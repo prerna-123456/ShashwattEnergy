@@ -14,8 +14,7 @@ node_modules/
 dist/
 dist-ssr/
 
-# Local env files
-*.local
+# Environment files
 .env
 .env.*
 !.env.example
