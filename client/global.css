@@ -41,3 +41,151 @@
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) { overflow-wrap: anywhere; word-break: break-word; }
   pre, code { overflow-x: auto; white-space: pre; }
 }
+
+@layer utilities {
+  @media (max-width: 767px) {
+    html,
+    body,
+    #root {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main {
+      overflow-x: hidden;
+    }
+
+    .max-w-7xl,
+    .max-w-8xl,
+    .max-w-\[1748px\] {
+      max-width: 100%;
+    }
+
+    .w-145,
+    .max-w-142\.5,
+    .max-w-112\.5,
+    .max-w-105,
+    .max-w-73,
+    .max-w-67\.5,
+    .max-w-325,
+    .max-w-245,
+    .max-w-225,
+    .max-w-210,
+    .max-w-180,
+    .max-w-170,
+    .max-w-165,
+    .max-w-160,
+    .max-w-150,
+    .max-w-142,
+    .max-w-140,
+    .max-w-125,
+    .max-w-113\.75,
+    .max-w-94,
+    .max-w-78,
+    .max-w-72 {
+      max-width: 100%;
+    }
+
+    .w-145 {
+      width: 100%;
+    }
+
+    .min-w-200,
+    .min-w-45,
+    .min-w-41,
+    .min-w-33\.5 {
+      min-width: 0;
+    }
+
+    .min-w-41,
+    .min-w-33\.5 {
+      width: 100%;
+    }
+
+    .grid-cols-\[0\.62fr_0\.95fr_1\.5fr\] {
+      grid-template-columns: minmax(7rem, 0.9fr) minmax(7rem, 0.9fr) minmax(10rem, 1.2fr);
+    }
+
+    .px-44,
+    .px-20,
+    .px-12,
+    .px-11,
+    .px-10,
+    .px-9,
+    .px-8 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .gap-32,
+    .gap-28,
+    .gap-16,
+    .gap-14,
+    .gap-12,
+    .gap-10,
+    .gap-9,
+    .gap-8 {
+      gap: 1.5rem;
+    }
+
+    .h-190,
+    .min-h-190 {
+      min-height: 38rem;
+      height: auto;
+    }
+
+    .min-h-138\.5,
+    .min-h-115,
+    .min-h-105 {
+      min-height: 30rem;
+    }
+
+    .h-150,
+    .h-142\.75,
+    .h-103\.75,
+    .h-94,
+    .h-82,
+    .h-70,
+    .h-67 {
+      height: auto;
+      min-height: 16rem;
+    }
+
+    .h-49,
+    .h-45,
+    .h-40,
+    .h-30 {
+      height: auto;
+      min-height: 10rem;
+    }
+
+    .text-\[64px\],
+    .text-\[60px\],
+    .text-\[56px\],
+    .text-\[48px\] {
+      font-size: 2.5rem;
+      line-height: 1.12;
+    }
+
+    .text-\[42px\],
+    .text-\[40px\],
+    .text-\[36px\],
+    .text-\[34px\] {
+      font-size: 2rem;
+      line-height: 1.16;
+    }
+
+    .text-\[32px\],
+    .text-\[30px\] {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .text-\[24px\],
+    .text-\[22px\],
+    .text-\[20px\],
+    .text-\[18px\] {
+      line-height: 1.45;
+    }
+  }
+}

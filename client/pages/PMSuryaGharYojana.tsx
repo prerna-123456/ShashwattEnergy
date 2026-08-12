@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import {
   Menu,
   X,
-  Calculator,
   Landmark,
-  ArrowRight,
   ContactRound,
   Earth,
   Mail,
@@ -13,15 +11,10 @@ import {
   MapPin,
   Share2,
   Factory,
-  DraftingCompass,
   Warehouse,
   CircleCheck,
-  BadgeCheck,
-  Wrench,
-  Shield,
   TrendingUp,
   Grid2X2,
-  RefreshCcw,
   Leaf,
 } from "lucide-react";
 
@@ -32,7 +25,7 @@ export default function PMSuryaGharYojana() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-0">
+        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
@@ -61,7 +54,7 @@ export default function PMSuryaGharYojana() {
             <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
           </div>
 
-          <Link to="#contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+          <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
             Contact Us
           </Link>
 
@@ -87,7 +80,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('commercial-bg.png')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
+        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('/surya-bg.png')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
@@ -163,9 +156,9 @@ export default function PMSuryaGharYojana() {
             {[
               {
                 icon: Grid2X2,
-                title: "Install Rooftop Solar",
+                title: "Loans at lower rate of interest",
                 description:
-                  "Seamless installation of high-efficiency panels on residential structures.",
+                  "Affordable solar financing with lower interest rates and flexible repayment options.",
               },
               {
                 icon: Landmark,
@@ -418,14 +411,14 @@ export default function PMSuryaGharYojana() {
 
             <div className="mt-9 flex flex-wrap justify-center gap-5">
               <Link
-                to="#contact"
+                to="/contact"
                 className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
               >
                 Contact Us
               </Link>
 
               <Link
-                to="#calculator"
+                to="/calculator"
                 className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
               >
                 Calculate Savings
@@ -487,7 +480,7 @@ export default function PMSuryaGharYojana() {
                 <br />
                 Yojana
               </Link>
-              <Link to="#calculator">Calculator</Link>
+              <Link to="/calculator">Calculator</Link>
             </div>
           </div>
 
@@ -510,11 +503,21 @@ export default function PMSuryaGharYojana() {
             <div className="flex flex-col gap-5 text-[16px] leading-[1.45] text-[#FAF9F6]">
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-                <p>+917829575683 / 9972975683</p>
+                <p>
+                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                  +917619575683
+                </a>{" "}
+                /{" "}
+                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                  9972975683
+                </a>
+              </p>
               </div>
               <div className="flex gap-4">
                 <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-                <p>support@shashwatt.com</p>
+                <a href="mailto:connect@shashwatt.com" className="hover:underline focus-visible:underline active:underline">
+                  connect@shashwatt.com
+                </a>
               </div>
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />

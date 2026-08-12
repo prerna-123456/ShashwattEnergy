@@ -21,7 +21,7 @@ export default function Residential() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-0">
+        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
@@ -50,7 +50,7 @@ export default function Residential() {
             <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
           </div>
 
-          <Link to="#contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+          <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
             Contact Us
           </Link>
 
@@ -216,17 +216,15 @@ export default function Residential() {
               </div>
 
               <p className="mt-11 max-w-94 text-[16px] leading-[1.55] text-[#5D3F3C]">
-                A grid-connected solar PV system designed for a high-consumption
-                luxury villa, utilizing Mono PERC Half-cut modules for maximum
-                efficiency in varying light conditions.
+                A grid-connected solar PV system for a luxury villa, using TOPCON half-cut modules for high efficiency and reliable performance in varying light conditions.
               </p>
 
-              <Link
-                to="#projects"
+              {/* <Link
+                to="/projects"
                 className="mt-11 inline-flex h-12 w-39 items-center justify-center rounded-[8px] border-2 border-[#BA0013] text-[14px] font-semibold text-[#BA0013]"
               >
                 View Project
-              </Link>
+              </Link> */}
             </div>
           </article>
         </div>
@@ -260,7 +258,7 @@ export default function Residential() {
                     System Size: 3.0 kW
                   </p>
                   <Link
-                    to="#projects"
+                    to="/projects"
                     aria-label="View Sunrise Residency"
                     className="text-[28px] leading-none text-[#BA0013]"
                   >
@@ -290,7 +288,7 @@ export default function Residential() {
                     System Size: 12.0 kW
                   </p>
                   <Link
-                    to="#projects"
+                    to="/projects"
                     aria-label="View Maple Greens Apartments"
                     className="text-[28px] leading-none text-[#BA0013]"
                   >
@@ -320,7 +318,7 @@ export default function Residential() {
                     System Size: 7.5 kW
                   </p>
                   <Link
-                    to="#projects"
+                    to="/projects"
                     aria-label="View The Horizon Villa"
                     className="text-[28px] leading-none text-[#BA0013]"
                   >
@@ -369,7 +367,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    String inverter based solar system with Mono-PERC Half cut
+                    String inverter based solar system with TOPCON Half cut
                     panels with efficiency up to 21%
                   </p>
                 </div>
@@ -384,7 +382,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Warranty - 25 years on panels and 5 years on inverter
+                    Warranty - 25 years to 30 years on panels and 5 years on inverter
                   </p>
                 </div>
 
@@ -453,6 +451,13 @@ export default function Residential() {
                     consumption
                   </p>
                 </div>
+
+                <div className="flex gap-4">
+                  <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
+                  <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
+                    Monitoring can be viewed through mobile
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -468,78 +473,158 @@ export default function Residential() {
       {/* Solar Package Comparison Section */}
       <section className="bg-[#FAF9F6] pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-0">
-          <div className="overflow-hidden rounded-b-lg bg-white shadow-[0_16px_36px_rgba(39,31,25,0.12)]">
+          <div className="overflow-x-auto rounded-b-lg bg-white shadow-[0_16px_36px_rgba(39,31,25,0.12)] md:overflow-hidden">
             <div className="grid min-w-200 grid-cols-[0.62fr_0.95fr_1.5fr] bg-[#E7BDB81A] text-[16px] font-bold text-[#1A1C1A]">
               <div className="border-r border-[#00000080] px-20 py-5">
-                Feature
+                Specifications
               </div>
               <div className="border-r border-[#00000080] px-20 py-5 text-[#BA0013]">
-                Premium (Microinverter)
+                Standard
               </div>
               <div className="px-44 py-5 text-[#5D3F3C]">
-                Standard (String)
+                Premium
               </div>
             </div>
 
             <div className="overflow-x-auto">
               <div className="min-w-200">
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-[#E7BDB81A] text-[14px] text-[#1A1C1A]">
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
                   <div className="px-20 py-6 font-semibold">
-                    Inverter Type
+                    Panel Type
                   </div>
                   <div className="px-20 py-6">
-                    Microinverter (Modular)
+                    <span className="font-bold">TopCON</span> (Efficiency ~ 20%)
+                    <br />
+                    Adani
                   </div>
                   <div className="px-44 py-6">
-                    String Inverter
+                    <span className="font-bold">TopCON</span> (Efficiency ~ 23%)
+                    <br />
+                    Adani
                   </div>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-[#E7BDB81A] text-[14px] text-[#1A1C1A]">
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
                   <div className="px-20 py-6 font-semibold">
-                    Panel Tech
+                    Max Output
                   </div>
                   <div className="px-20 py-6">
-                    TopCON N-Type
+                    620 watts
                   </div>
                   <div className="px-44 py-6">
-                    Mono-PERC Half Cut
+                    620 watts
                   </div>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-[#E7BDB81A] text-[14px] text-[#1A1C1A]">
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
                   <div className="px-20 py-6 font-semibold">
-                    Efficiency
+                    Panel Warranty
                   </div>
                   <div className="px-20 py-6">
-                    ~24%
+                    Performance warranty - <span className="font-bold">30 Years</span>
+                    <br />
+                    Product warranty - 12 years
                   </div>
                   <div className="px-44 py-6">
-                    ~21%
+                    Performance warranty - <span className="font-bold">30 Years</span>
+                    <br />
+                    Product warranty - 12 years
                   </div>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-[#E7BDB81A] text-[14px] text-[#1A1C1A]">
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
                   <div className="px-20 py-6 font-semibold">
-                    Warranty
+                    Inverter
                   </div>
                   <div className="px-20 py-6">
-                    30y Panel / 25y Inverter
+                    <span className="font-bold">Feston / Deye</span> (String Inverter)
                   </div>
                   <div className="px-44 py-6">
-                    25y Panel / 5y Inverter
+                    <span className="font-bold italic">Enphase</span> (Microinverter)
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Inverter Warranty
+                  </div>
+                  <div className="px-20 py-6">
+                    10 years
+                  </div>
+                  <div className="px-44 py-6">
+                    <span className="font-bold">25 years</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Inverter Lifespan
+                  </div>
+                  <div className="px-20 py-6">
+                    12 years
+                  </div>
+                  <div className="px-44 py-6">
+                    <span className="font-bold">30 years</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Average generation per kW
+                  </div>
+                  <div className="px-20 py-6">
+                    up to 120 units per month
+                  </div>
+                  <div className="px-44 py-6">
+                    up to 140 units per month
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Own Consumption Monitoring
+                  </div>
+                  <div className="px-20 py-6">
+                    No
+                  </div>
+                  <div className="px-44 py-6">
+                    Yes
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Redundancy
+                  </div>
+                  <div className="px-20 py-6">
+                    If one panel fails, generation stops completely
+                  </div>
+                  <div className="px-44 py-6">
+                    If one panel fails, others continue generation
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+                  <div className="px-20 py-6 font-semibold">
+                    Future Expansion
+                  </div>
+                  <div className="px-20 py-6">
+                    Inverter needs to be changed
+                  </div>
+                  <div className="px-44 py-6">
+                    Only panels can be added
                   </div>
                 </div>
 
                 <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] text-[14px] text-[#1A1C1A]">
                   <div className="px-20 py-6 font-semibold">
-                    Monitoring
+                    Structure
                   </div>
                   <div className="px-20 py-6">
-                    Module-level Advanced
+                    <span className="font-bold">GI Structure 6 ft</span>
                   </div>
                   <div className="px-44 py-6">
-                    Standard WiFi Tracking
+                    <span className="font-bold">GI Structure 6 ft</span>
                   </div>
                 </div>
               </div>
@@ -557,7 +642,7 @@ export default function Residential() {
             </p>
 
             <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-              Transform Your Home with Solar Power
+              Transform your Space with solar power
             </h2>
 
             <p className="mx-auto mt-4 max-w-125 text-[18px] leading-[1.55] text-[#5D3F3C]">
@@ -615,7 +700,7 @@ export default function Residential() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <Link
-              to="#calculator"
+              to="/calculator"
               className="flex min-h-34 items-center gap-9 rounded-lg border border-[#D9D5D0] bg-white px-11 py-8 transition hover:border-[#BA0013]/40"
             >
               <span className="flex h-18 w-18 shrink-0 items-center justify-center rounded-full bg-[#FCE3E7] text-[#BA0013]">
@@ -634,7 +719,7 @@ export default function Residential() {
             </Link>
 
             <Link
-              to="#pm-surya-ghar"
+              to="/pm-surya-ghar"
               className="flex min-h-34 items-center gap-9 rounded-lg border border-[#D9D5D0] bg-white px-11 py-8 transition hover:border-[#BA0013]/40"
             >
               <span className="flex h-18 w-18 shrink-0 items-center justify-center rounded-full bg-[#FCE3E7] text-[#BA0013]">
@@ -646,9 +731,9 @@ export default function Residential() {
                   PM Surya Ghar
                 </span>
                 <span className="mt-3 block max-w-73 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                  Learn about government subsidies and
-                  <br />
-                  Muft Bijli Yojna guides.
+                  Add subsidy for PM Surya Ghar: 
+                    1kW - 30,000, 2kW - 60,000, 3kW - 78,000
+
                 </span>
               </span>
             </Link>
@@ -673,14 +758,14 @@ export default function Residential() {
 
             <div className="mt-9 flex flex-wrap justify-center gap-5">
               <Link
-                to="#contact"
+                to="/contact"
                 className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
               >
                 Contact Us
               </Link>
 
               <Link
-                to="#calculator"
+                to="/calculator"
                 className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
               >
                 Calculate Savings
@@ -742,7 +827,7 @@ export default function Residential() {
                 <br />
                 Yojana
               </Link>
-              <Link to="#calculator">Calculator</Link>
+              <Link to="/calculator">Calculator</Link>
             </div>
           </div>
 
@@ -765,11 +850,21 @@ export default function Residential() {
             <div className="flex flex-col gap-5 text-[16px] leading-[1.45] text-[#FAF9F6]">
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-                <p>+917829575683 / 9972975683</p>
+                <p>
+                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                  +917619575683
+                </a>{" "}
+                /{" "}
+                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                  9972975683
+                </a>
+              </p>
               </div>
               <div className="flex gap-4">
                 <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-                <p>support@shashwatt.com</p>
+                <a href="mailto:connect@shashwatt.com" className="hover:underline focus-visible:underline active:underline">
+                  connect@shashwatt.com
+                </a>
               </div>
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />

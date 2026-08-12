@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { LayoutGroup, motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -25,10 +26,78 @@ import {
 } from "lucide-react";
 
 const features = [
-  "Customized Solar Design",
-  "Professional Installation",
-  "Quality Components",
-  "End-to-End Support",
+  {
+    title: "Customized Solar Design",
+    image: "/design1.png",
+  },
+  {
+    title: "Professional Installation",
+    image: "/design2.png",
+  },
+  {
+    title: "Quality Components",
+    image: "/design3.png",
+  },
+  {
+    title: "End-to-End Support",
+    image: "/design4.png",
+  },
+];
+
+const trustCarouselImages = [
+  "/trust.png",
+  "/trust2.jpg",
+  "/trust3.jpg",
+  "/trust4.jpg",
+  "/trust5.jpg",
+];
+
+const heroSlides = [
+  {
+    title: "Turn Sunlight Into\nLong-Term Savings",
+    desc: "Empowering Indian homes and businesses with high-performance solar infrastructure. We deliver end-to-end engineering excellence for a sustainable future.",
+    image: "/hero-bg.png",
+    primaryLabel: "Consult our Expertise",
+    primaryLink: "/contact",
+    secondaryLabel: "About Us",
+    secondaryLink: "/about",                        
+  },
+  {
+    title: "Generate clean energy and\nreduce your power bills",
+    desc: "Harness the power of the sun to create a smarter, more sustainable, and cost-effective energy future.",
+    image: "/hero-bg2.png",
+    primaryLabel: "Consult our Expertise",
+    primaryLink: "/residential",
+    secondaryLabel: "About Us",
+    secondaryLink: "/calculator",
+  },
+  {
+    title: "Power Your World with\nClean Energy",
+    desc: "Switch to solar and generate clean, renewable power that reduces your dependence on conventional energy while building a more sustainable future.",
+    image: "/hero-bg3.png",
+    primaryLabel: "Consult our Expertise",
+    primaryLink: "/commercial",
+    secondaryLabel: "About Us",
+    secondaryLink: "/projects",
+  },
+  {
+    title: "Reliable Solar Backup,\nWhenever You Need It",
+    desc: "Stay powered through outages with dependable solar backup solutions designed to keep your home or business running without interruption.",
+    image: "/hero-bg4.png",
+    primaryLabel: "Consult our Expertise",
+    primaryLink: "/pm-surya-ghar",
+    secondaryLabel: "About Us",
+    secondaryLink: "/pm-surya-ghar",
+  },
+  {
+    title: "Step Into a Smarter\nEnergy Future",
+    desc: "Take control of the way you power your home or business with clean solar energy.Reduce your dependence on the grid, lower your electricity bills, and enjoy energy designed around your needs.",
+    image: "/hero-bg5.png",
+    primaryLabel: "Consult our Expertise",
+    primaryLink: "/contact",
+    secondaryLabel: "About Us",
+    secondaryLink: "/about",
+  },
 ];
 
 const solutions = [
@@ -66,46 +135,64 @@ const solutions = [
 
 const partnerLogos = [
   {
-    src: "/logo1.png",
+    src: "/logo5.png",
     alt: "Partner logo 1",
   },
   {
-    src: "/logo2.png",
+    src: "/logo3.png",
     alt: "Partner logo 2",
   },
   {
-    src: "/logo3.png",
+    src: "/logo7.png",
     alt: "Partner logo 3",
   },
   {
-    src: "/logo4.png",
+    src: "/logo2.png",
     alt: "Partner logo 4",
   },
   {
-    src: "/logo5.png",
+    src: "/logo4.png",
+    alt: "Partner logo 5",
+  },
+  {
+    src: "/logo6.png",
+    alt: "Partner logo 4",
+  },
+  {
+    src: "/logo1.png",
     alt: "Partner logo 5",
   },
 ];
 
 const livingSpaces = [
   {
-    title: "Independent\nHomes",
+    title: "Independent Homes",
     desc: "Maximum autonomy with custom rooftop designs tailored for family needs.",
+    image: "/home1.png",
     Icon: House,
   },
   {
-    title: "Villas",
-    desc: "High-capacity systems for luxury energy needs and pool heating integration.",
+    title: "Malls",
+    desc: "Powering malls with efficient solar energy and long-term savings.",
+    image: "/mall.png",
     Icon: Building,
   },
   {
-    title: "Apartments",
-    desc: "Smart solutions for vertical living efficiency and individual meter offsets.",
+    title: "Warehouse",
+    desc: "Reliable solar power for efficient and sustainable warehouse operations.",
+    image: "/warehouse.png",
     Icon: Building2,
   },
   {
-    title: "Housing\nSocieties",
+    title: "Commercials",
+    desc: "Smart solar solutions for energy-efficient commercial spaces.",
+    image: "/commercials.png",
+    Icon: Building2,
+  },
+  {
+    title: "Housing Societies",
     desc: "Community-scale power for common utility savings and green branding.",
+    image: "/solution2.jpg",
     Icon: Hotel,
   },
 ];
@@ -150,28 +237,79 @@ const blogPosts = [
 const customerStories = [
   {
     name: "Commercial Customer",
-    system: "250kW System",
+    system: "25KW On-Grid System",
     quote:
-      "From our first consultation to final commissioning, the Shashwatt Energy team showed excellent technical expertise and attention to detail. We appreciated their use of high-quality components and their ability to manage a project of this scale seamlessly. We're already seeing the impact on our power costs.",
+      "The Shashwatt Energy team made our solar installation simple and seamless. The system is performing efficiently, helping us significantly reduce our monthly electricity costs.",
+  },
+  {
+    name: "Rural Property Owner",
+    system: "10KW Off-Grid System",
+    quote:
+      "We now have reliable power even in areas with limited grid connectivity. The team provided excellent guidance and installed the system professionally.",
   },
   {
     name: "Residential Customer",
-    system: "8kW Rooftop System",
+    system: "8KW Hybrid System",
     quote:
-      "The installation was clean, quick, and handled with real care. The team explained every step clearly, helped us understand net metering, and delivered a system that has made our monthly electricity bills much lighter.",
-  },
-  {
-    name: "Housing Society Customer",
-    system: "120kW Common Area System",
-    quote:
-      "Shashwatt Energy gave our society a practical solar plan that worked for shared utilities without disrupting residents. Their coordination, documentation support, and commissioning process made the whole project feel effortless.",
+      "Our hybrid solar system gives us reliable backup along with significant energy savings. The entire installation process was smooth, professional, and hassle-free.",
   },
 ];
 
 export default function Index() {
+  const [hoveredCard, setHoveredCard] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
   const [activeStory, setActiveStory] = useState(0);
+  const [activeTrustImage, setActiveTrustImage] = useState(0);
+  const [featuresAnimated, setFeaturesAnimated] = useState(false);
+  const [showLogoIntro, setShowLogoIntro] = useState(true);
+  const featuresRef = useRef<HTMLElement | null>(null);
+  const trustSectionRef = useRef<HTMLElement | null>(null);
+  const journeySectionRef = useRef<HTMLElement | null>(null);
+  const pmSectionRef = useRef<HTMLElement | null>(null);
+  const impactSectionRef = useRef<HTMLElement | null>(null);
+  const precisionSectionRef = useRef<HTMLElement | null>(null);
+  const trustSectionInView = useInView(trustSectionRef, {
+    once: true,
+    margin: "-20% 0px -20% 0px",
+  });
+  const journeySectionInView = useInView(journeySectionRef, {
+    once: true,
+    margin: "-25% 0px -25% 0px",
+  });
+  const pmSectionInView = useInView(pmSectionRef, {
+    once: true,
+    margin: "-20% 0px -20% 0px",
+  });
+  const impactSectionInView = useInView(impactSectionRef, {
+    once: true,
+    margin: "-20% 0px -20% 0px",
+  });
+  const precisionSectionInView = useInView(precisionSectionRef, {
+    once: true,
+    margin: "-20% 0px -20% 0px",
+  });
+  const impactHeadingPrefix = "Creating Real ";
+  const impactHeadingHighlight = "Environmental Impact";
+  const impactHeadingText = `${impactHeadingPrefix}${impactHeadingHighlight}`;
+  const [impactTypedLength, setImpactTypedLength] = useState(0);
+
+  useEffect(() => {
+    const logoIntroTimer = window.setTimeout(() => {
+      setShowLogoIntro(false);
+    }, 1300);
+
+    return () => window.clearTimeout(logoIntroTimer);
+  }, []);
+
+  useEffect(() => {
+    const heroTimer = window.setInterval(() => {
+      setActiveHeroSlide((current) => (current + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => window.clearInterval(heroTimer);
+  }, []);
 
   useEffect(() => {
     const storyTimer = window.setInterval(() => {
@@ -181,10 +319,74 @@ export default function Index() {
     return () => window.clearInterval(storyTimer);
   }, []);
 
+  useEffect(() => {
+    const trustTimer = window.setInterval(() => {
+      setActiveTrustImage((current) => (current + 1) % trustCarouselImages.length);
+    }, 3000);
+
+    return () => window.clearInterval(trustTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!impactSectionInView) return;
+
+    setImpactTypedLength(0);
+
+    const impactTimer = window.setInterval(() => {
+      setImpactTypedLength((current) => {
+        if (current >= impactHeadingText.length) {
+          window.clearInterval(impactTimer);
+          return current;
+        }
+
+        return current + 1;
+      });
+    }, 90);
+
+    return () => window.clearInterval(impactTimer);
+  }, [impactHeadingText.length, impactSectionInView]);
+
+  useEffect(() => {
+    const featureStrip = featuresRef.current;
+
+    if (!featureStrip) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFeaturesAnimated(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(featureStrip);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
+  <LayoutGroup>
   <main className="min-h-screen overflow-hidden bg-[#f8f7f2] text-[#431013]">
+    {showLogoIntro && (
+      <motion.div
+        className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <motion.img
+          layoutId="hero-logo-text"
+          src="/logo-text.png"
+          alt="Shashwatt Energy"
+          className="h-auto w-[700vw] max-w-2900"
+          transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+        />
+      </motion.div>
+    )}
     <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-      <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-0">
+      <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
         <Link to="/" className="flex items-center">
           <img
             src="/logo.png"
@@ -193,11 +395,15 @@ export default function Index() {
           />
 
           <div className="flex flex-col leading-none">
-            <img
+            {!showLogoIntro && (
+            <motion.img
+              layoutId="hero-logo-text"
               src="/logo-text.png"
               alt="Shashwatt Energy"
               className="h-14 w-auto md:-ml-4 md:mt-2"
+              transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
             />
+            )}
           </div>
         </Link>
 
@@ -213,7 +419,7 @@ export default function Index() {
           <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
         </div>
 
-        <Link to="#contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+        <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
           Contact Us
         </Link>
 
@@ -238,40 +444,80 @@ export default function Index() {
     </nav>
 
     {/* Hero Section */}
-    <section className="relative min-h-190 overflow-hidden bg-[#9ca3a3] bg-[linear-gradient(180deg,rgba(20,31,35,0.28)_0%,rgba(18,25,20,0.12)_34%,rgba(7,14,10,0.55)_100%),url('/hero-bg.png')] bg-cover bg-center text-white">
+    <section className="relative min-h-190 overflow-hidden bg-[#9ca3a3] text-white">
+      {heroSlides.map((slide, index) => (
+        <img
+          key={slide.image}
+          src={slide.image}
+          alt={slide.title.replace(/\n/g, " ")}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${activeHeroSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,31,35,0.34)_0%,rgba(18,25,20,0.18)_34%,rgba(7,14,10,0.68)_100%)]" />
       <div className="absolute inset-0 bg-black/10" />
-      <div className="relative z-10 mx-auto flex min-h-190 max-w-7xl items-center px-0 pt-20 lg:px-0">
-        <div className="mt-40">
-          <h1 className="max-w-210 text-[60px] font-bold leading-[1.12] tracking-normal text-white sm:text-[72px] lg:text-[60px]">
-            Turn Sunlight Into
-            <br />
-            Long-Term Savings
-          </h1>
 
-          <p className="mt-8 max-w-186.75 text-[18px] font-medium leading-[1.45] text-white sm:text-[18px]">
-            Empowering Indian homes and businesses with high-performance solar infrastructure.
-            We deliver end-to-end engineering excellence for a sustainable future.
-          </p>
+      <div className="relative z-10 mx-auto flex min-h-190 max-w-7xl items-center px-6 pt-20 lg:px-0">
+        <div className="relative mt-40 min-h-97.5 max-w-210">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={slide.title}
+              className={`transition-all duration-700 ease-out ${activeHeroSlide === index
+                ? "relative translate-y-0 opacity-100"
+                : "pointer-events-none absolute translate-y-8 opacity-0"
+                }`}
+            >
+              <h1 className="whitespace-pre-line text-[48px] font-bold leading-[1.12] tracking-normal text-white sm:text-[64px] lg:text-[60px]">
+                {slide.title}
+              </h1>
 
-          <div className="mt-10 flex flex-wrap items-center gap-8">
-            <Link to="#contact" className="rounded-full bg-[#FFDAD8] px-6 py-3 text-[16px] font-regular text-[#341010] transition">
-              Consult our Expertise
-            </Link>
-            <Link to="#about" className="rounded-full border border-[#FFDAD8] px-6 py-3 text-[16px] font-regular text-white transition">
-              About Us
-            </Link>
-          </div>
+              <p className="mt-8 max-w-186.75 text-[18px] font-medium leading-[1.45] text-white sm:text-[18px]">
+                {slide.desc}
+              </p>
+
+              <div className="mt-10 flex flex-wrap items-center gap-8">
+                <Link
+                  to={slide.primaryLink}
+                  className="rounded-full bg-[#FFDAD8] px-6 py-3 text-[16px] font-regular text-[#341010] transition hover:bg-white"
+                >
+                  {slide.primaryLabel}
+                </Link>
+                <Link
+                  to={slide.secondaryLink}
+                  className="rounded-full border border-[#FFDAD8] px-6 py-3 text-[16px] font-regular text-white transition hover:bg-[#FFDAD8] hover:text-[#341010]"
+                >
+                  {slide.secondaryLabel}
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
+        {heroSlides.map((slide, index) => (
+          <button
+            key={slide.title}
+            type="button"
+            onClick={() => setActiveHeroSlide(index)}
+            aria-label={`Show ${slide.title.replace(/\n/g, " ")}`}
+            aria-current={activeHeroSlide === index ? "true" : undefined}
+            className={`h-2.5 rounded-full transition-all duration-300 ${activeHeroSlide === index
+              ? "w-0 bg-[#FFDAD8]"
+              : "w-0 bg-white/65 hover:bg-white"
+              }`}
+          />
+        ))}
       </div>
     </section>
 
-    <section className="w-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
+    <section ref={featuresRef} className="w-full bg-white shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
       <div className="max-w-360 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {features.map((item, index) => (
             <div
               key={index}
-              className={`flex items-center justify-center text-center h-32 px-0
+              className={`relative flex items-center justify-center overflow-hidden text-center h-40 px-0
                 ${index !== features.length - 1
                   ? "border-r border-gray-300"
                   : ""
@@ -282,8 +528,20 @@ export default function Index() {
                 }
               `}
             >
-              <h3 className="text-[#222] text-sm md:text-[16px] font-regular">
-                {item}
+              <img
+                src={item.image}
+                alt={item.title}
+                className={`absolute top-9 h-12 w-12 object-contain transition-all duration-1400 ease-out ${featuresAnimated
+                  ? "translate-y-0 scale-100 opacity-100"
+                  : "translate-y-6 scale-50 opacity-0"
+                  }`}
+                style={{ transitionDelay: `${360 + index * 360}ms` }}
+              />
+              <h3
+                className={`text-[#222] text-sm md:text-[16px] font-regular transition-transform duration-1000 ease-out ${featuresAnimated ? "translate-y-8" : "translate-y-0"
+                  }`}
+              >
+                {item.title}
               </h3>
             </div>
           ))}
@@ -309,42 +567,99 @@ export default function Index() {
           </h2>
 
           <p className="max-w-142.5 mx-auto text-[16px] leading-6 text-[#5D3F3C]">
-            Providing specialized solar infrastructure tailored for residential, commercial, and
-            industrial segments across India.
+            Providing specialized solar infrastructure tailored for
+            residential, commercial, and industrial segments across India.
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-3">
+
           {[0, 1, 2].map((column) => (
             <div key={column} className="flex flex-col gap-6">
+
               {solutions
                 .filter((_, index) => index % 3 === column)
-                .map((item) => (
-                  <div
-                    key={item.title}
-                    className={`flex flex-col rounded-lg border border-[#dedbd7] bg-white p-7 shadow-[0_18px_36px_rgba(39,31,25,0.08)] transition duration-300 hover:shadow-[0_22px_44px_rgba(39,31,25,0.12)] ${item.image ? "min-h-101" : "min-h-56.5 justify-center"
-                      }`}
-                  >
-                    {item.image && (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="mb-8 h-48 w-full rounded-md object-cover"
-                      />
-                    )}
+                .map((item) => {
+                  const isHovered = hoveredCard === item.title;
 
-                    <h3 className="mb-3 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
-                      {item.title}
-                    </h3>
+                  return (
+                    <div
+                      key={item.title}
+                      onMouseEnter={() => setHoveredCard(item.title)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                      className={`
+                        flex flex-col rounded-lg
+                        border border-[#dedbd7]
+                        p-7
+                        transition-all duration-300 ease-in-out
+                        shadow-[0_18px_36px_rgba(39,31,25,0.08)]
+                        ${
+                          isHovered
+                            ? "bg-[#341010] shadow-[0_22px_44px_rgba(39,31,25,0.12)]"
+                            : "bg-white"
+                        }
+                        ${
+                          item.image
+                            ? "min-h-101"
+                            : "min-h-56.5 justify-center"
+                        }
+                      `}
+                    >
 
-                    <p className="max-w-67.5 text-[16px] leading-[1.55] text-[#5D3F3C]">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
+                      {/* Image */}
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="mb-8 h-48 w-full rounded-md object-cover"
+                        />
+                      )}
+
+                      {/* Title */}
+                      <h3
+                        className={`
+                          mb-3
+                          text-[24px]
+                          font-semibold
+                          leading-tight
+                          transition-colors
+                          duration-300
+                          ${
+                            isHovered
+                              ? "text-white"
+                              : "text-[#1A1C1A]"
+                          }
+                        `}
+                      >
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p
+                        className={`
+                          max-w-67.5
+                          text-[16px]
+                          leading-[1.55]
+                          transition-colors
+                          duration-300
+                          ${
+                            isHovered
+                              ? "text-white"
+                              : "text-[#5D3F3C]"
+                          }
+                        `}
+                      >
+                        {item.desc}
+                      </p>
+
+                    </div>
+                  );
+                })}
+
             </div>
           ))}
+
         </div>
       </div>
     </section>
@@ -354,7 +669,7 @@ export default function Index() {
         <div className="grid gap-10 border-b border-[#ead5cf] pb-12 text-center md:grid-cols-3 md:gap-0">
           <div className="md:border-r md:border-[#ead5cf]">
             <h3 className="mb-5 font-serif text-[40px] leading-none text-[#BA0013] md:text-[56px]">
-              2,000+ kW
+              3,000+ kW
             </h3>
             <p className="text-[16px] font-semibold uppercase tracking-[2px] text-[#5D3F3C]">
               Solar Installation
@@ -383,96 +698,129 @@ export default function Index() {
     </section>
 
     {/* Why Trust ShashWatt?*/}
-    <section className="bg-[#faf9f7] py-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2 lg:px-0">
-        <div className="relative mx-auto w-full max-w-145 md:mx-0">
-          <div className="absolute -left-23.75 -top-21.25 z-10 hidden rounded-lg border border-[#E7BDB8BD]/74 bg-[#F4F3F1] px-10 py-7 text-center shadow-[0_18px_45px_rgba(39,31,25,0.18)] md:block">
-            <p className="text-[40px] font-bold leading-none text-[#BA0013]">
-              25Y
-            </p>
-            <p className="mt-5 whitespace-nowrap text-[16px] text-[#5D3F3C]">
-              Performance Warranty
-            </p>
-          </div>
+    <section ref={trustSectionRef} className="relative overflow-hidden bg-white py-20">
+      <motion.div
+        aria-hidden="true"
+        className="absolute inset-x-0 -top-32 bottom-0 z-0 bg-[#341010]"
+        initial={{ x: "0%" }}
+        animate={trustSectionInView ? { x: "-100%" } : { x: "0%" }}
+        transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}
+      />
 
-          <img
-            src="/trust.png"
-            alt="Residential rooftop solar installation"
-            className="h-103.75 w-full rounded-lg object-cover shadow-[0_24px_45px_rgba(39,31,25,0.22)]"
-          />
-        </div>
-
-        <div className="max-w-125">
-          <p className="mb-6 text-[16px] font-bold uppercase tracking-[5px] text-[#93000D]">
-            Reliability
-          </p>
-
-          <h2 className="mb-10 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-            Why Trust <span className="text-[#BA0013]">ShashWatt?</span>
-          </h2>
-
-          <div className="space-y-9">
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
-                <RotateCcw size={20} />
-              </div>
-              <div>
-                <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
-                  Proven Track Record
-                </h3>
-                <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
-                  Over 1,000+ KW installed across diverse terrains and property types in India.
-                </p>
-              </div>
+      <div className="relative flex items-center">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-32 px-6 md:grid-cols-2 lg:px-0">
+          <div className="relative mx-auto w-full max-w-145 md:mx-0">
+            <div className="absolute -left-23.75 top-0 z-10 hidden rounded-lg border border-[#E7BDB8BD]/74 bg-[#F4F3F1] px-10 py-7 text-center shadow-[0_18px_45px_rgba(39,31,25,0.18)] md:block">
+              <p className="text-[40px] font-bold leading-none text-[#BA0013]">
+                30Y
+              </p>
+              <p className="mt-5 whitespace-nowrap text-[16px] text-[#5D3F3C]">
+                Performance Warranty
+              </p>
             </div>
 
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
-                <Hd size={20} />
-              </div>
-              <div>
-                <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
-                  Tier-1 Components
-                </h3>
-                <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
-                  We partner with industry leaders like Adani, RenewSys, and Solis for maximum efficiency.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
-                <Settings size={20} />
-              </div>
-              <div>
-                <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
-                  Precision Engineering
-                </h3>
-                <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
-                  Custom structural designs tailored for maximum solar harvesting based on your roof orientation.
-                </p>
-              </div>
+            <div className="relative h-103.75 w-145 overflow-hidden rounded-lg shadow-[0_24px_45px_rgba(39,31,25,0.22)] md:mt-16">
+              {trustCarouselImages.map((image, index) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt="Residential rooftop solar installation"
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                    index === activeTrustImage ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
             </div>
           </div>
+
+          <motion.div
+            className="max-w-125"
+            initial={{ opacity: 0, x: 72 }}
+            animate={trustSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 72 }}
+            transition={{ delay: 0.85, duration: 0.75, ease: "easeOut" }}
+          >
+            <p className="mb-6 text-[16px] font-bold uppercase tracking-[5px] text-[#93000D]">
+              Reliability
+            </p>
+
+            <h2 className="mb-10 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
+              Why Trust <span className="text-[#BA0013]">ShashWatt?</span>
+            </h2>
+
+            <div className="space-y-9">
+              <div className="flex gap-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
+                  <RotateCcw size={20} />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
+                    Proven Track Record
+                  </h3>
+                  <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
+                    Over 3,000+ kW installed across diverse terrains and property types in India.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
+                  <Hd size={20} />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
+                    Tier-1 Components
+                  </h3>
+                  <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
+                    We partner with industry leaders like Adani, RenewSys, Emphase and Panasonic for maximum efficiency.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[#BA0013] text-white">
+                  <Settings size={20} />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-[24px] font-semibold text-[#1A1C1A]">
+                    Precision Engineering
+                  </h3>
+                  <p className="text-[16px] leading-[1.55] text-[#5D3F3C]">
+                    Custom structural designs tailored for maximum solar harvesting based on your roof orientation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
 
     {/* Seamless Installation Journey */}
-    <section className="bg-[#faf9f7] py-20">
+    <section ref={journeySectionRef} className="bg-[#faf9f7] py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-0">
         <h2 className="mb-20 text-center text-[40px] font-bold leading-tight text-[#1A1C1A]">
           Seamless <span className="text-[#BA0013]">Installation Journey</span>
         </h2>
 
         <div className="relative">
-          <div className="absolute left-28 right-28 top-10 hidden h-0.5 bg-[#E7BDB84D] md:block" />
+          <div className="absolute left-28 right-28 top-12.5 hidden h-1 bg-[#E7BDB84D] md:block" />
+          <motion.div
+            aria-hidden="true"
+            className="absolute left-28 right-28 top-12.5 hidden h-1 origin-left bg-[#BA0013] md:block"
+            initial={{ scaleX: 0 }}
+            animate={journeySectionInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 6.6, ease: "easeInOut" }}
+          />
 
           <div className="relative grid gap-12 text-center md:grid-cols-4 md:gap-8">
             <div className="flex flex-col items-center">
-              <div className="mb-9 flex h-20 w-20 items-center justify-center rounded-full border-[3px] border-[#BA0013] bg-[#EFEEEB] text-[#BA0013]">
+              <motion.div
+                className="mb-9 flex h-25 w-25 items-center justify-center rounded-full border-4 border-[#E7BDB8] bg-[#EFEEEB] text-[#BA0013]"
+                animate={journeySectionInView ? { borderColor: "#BA0013" } : { borderColor: "#E7BDB8" }}
+                transition={{ delay: 0.1, duration: 0.45 }}
+              >
                 <Crosshair size={32} />
-              </div>
+              </motion.div>
               <h3 className="mb-3 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
                 Rooftop Survey
               </h3>
@@ -482,9 +830,13 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="mb-9 flex h-20 w-20 items-center justify-center rounded-full bg-[#EFEEEB] text-[#BA0013]">
+              <motion.div
+                className="mb-9 flex h-25 w-25 items-center justify-center rounded-full border-4 border-[#E7BDB8] bg-[#EFEEEB] text-[#BA0013]"
+                animate={journeySectionInView ? { borderColor: "#BA0013" } : { borderColor: "#E7BDB8" }}
+                transition={{ delay: 0.85, duration: 0.45 }}
+              >
                 <PenTool size={30} strokeWidth={2.5} />
-              </div>
+              </motion.div>
               <h3 className="mb-3 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
                 Solar Plant Design
               </h3>
@@ -494,9 +846,13 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="mb-9 flex h-20 w-20 items-center justify-center rounded-full bg-[#EFEEEB] text-[#BA0013]">
+              <motion.div
+                className="mb-9 flex h-25 w-25 items-center justify-center rounded-full border-4 border-[#E7BDB8] bg-[#EFEEEB] text-[#BA0013]"
+                animate={journeySectionInView ? { borderColor: "#BA0013" } : { borderColor: "#E7BDB8" }}
+                transition={{ delay: 1.6, duration: 0.45 }}
+              >
                 <Wrench size={30} strokeWidth={2.5} />
-              </div>
+              </motion.div>
               <h3 className="mb-3 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
                 Installation
               </h3>
@@ -506,14 +862,18 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="mb-9 flex h-20 w-20 items-center justify-center rounded-full bg-[#EFEEEB] text-[#BA0013]">
+              <motion.div
+                className="mb-9 flex h-25 w-25 items-center justify-center rounded-full border-4 border-[#E7BDB8] bg-[#EFEEEB] text-[#BA0013]"
+                animate={journeySectionInView ? { borderColor: "#BA0013" } : { borderColor: "#E7BDB8" }}
+                transition={{ delay: 2.35, duration: 0.45 }}
+              >
                 <Settings size={30} strokeWidth={2.5} />
-              </div>
+              </motion.div>
               <h3 className="mb-3 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
-                Maintenance
+                Post-Installation Support
               </h3>
               <p className="max-w-66 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                Upto 100% Maintenance and cleaning support.
+                Reliable support for long-term performance.
               </p>
             </div>
           </div>
@@ -522,52 +882,78 @@ export default function Index() {
     </section>
 
     {/* PM Surya Ghar */}
-    <section id="pm-surya-ghar" className="bg-[#faf9f7] py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-[1fr_1.12fr] lg:px-0">
+    <section id="pm-surya-ghar" ref={pmSectionRef} className="relative overflow-hidden bg-[#faf9f7] py-24">
+      <motion.div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-20 bottom-28 z-0 bg-[#341010]"
+        initial={{ x: "0%" }}
+        animate={pmSectionInView ? { x: "100%" } : { x: "0%" }}
+        transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}
+      />
+
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-[1fr_1.12fr] lg:px-0">
         <div className="mb-28">
-          <p className="mb-6 text-[16px] font-bold uppercase tracking-[5px] text-[#93000D]">
-            Subsidy
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -72 }}
+            animate={pmSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -72 }}
+            transition={{ delay: 0.85, duration: 0.75, ease: "easeOut" }}
+          >
+            <p className="mb-6 text-[16px] font-bold uppercase tracking-[5px] text-[#93000D]">
+              Subsidy
+            </p>
 
-          <h2 className="mb-8 text-[52px] font-bold leading-[1.18] text-[#3b0508] md:text-[40px]">
-            <span className="text-[#93000D]">PM Surya Ghar:</span>
-            <br />
-            <span className="text-[#410002]">Muft Bijli Yojana</span>
-          </h2>
+            <h2 className="mb-8 text-[52px] font-bold leading-[1.28] text-[#3b0508] md:text-[40px]">
+              <span className="text-[#93000D]">Empanellad with PM Surya Ghar:</span>
+              <span className="text-[#410002]"> Muft Bijli Yojana</span>
+            </h2>
 
-          <p className="mb-8 max-w-180 text-[18px] leading-[1.45] text-[#1A1C1A]">
-            Avail significant government subsidies and generate up to 300
-            units of free electricity every month. ShashWatt Energy is an
-            authorized vendor for complete subsidy processing.
-          </p>
+            <p className="mb-8 max-w-180 text-[18px] leading-[1.45] text-[#1A1C1A]">
+              we handle paperworks  Lysining, commissioning, subsidy applications  loan application.
+            </p>
+          </motion.div>
 
           <div className="space-y-4">
-            <div className="flex items-center gap-6 text-[#410002]">
+            <motion.div
+              className="flex items-center gap-6 text-[#410002]"
+              initial={{ opacity: 0, x: -40 }}
+              animate={pmSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+              transition={{ delay: 1.15, duration: 0.55, ease: "easeOut" }}
+            >
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-3 border-[#4a090b]">
                 <Check size={14} strokeWidth={3} />
               </span>
               <p className="text-[16px] leading-tight">
                 Direct Benefit Transfer to your account
               </p>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-6 text-[#410002]">
+            <motion.div
+              className="flex items-center gap-6 text-[#410002]"
+              initial={{ opacity: 0, x: -40 }}
+              animate={pmSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+              transition={{ delay: 1.35, duration: 0.55, ease: "easeOut" }}
+            >
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-3 border-[#4a090b]">
                 <Check size={14} strokeWidth={3} />
               </span>
               <p className="text-[16px] leading-tight">
                 Authorized solar modules only
               </p>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-6 text-[#410002]">
+            <motion.div
+              className="flex items-center gap-6 text-[#410002]"
+              initial={{ opacity: 0, x: -40 }}
+              animate={pmSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+              transition={{ delay: 1.55, duration: 0.55, ease: "easeOut" }}
+            >
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-3 border-[#4a090b]">
                 <Check size={14} strokeWidth={3} />
               </span>
               <p className="text-[16px] leading-tight">
                 End-to-end documentation assistance
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -591,31 +977,60 @@ export default function Index() {
     </section>
 
     {/* Creating Real Environmental Impact */}
-    <section className="bg-[#faf9f7] py-0">
+    <section ref={impactSectionRef} className="relative isolate bg-[#faf9f7] py-16">
       <div className="mx-auto max-w-[1748px] px-0">
         <div className="mx-auto pt-5 text-center">
-          <h2 className="mb-10 px-6 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-            Creating Real <span className="text-[#93000D]">Environmental Impact</span>
+          <h2
+            aria-label={impactHeadingText}
+            className="relative z-10 mx-auto mb-10 min-h-22 px-6 text-[34px] font-bold leading-tight text-[#1A1C1A] md:min-h-12 md:text-[40px]"
+          >
+            {impactHeadingPrefix.slice(0, impactTypedLength)}
+            <span className="text-[#93000D]">
+              {impactHeadingHighlight.slice(
+                0,
+                Math.max(impactTypedLength - impactHeadingPrefix.length, 0),
+              )}
+            </span>
+            {impactTypedLength < impactHeadingText.length && (
+              <span className="ml-1 inline-block h-9 w-0.5 translate-y-1 bg-[#93000D] md:h-10" />
+            )}
           </h2>
-          <p className="mx-auto max-w-170 px-6 text-[20px] font-normal leading-[1.45] text-[#1A1C1A] md:text-[18px]">
-            ShashWatt has achieved <span className="font-bold text-[#007100]">2,000+ KW</span> of solar installations, generated
+          <motion.p
+            className="relative z-10 mx-auto max-w-170 px-6 text-[20px] font-normal leading-[1.45] text-[#1A1C1A] md:text-[18px]"
+            initial={{ opacity: 0, x: -72 }}
+            animate={
+              impactTypedLength >= impactHeadingText.length
+                ? { opacity: 1, x: 0 }
+                : { opacity: 0, x: -72 }
+            }
+            transition={{ duration: 1.05, ease: "easeOut" }}
+          >
+            ShashWatt has achieved <span className="font-bold text-[#007100]">3,000+ kW</span> of solar installations, generated
             over <span className="font-bold text-[#007100]">175,000+ kWh</span> of clean energy, and helped save around
-            <span className="font-bold text-[#007100]">125,000+</span> tress
+            <span className="font-bold text-[#007100]">135,000+</span> tress
             planted through its solar energy solutions.
-          </p>
+          </motion.p>
 
           <img
             src="/impact.png"
             alt="Solar panels with wind turbines and greenery"
-            className="block h-full w-full object-fill md:h-full md:-mt-60"
+            className="relative z-0 block h-full w-full object-fill md:h-full md:-mt-60"
           />
         </div>
       </div>
     </section>
 
     {/* Built with Precision */}
-    <section className="bg-[#faf9f7] py-16 md:py-0 lg:pb-24 lg:-mt-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-0">
+    <section ref={precisionSectionRef} className="relative overflow-hidden bg-[#faf9f7] py-16 md:pb-0 md:pt-20 lg:pb-12 lg:pt-28 lg:-mt-28">
+      <motion.div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 bg-[#341010]"
+        initial={{ opacity: 1 }}
+        animate={precisionSectionInView ? { opacity: 0 } : { opacity: 1 }}
+        transition={{ duration: 2.35, ease: "easeInOut" }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-0">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div>
             <h2 className="mb-6 text-[40px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
@@ -632,7 +1047,7 @@ export default function Index() {
           <div className="flex items-start justify-start gap-9 pt-3 text-center md:justify-end md:pt-18">
             <div>
               <p className="mb-2 text-[16px] leading-none text-[#BA0013]">
-                25Y
+                30Y
               </p>
               <p className="text-[16px] leading-tight text-[#5D3F3C]">
                 Warranty
@@ -651,32 +1066,44 @@ export default function Index() {
         </div>
 
         <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <img
+          <motion.img
             src="/precision1.jpg"
             alt="Solar cabling detail"
             className="h-67 w-full rounded-lg object-cover"
+            initial={{ opacity: 0, x: "115%", y: 0, scale: 0.96 }}
+            animate={precisionSectionInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: "115%", y: 0, scale: 0.96 }}
+            transition={{ delay: 4.05, duration: 1.45, ease: "easeOut" }}
           />
-          <img
-            src="/precision2.jpg"
+          <motion.img
+            src="/precision2.jpeg"
             alt="Solar inverter display"
             className="h-67 w-full rounded-lg object-cover"
+            initial={{ opacity: 0, x: "calc(50% + 1rem)", y: 0, scale: 0.96 }}
+            animate={precisionSectionInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: "calc(50% + 1rem)", y: 0, scale: 0.96 }}
+            transition={{ delay: 2.45, duration: 1.35, ease: "easeOut" }}
           />
-          <img
+          <motion.img
             src="/precision3.jpg"
             alt="Rooftop solar panel installation"
             className="h-67 w-full rounded-lg object-cover"
+            initial={{ opacity: 0, x: "-115%", y: 0, scale: 0.96 }}
+            animate={precisionSectionInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: "-115%", y: 0, scale: 0.96 }}
+            transition={{ delay: 3.35, duration: 1.45, ease: "easeOut" }}
           />
-          <img
+          <motion.img
             src="/precision4.jpg"
             alt="Solar mounting hardware"
             className="h-67 w-full rounded-lg object-cover"
+            initial={{ opacity: 0, x: "-115%", y: 0, scale: 0.96 }}
+            animate={precisionSectionInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: "-115%", y: 0, scale: 0.96 }}
+            transition={{ delay: 4.7, duration: 1.5, ease: "easeOut" }}
           />
         </div>
       </div>
     </section>
 
     {/* Our Partners */}
-    <section className="bg-white py-16">
+    <section className="bg-white py-24">
       <style>{`
         @keyframes partners-marquee {
           from {
@@ -731,20 +1158,33 @@ export default function Index() {
         <div className="relative mt-18">
           <div className="absolute left-4 right-4 top-0 hidden h-px bg-[#FAF9F6] md:block" />
 
-          <div className="grid gap-10 md:grid-cols-4 md:gap-9">
-            {livingSpaces.map(({ title, desc, Icon }) => (
-              <div key={title} className="relative pt-0">
+          <div className="grid gap-10 md:grid-cols-5 md:gap-6">
+            {livingSpaces.map(({ title, desc, image, Icon }) => (
+              <div key={title} className="group relative pt-0">
                 <div className="absolute -top-10 -left-8 z-10 flex h-17.5 w-17.5 items-center justify-center rounded-full bg-[#BA00131A] text-[#BA0013]">
                   <Icon size={27} strokeWidth={2.5} />
                 </div>
 
-                <div className="flex min-h-65 flex-col items-center justify-center rounded-lg border border-[#E8E0DC] bg-[#FAF9F6] px-8 py-12 text-center">
-                  <h3 className="mb-6 whitespace-pre-line text-[24px] font-semibold leading-[1.18] text-[#1A1C1A]">
-                    {title}
-                  </h3>
-                  <p className="max-w-52 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                    {desc}
-                  </p>
+                <div className="relative flex min-h-65 overflow-hidden rounded-lg border border-[#E8E0DC] bg-[#FAF9F6] px-8 py-12 text-center shadow-sm transition duration-700 group-hover:-translate-y-2 group-hover:border-[#BA0013]/30 group-hover:bg-white group-hover:shadow-[0_18px_45px_rgba(186,0,19,0.14)]">
+                  <div className="flex w-full flex-col items-center justify-center transition duration-700 ease-out group-hover:-translate-y-8 group-hover:opacity-0">
+                    <h3 className="mb-6 whitespace-pre-line text-[24px] font-semibold leading-[1.18] text-[#1A1C1A]">
+                      {title}
+                    </h3>
+                    <p className="max-w-52 text-[16px] leading-[1.45] text-[#5D3F3C]">
+                      {desc}
+                    </p>
+                  </div>
+
+                  <div className="absolute inset-0 flex -translate-y-7 flex-col items-center justify-center px-5 opacity-0 transition duration-700 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                    <img
+                      src={image}
+                      alt={`${title.replace(/\n/g, " ")} solar solution`}
+                      className="mb-5 h-30 w-full rounded-md object-cover shadow-[0_10px_24px_rgba(26,28,26,0.12)] transition duration-700 group-hover:scale-[1.03]"
+                    />
+                    <h3 className="whitespace-pre-line text-[20px] font-semibold leading-[1.18] text-[#BA0013]">
+                      {title}
+                    </h3>
+                  </div>
                 </div>
               </div>
             ))}
@@ -801,7 +1241,7 @@ export default function Index() {
 
         <div className="mt-15 text-center">
           <Link
-            to="#faq"
+            to="/faq"
             className="inline-flex items-center gap-2 rounded-md border border-[#BA0013] px-6 py-3 text-[16px] font-normal text-[#BA0013] transition hover:bg-[#BA0013] hover:text-white"
           >
             View All FAQs
@@ -834,35 +1274,35 @@ export default function Index() {
           {blogPosts.map((post) => (
             <article
               key={post.title}
-              className="overflow-hidden rounded-lg bg-white shadow-[0_22px_55px_rgba(39,31,25,0.10)]"
+              className="group overflow-hidden rounded-lg bg-white shadow-[0_22px_55px_rgba(39,31,25,0.10)] transition-all duration-700 ease-out hover:-translate-y-2 hover:bg-[#3B0B0B] hover:shadow-[0_26px_60px_rgba(59,11,11,0.24)]"
             >
               <img
                 src={post.image}
                 alt={post.title}
-                className="h-49 w-full object-cover"
+                className="h-49 w-full object-cover transition duration-700 ease-out group-hover:brightness-95"
               />
 
               <div className="px-12 py-12">
-                <p className="mb-6 text-[16px] uppercase leading-none text-[#BA0013]">
+                <p className="mb-6 text-[16px] uppercase leading-none text-[#BA0013] transition duration-700 group-hover:text-[#E7BDB8]">
                   {post.category}
                 </p>
 
-                <h3 className="mb-6 text-[24px] font-semibold leading-[1.18] text-[#1A1C1A]">
+                <h3 className="mb-6 text-[24px] font-semibold leading-[1.18] text-[#1A1C1A] transition duration-700 group-hover:text-white">
                   {post.title}
                 </h3>
 
-                <p className="mb-10 text-[16px] leading-[1.45] text-[#5D3F3C]">
+                <p className="mb-10 text-[16px] leading-[1.45] text-[#5D3F3C] transition duration-700 group-hover:text-[#F4E8E6]">
                   {post.desc}
                 </p>
 
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-[14px] font-semibold text-[#5D3F3C]">
+                <div className="flex items-center justify-between gap-4 border-t border-transparent pt-0 transition-all duration-700 group-hover:border-[#E7BDB8]/30 group-hover:pt-5">
+                  <p className="text-[14px] font-semibold text-[#5D3F3C] transition duration-700 group-hover:text-white">
                     {post.date}
                   </p>
 
                   <Link
-                    to="#blog"
-                    className="inline-flex items-center gap-2 text-[16px] text-[#BA0013]"
+                    to="/blog"
+                    className="inline-flex items-center gap-2 text-[16px] text-[#BA0013] transition duration-700 group-hover:text-[#FF2D3F]"
                   >
                     Read Article
                     <ArrowRight size={18} />
@@ -875,7 +1315,7 @@ export default function Index() {
 
         <div className="mt-16 text-center">
           <Link
-            to="#blog"
+            to="/blog"
             className="inline-flex items-center justify-center rounded-md border border-[#BA0013] px-9 py-4 text-[16px] font-normal text-[#BA0013] transition hover:bg-[#BA0013] hover:text-white"
           >
             View All Blogs
@@ -903,23 +1343,38 @@ export default function Index() {
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${activeStory * 100}%)` }}
           >
-            {customerStories.map((story) => (
-              <div key={story.name} className="w-full shrink-0">
-                <div className="rounded-2xl bg-white px-10 py-18 text-center shadow-[0_24px_45px_rgba(39,31,25,0.18)]">
-                  <h3 className="text-[24px] font-bold leading-tight text-[#1A1C1A]">
-                    {story.name}
-                  </h3>
+            {customerStories.map((story, index) => {
+              const isRedCard = index % 2 === 1;
 
-                  <p className="mt-3 text-[16px] leading-tight text-[#5D3F3C]">
-                    {story.system}
-                  </p>
+              return (
+                <div key={story.name} className="w-full shrink-0">
+                  <div
+                    className={`rounded-2xl px-10 py-18 text-center shadow-[0_24px_45px_rgba(39,31,25,0.18)] transition duration-500 ${isRedCard
+                      ? "bg-[#93000D] text-white"
+                      : "bg-white text-[#1A1C1A]"
+                      }`}
+                  >
+                    <h3 className="text-[24px] font-bold leading-tight">
+                      {story.name}
+                    </h3>
 
-                  <p className="mx-auto mt-8 max-w-160 text-[18px] italic leading-[1.55] text-[#1A1C1A]">
-                    "{story.quote}"
-                  </p>
+                    <p
+                      className={`mt-3 text-[16px] leading-tight ${isRedCard ? "text-[#F4E8E6]" : "text-[#5D3F3C]"
+                        }`}
+                    >
+                      {story.system}
+                    </p>
+
+                    <p
+                      className={`mx-auto mt-8 max-w-160 text-[18px] italic leading-[1.55] ${isRedCard ? "text-white" : "text-[#1A1C1A]"
+                        }`}
+                    >
+                      "{story.quote}"
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -930,11 +1385,13 @@ export default function Index() {
               type="button"
               onClick={() => setActiveStory(index)}
               aria-label={`Show ${story.name}`}
+              aria-current={activeStory === index ? "true" : undefined}
               className={`h-2.5 w-2.5 rounded-full transition ${activeStory === index ? "bg-[#BA0013]" : "bg-[#E7BDB8]"
                 }`}
             />
           ))}
         </div>
+
       </div>
     </section>
 
@@ -955,14 +1412,14 @@ export default function Index() {
 
           <div className="mt-9 flex flex-wrap justify-center gap-5">
             <Link
-              to="#contact"
+              to="/contact"
               className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
             >
               Contact Us
             </Link>
 
             <Link
-              to="#calculator"
+              to="/calculator"
               className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
             >
               Calculate Savings
@@ -1024,7 +1481,6 @@ export default function Index() {
               <br />
               Yojana
             </Link>
-            <Link to="/calculator">Calculator</Link>
           </div>
         </div>
 
@@ -1047,18 +1503,28 @@ export default function Index() {
           <div className="flex flex-col gap-5 text-[16px] leading-[1.45] text-[#FAF9F6]">
             <div className="flex gap-4">
               <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-              <p>+917829575683 / 9972975683</p>
+              <p>
+                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                  +917619575683
+                </a>{" "}
+                /{" "}
+                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                  9972975683
+                </a>
+              </p>
             </div>
             <div className="flex gap-4">
               <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
-              <p>support@shashwatt.com</p>
+              <a href="mailto:connect@shashwatt.com" className="hover:underline focus-visible:underline active:underline">
+                connect@shashwatt.com
+              </a>
             </div>
             <div className="flex gap-4">
               <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
               <p>
-                C-512, Industrial Estate, Gokul
+                C-512, 7th cross, Industrial Estate, Gokul
                 <br />
-                Road, Hubballi - 580030
+                Road, Hubballi - 580032
               </p>
             </div>
           </div>
@@ -1070,5 +1536,6 @@ export default function Index() {
       </div>
     </footer>
   </main>
+  </LayoutGroup>
   );
 }
