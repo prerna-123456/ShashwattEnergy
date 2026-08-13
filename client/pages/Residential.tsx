@@ -26,16 +26,8 @@ export default function Residential() {
             <img
               src="/logo.png"
               alt="Shashwatt Energy"
-              className="h-14 w-auto md:-ml-4"
+              className="h-22 w-auto -ml-2 md:-ml-3"
             />
-
-            <div className="flex flex-col leading-none">
-              <img
-                src="/logo-text.png"
-                alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-4 md:mt-2"
-              />
-            </div>
           </Link>
 
           <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
@@ -80,7 +72,7 @@ export default function Residential() {
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
+        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
           <div className="max-w-165">
             <span className="inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium uppercase leading-none tracking-normal text-[#341010]">
               Raising Homes
@@ -93,7 +85,7 @@ export default function Residential() {
 
             <p className="mt-7 max-w-150 text-[18px] font-medium leading-[1.55] text-white md:text-[18px]">
               Experience the future of residential living where technology meets
-              architecture for sustainable autonomy. Empowering Indian homes <br />
+              architecture for sustainable autonomy. Empowering Indian homes
               with high-performance solar infrastructure.
             </p>
           </div>
@@ -102,7 +94,7 @@ export default function Residential() {
 
       {/* Portfolio Section */}
       <section className="bg-[#FAF9F6] py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-[1fr_1.08fr] lg:px-0">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-8 md:grid-cols-[1fr_1.08fr] lg:px-0">
           <div className="max-w-145">
             <p className="mb-5 text-[14px] font-semibold uppercase tracking-[2px] text-[#BA0013]">
               Portfolio
@@ -112,14 +104,13 @@ export default function Residential() {
               Projects -- Solar
               <br />
               installations shaped around
-              <br />
               real homes.
             </h2>
 
             <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-[#5D3F3C]">
               Every rooftop is a unique engineering challenge. From the orientation
               of the sun to the architectural integrity of the structure, we
-              customize each system to maximize yield without compromising <br />your
+              customize each system to maximize yield without compromising your
               home's aesthetic value. We deliver end-to-end engineering excellence
               for a sustainable future.
             </p>
@@ -145,8 +136,8 @@ export default function Residential() {
       </section>
 
       {/* Featured Project Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="mb-12 flex flex-wrap items-center gap-4">
             <button
               type="button"
@@ -216,7 +207,7 @@ export default function Residential() {
               </div>
 
               <p className="mt-11 max-w-94 text-[16px] leading-[1.55] text-[#5D3F3C]">
-                A grid-connected solar PV system for a luxury villa, using TOPCON half-cut modules for high efficiency and reliable performance in varying light conditions.
+                A grid-connected solar PV system for a luxury villa, using TOPCon half-cut modules for high efficiency and reliable performance in varying light conditions.
               </p>
 
               {/* <Link
@@ -231,8 +222,8 @@ export default function Residential() {
       </section>
 
       {/* Completed Home Projects Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <h2 className="mb-12 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Completed Home Projects
           </h2>
@@ -332,8 +323,8 @@ export default function Residential() {
       </section>
 
       {/* Solar Solutions Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="text-center">
             <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               Solar Solutions <span className="text-[#BA0013]">for Every Home</span>
@@ -367,7 +358,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    String inverter based solar system with TOPCON Half cut
+                    String inverter based solar system with TOPCon Half cut
                     panels with efficiency up to 21%
                   </p>
                 </div>
@@ -382,14 +373,14 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Warranty - 25 years to 30 years on panels and 5 years on inverter
+                    Warranty - 30 years on panels and 10 years on inverter
                   </p>
                 </div>
 
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Wifi based monitoring system to monitor solar generation
+                    Wi-Fi based monitoring system to monitor solar generation
                   </p>
                 </div>
               </div>
@@ -400,7 +391,7 @@ export default function Residential() {
 
       {/* Premium Solar Solution Section */}
       <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="mx-auto grid max-w-325 overflow-hidden rounded-2xl bg-white shadow-[0_16px_40px_rgba(39,31,25,0.16)] md:grid-cols-[1.03fr_1fr]">
             <div className="flex flex-col justify-center px-8 py-12 md:px-16">
               <h3 className="text-[32px] font-bold leading-tight text-[#1A1C1A]">
@@ -416,7 +407,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Microinverter based solar system with TopCON N-Type panels
+                    Microinverters based solar system with TOPCon N-Type panels
                     with efficiency up to 24%
                   </p>
                 </div>
@@ -447,8 +438,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Advanced energy monitoring system with monitoring your home
-                    consumption
+                    Advanced energy monitoring system for monitoring your home consumption
                   </p>
                 </div>
 
@@ -471,161 +461,588 @@ export default function Residential() {
       </section>
 
       {/* Solar Package Comparison Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
-          <div className="overflow-x-auto rounded-b-lg bg-white shadow-[0_16px_36px_rgba(39,31,25,0.12)] md:overflow-hidden">
-            <div className="grid min-w-200 grid-cols-[0.62fr_0.95fr_1.5fr] bg-[#E7BDB81A] text-[16px] font-bold text-[#1A1C1A]">
-              <div className="border-r border-[#00000080] px-20 py-5">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-0">
+
+          {/* ========================================================= */}
+          {/* DESKTOP TABLE — EXACTLY YOUR EXISTING DESIGN              */}
+          {/* ========================================================= */}
+
+          <div className="hidden md:block">
+            <div className="overflow-hidden rounded-b-lg bg-white shadow-[0_16px_36px_rgba(39,31,25,0.12)]">
+
+              {/* Header */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] bg-[#E7BDB81A] text-[16px] font-bold text-[#1A1C1A]">
+
+                <div className="border-r border-[#00000080] px-20 py-5">
+                  Specifications
+                </div>
+
+                <div className="border-r border-[#00000080] px-20 py-5 text-[#BA0013]">
+                  Standard
+                </div>
+
+                <div className="px-44 py-5 text-[#5D3F3C]">
+                  Premium
+                </div>
+              </div>
+
+              {/* Panel Type */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Panel Type
+                </div>
+
+                <div className="px-20 py-6">
+                  <span className="font-bold">TOPCon</span> (Efficiency ~ 20%)
+                  <br />
+                  Adani
+                </div>
+
+                <div className="px-44 py-6">
+                  <span className="font-bold">TOPCon</span> (Efficiency ~ 23%)
+                  <br />
+                  Adani
+                </div>
+              </div>
+
+              {/* Max Output */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Max Output
+                </div>
+
+                <div className="px-20 py-6">
+                  620 watts
+                </div>
+
+                <div className="px-44 py-6">
+                  620 watts
+                </div>
+              </div>
+
+              {/* Panel Warranty */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Panel Warranty
+                </div>
+
+                <div className="px-20 py-6">
+                  Performance warranty - <span className="font-bold">30 Years</span>
+                  <br />
+                  Product warranty - 12 years
+                </div>
+
+                <div className="px-44 py-6">
+                  Performance warranty - <span className="font-bold">30 Years</span>
+                  <br />
+                  Product warranty - 12 years
+                </div>
+              </div>
+
+              {/* Inverter */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Inverter
+                </div>
+
+                <div className="px-20 py-6">
+                  <span className="font-bold">Feston / Deye</span> (String Inverter)
+                </div>
+
+                <div className="px-44 py-6">
+                  <span className="font-bold italic">Enphase</span> (Microinverter)
+                </div>
+              </div>
+
+              {/* Inverter Warranty */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Inverter Warranty
+                </div>
+
+                <div className="px-20 py-6">
+                  10 years
+                </div>
+
+                <div className="px-44 py-6">
+                  <span className="font-bold">25 years</span>
+                </div>
+              </div>
+
+              {/* Inverter Lifespan */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Inverter Lifespan
+                </div>
+
+                <div className="px-20 py-6">
+                  12 years
+                </div>
+
+                <div className="px-44 py-6">
+                  <span className="font-bold">30 years</span>
+                </div>
+              </div>
+
+              {/* Average Generation */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Average generation per kW
+                </div>
+
+                <div className="px-20 py-6">
+                  up to 120 units per month
+                </div>
+
+                <div className="px-44 py-6">
+                  up to 140 units per month
+                </div>
+              </div>
+
+              {/* Own Consumption */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Own Consumption Monitoring
+                </div>
+
+                <div className="px-20 py-6">
+                  No
+                </div>
+
+                <div className="px-44 py-6">
+                  Yes
+                </div>
+              </div>
+
+              {/* Redundancy */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Redundancy
+                </div>
+
+                <div className="px-20 py-6">
+                  If one panel fails, generation stops completely
+                </div>
+
+                <div className="px-44 py-6">
+                  If one panel fails, others continue generation
+                </div>
+              </div>
+
+              {/* Future Expansion */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Future Expansion
+                </div>
+
+                <div className="px-20 py-6">
+                  Inverter needs to be changed
+                </div>
+
+                <div className="px-44 py-6">
+                  Only panels can be added
+                </div>
+              </div>
+
+              {/* Structure */}
+              <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] text-[14px] text-[#1A1C1A]">
+
+                <div className="px-20 py-6 font-semibold">
+                  Structure
+                </div>
+
+                <div className="px-20 py-6">
+                  <span className="font-bold">GI Structure 6 ft</span>
+                </div>
+
+                <div className="px-44 py-6">
+                  <span className="font-bold">GI Structure 6 ft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ========================================================= */}
+          {/* MOBILE DESIGN — CARD STYLE                                */}
+          {/* ========================================================= */}
+
+          <div className="md:hidden">
+
+            {/* Mobile Heading */}
+            <div className="mb-5 rounded-lg bg-white px-5 py-4 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <p className="text-[18px] font-bold text-[#1A1C1A]">
                 Specifications
-              </div>
-              <div className="border-r border-[#00000080] px-20 py-5 text-[#BA0013]">
-                Standard
-              </div>
-              <div className="px-44 py-5 text-[#5D3F3C]">
-                Premium
+              </p>
+
+              <div className="mt-3 flex gap-3">
+
+                <div className="rounded-full bg-[#E7BDB81A] px-4 py-2 text-[13px] font-bold text-[#BA0013]">
+                  Standard
+                </div>
+
+                <div className="rounded-full bg-[#E7BDB81A] px-4 py-2 text-[13px] font-bold text-[#5D3F3C]">
+                  Premium
+                </div>
               </div>
             </div>
 
-            <div className="overflow-x-auto">
-              <div className="min-w-200">
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Panel Type
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Panel Type */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Panel Type
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     <span className="font-bold">TopCON</span> (Efficiency ~ 20%)
                     <br />
                     Adani
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     <span className="font-bold">TopCON</span> (Efficiency ~ 23%)
                     <br />
                     Adani
-                  </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Max Output */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Max Output
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
+                    620 watts
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Max Output
-                  </div>
-                  <div className="px-20 py-6">
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     620 watts
-                  </div>
-                  <div className="px-44 py-6">
-                    620 watts
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Panel Warranty
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Panel Warranty */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Panel Warranty
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     Performance warranty - <span className="font-bold">30 Years</span>
                     <br />
                     Product warranty - 12 years
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     Performance warranty - <span className="font-bold">30 Years</span>
                     <br />
                     Product warranty - 12 years
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Inverter
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Inverter */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Inverter
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold">Feston / Deye</span> (String Inverter)
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold italic">Enphase</span> (Microinverter)
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Inverter Warranty
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Inverter Warranty */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Inverter Warranty
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     10 years
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold">25 years</span>
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Inverter Lifespan
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Inverter Lifespan */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Inverter Lifespan
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     12 years
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold">30 years</span>
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Average generation per kW
-                  </div>
-                  <div className="px-20 py-6">
+            {/* Average Generation */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Average generation per kW
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     up to 120 units per month
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     up to 140 units per month
-                  </div>
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Own Consumption Monitoring
-                  </div>
-                  <div className="px-20 py-6">
+              </div>
+
+            </div>
+
+
+            {/* Own Consumption Monitoring */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Own Consumption Monitoring
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     No
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+                  <p className="text-[14px] text-[#5D3F3C]">
                     Yes
-                  </div>
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Redundancy
-                  </div>
-                  <div className="px-20 py-6">
+              </div>
+
+            </div>
+
+
+            {/* Redundancy */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Redundancy
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     If one panel fails, generation stops completely
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     If one panel fails, others continue generation
-                  </div>
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Future Expansion
-                  </div>
-                  <div className="px-20 py-6">
+              </div>
+
+            </div>
+
+
+            {/* Future Expansion */}
+            <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Future Expansion
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
                     Inverter needs to be changed
-                  </div>
-                  <div className="px-44 py-6">
-                    Only panels can be added
-                  </div>
+                  </p>
                 </div>
 
-                <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] text-[14px] text-[#1A1C1A]">
-                  <div className="px-20 py-6 font-semibold">
-                    Structure
-                  </div>
-                  <div className="px-20 py-6">
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] leading-normal text-[#5D3F3C]">
+                    Only panels can be added
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* Structure */}
+            <div className="rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
+
+              <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
+                Structure
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#BA0013]">
+                    Standard
+                  </p>
+
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold">GI Structure 6 ft</span>
-                  </div>
-                  <div className="px-44 py-6">
+                  </p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1px] text-[#5D3F3C]">
+                    Premium
+                  </p>
+
+                  <p className="text-[14px] text-[#5D3F3C]">
                     <span className="font-bold">GI Structure 6 ft</span>
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -634,8 +1051,8 @@ export default function Residential() {
       </section>
 
       {/* Applications Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="text-center">
             <p className="mb-4 text-[14px] font-semibold uppercase tracking-[2px] text-[#BA0013]">
               Applications
@@ -645,8 +1062,8 @@ export default function Residential() {
               Transform your Space with solar power
             </h2>
 
-            <p className="mx-auto mt-4 max-w-125 text-[18px] leading-[1.55] text-[#5D3F3C]">
-              Solar panels with latest technology combined with micro inverters for
+            <p className="mx-auto mt-4 max-w-135 text-[18px] leading-[1.55] text-[#5D3F3C]">
+              Solar panels with the latest technology combined with micro inverters for
               higher generation and long lasting systems
             </p>
           </div>
@@ -692,8 +1109,8 @@ export default function Residential() {
       </section>
 
       {/* Solar Options Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <h2 className="mb-16 text-center text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Explore Your Solar Options
           </h2>
@@ -731,9 +1148,7 @@ export default function Residential() {
                   PM Surya Ghar
                 </span>
                 <span className="mt-3 block max-w-73 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                  Add subsidy for PM Surya Ghar: 
-                    1kW - 30,000, 2kW - 60,000, 3kW - 78,000
-
+                  1 kW – ₹30,000, 2 kW – ₹60,000, 3 kW – ₹78,000
                 </span>
               </span>
             </Link>
@@ -743,7 +1158,7 @@ export default function Residential() {
 
       {/* Solar Switch CTA */}
       <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
-        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-6 lg:px-0">
+        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
               Ready to Make the
@@ -777,21 +1192,14 @@ export default function Residential() {
 
       {/* Footer */}
       <footer className="bg-[#341010] text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+        <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
           <div>
             <Link to="/" className="inline-flex items-center">
               <img
                 src="/logo.png"
                 alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-6"
+                className="h-20 w-auto -ml-3 md:-ml-3"
               />
-              <span className="flex flex-col leading-none">
-                <img
-                  src="/logo-text.png"
-                  alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-4 md:mt-2"
-                />
-              </span>
             </Link>
 
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -827,7 +1235,6 @@ export default function Residential() {
                 <br />
                 Yojana
               </Link>
-              <Link to="/calculator">Calculator</Link>
             </div>
           </div>
 
@@ -839,7 +1246,7 @@ export default function Residential() {
               <Link to="/about">About Us</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/blog">Blogs</Link>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/faq">FAQs</Link>
             </div>
           </div>
 
@@ -851,14 +1258,14 @@ export default function Residential() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                    +917619575683
+                  </a>{" "}
+                  /{" "}
+                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                    9972975683
+                  </a>
+                </p>
               </div>
               <div className="flex gap-4">
                 <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -869,9 +1276,9 @@ export default function Residential() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, Industrial Estate, Gokul
+                  C-512, 7th cross, Industrial Estate, Gokul
                   <br />
-                  Road, Hubballi - 580030
+                  Road, Hubballi - 580032
                 </p>
               </div>
             </div>

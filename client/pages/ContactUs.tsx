@@ -50,9 +50,8 @@ function Reveal({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      } ${className}`}
+      className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        } ${className}`}
       style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
     >
       {children}
@@ -65,15 +64,33 @@ interface ContactDetail {
   label: string;
   value: string;
   extra?: string;
+  href?: string;
+  links?: { text: string; href: string }[];
+  external?: boolean;
 }
 
 const contactDetails: ContactDetail[] = [
-  { icon: Phone, label: "Call Us", value: "+91 7829575683 / +91 9972975683" },
-  { icon: Mail, label: "Email Us", value: "contact@shashwatt.com" },
+  {
+    icon: Phone,
+    label: "Call Us",
+    value: "+91 78295 75683 / +91 99729 75683",
+    links: [
+      { text: "+91 78295 75683", href: "tel:+917829575683" },
+      { text: "+91 99729 75683", href: "tel:+919972975683" },
+    ],
+  },
+  {
+    icon: Mail,
+    label: "Email Us",
+    value: "contact@shashwatt.com",
+    href: "mailto:contact@shashwatt.com",
+  },
   {
     icon: MapPin,
     label: "Visit Us",
-    value: "C-512, Industrial Estate, Gokul road, 7th Cross, Hubballi - 580032",
+    value: "C-512, Industrial Estate, Gokul Road, 7th Cross, Hubballi - 580032",
+    href: "https://www.google.com/maps/search/?api=1&query=C-512%2C%20Industrial%20Estate%2C%20Gokul%20Road%2C%207th%20Cross%2C%20Hubballi%20-%20580032",
+    external: true,
   },
   { icon: Clock, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 6:00 PM" },
 ];
@@ -115,58 +132,50 @@ export default function ContactUs() {
       <div className="bg-[#faf9f7] text-[#1A1C1A] antialiased">
 
         <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-                  <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
-                    <Link to="/" className="flex items-center">
-                      <img
-                        src="/logo.png"
-                        alt="Shashwatt Energy"
-                        className="h-14 w-auto md:-ml-4"
-                      />
-        
-                      <div className="flex flex-col leading-none">
-                        <img
-                          src="/logo-text.png"
-                          alt="Shashwatt Energy"
-                          className="h-14 w-auto md:-ml-4 md:mt-2"
-                        />
-                      </div>
-                    </Link>
-        
-                    <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
-                      <Link to="/" className="hover:text-white/80">Home</Link>
-                      <Link to="/residential" className="hover:text-white/80">Residential</Link>
-                      <Link to="/commercial" className="hover:text-white/80 ">Commercial</Link>
-                      <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
-                      <Link to="/about" className="hover:text-white/80">About Us</Link>
-                      <Link to="/projects" className="hover:text-white/80">Projects</Link>
-                      <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-                      <Link to="/blog" className="hover:text-white/80">Blog</Link>
-                      <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
-                    </div>
-        
-                    <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
-                      Contact Us
-                    </Link>
-        
-                    <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
-                  </div>
-                  {menuOpen &&
-                    <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden">
-                      <div className="flex flex-col gap-4 text-sm">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                        <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
-                        <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
-                        <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
-                        <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-                        <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                        <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                        <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-                        <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
-                        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
-                      </div>
-                    </div>
-                  }
-                </nav>
+          <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Shashwatt Energy"
+                className="h-22 w-auto -ml-2 md:-ml-3"
+              />
+            </Link>
+
+            <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
+              <Link to="/" className="hover:text-white/80">Home</Link>
+              <Link to="/residential" className="hover:text-white/80">Residential</Link>
+              <Link to="/commercial" className="hover:text-white/80 ">Commercial</Link>
+              <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
+              <Link to="/about" className="hover:text-white/80">About Us</Link>
+              <Link to="/projects" className="hover:text-white/80">Projects</Link>
+              <Link to="/faq" className="hover:text-white/80">FAQ</Link>
+              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
+            </div>
+
+            <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+              Contact Us
+            </Link>
+
+            <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
+          </div>
+          {menuOpen &&
+            <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden">
+              <div className="flex flex-col gap-4 text-sm">
+                <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+                <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
+                <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
+                <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
+                <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+                <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+              </div>
+            </div>
+          }
+        </nav>
         {/* ============ HERO ============ */}
         <section className="relative min-h-138.5 overflow-hidden bg-white bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5">
           <img
@@ -177,28 +186,25 @@ export default function ContactUs() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
-          <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
+          <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
             <div className="max-w-185">
               <span
-                className={`inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium uppercase leading-none tracking-normal text-[#341010] transition-all duration-700 ease-out ${
-                  heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
+                className={`inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium uppercase leading-none tracking-normal text-[#341010] transition-all duration-700 ease-out ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
               >
                 Contact Us
               </span>
               <h1
                 style={{ transitionDelay: heroIn ? "120ms" : "0ms" }}
-                className={`mt-8 text-[42px] font-bold leading-[1.05] tracking-normal text-white transition-all duration-700 ease-out sm:text-[56px] lg:text-[56px] ${
-                  heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
+                className={`mt-8 text-[42px] font-bold leading-[1.05] tracking-normal text-white transition-all duration-700 ease-out sm:text-[56px] lg:text-[56px] ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
               >
                 Let's Start Your Solar Journey
               </h1>
               <p
                 style={{ transitionDelay: heroIn ? "240ms" : "0ms" }}
-                className={`mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white transition-all duration-700 ease-out md:text-[18px] ${
-                  heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
+                className={`mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white transition-all duration-700 ease-out md:text-[18px] ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
               >
                 Whether you're exploring solar for your home, business, or community, our team is here
                 to help you find the right solution for your energy needs.
@@ -207,182 +213,216 @@ export default function ContactUs() {
           </div>
         </section>
 
-      {/* ============ CONTACT INFO BAR ============ */}
-      <section className="border-b border-[#dfddda] bg-[#faf9f7]">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 sm:divide-x divide-[#dfddda] divide-y sm:divide-y-0 px-6 md:px-0">
-          {contactDetails.map(({ icon: Icon, label, value }) => (
-            <div key={label} className="py-8 sm:py-10 px-0 sm:px-4 md:px-6 sm:first:pl-0">
-              <Icon size={18} className="text-[#BA0013] mb-3" />
-              <div className="text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-1.5">
-                {label}
-              </div>
-              <div className="font-bold text-sm text-[#1A1C1A] leading-snug">
-                {value}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ============ FORM ============ */}
-      <section className="bg-[#f1f0ee] pb-16 pt-2 md:pb-24 md:pt-20">
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-start px-6 md:px-0">
-          <Reveal>
-            <span className="block text-[16px] font-bold tracking-widest uppercase text-[#BA0013] mb-6">
-              Get in Touch
-            </span>
-            <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] mb-6">
-              Tell Us About Your Energy Needs
-            </h2>
-            <p className="text-[16px] leading-[1.45] text-[#5D3F3C] max-w-md mb-10">
-              Every building is unique. Share a few details about your property, and our technical
-              specialists will prepare a customized feasibility report and solar proposal for you
-              within 24 hours of survey.
-            </p>
-
-            <div className="space-y-5">
-              {promises.map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <div className="w-8 h-8 shrink-0 rounded-full bg-[#FCE3E7] text-[#BA0013] flex items-center justify-center">
-                    <Check size={16} />
-                  </div>
-                  <span className="font-semibold text-sm text-[#1A1C1A]">
-                    {item}
-                  </span>
+        {/* ============ CONTACT INFO BAR ============ */}
+        <section className="border-b border-[#dfddda] bg-[#faf9f7]">
+          <div className="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 sm:divide-x divide-[#dfddda] divide-y sm:divide-y-0 px-8 md:px-0">
+            {contactDetails.map(({ icon: Icon, label, value, href, links, external }) => (
+              <div key={label} className="py-8 sm:py-10 px-0 sm:px-4 md:px-6 sm:first:pl-0">
+                <Icon size={18} className="text-[#BA0013] mb-3" />
+                <div className="text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-1.5">
+                  {label}
                 </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={150}>
-            <div className="bg-white rounded-[8px] shadow-[0_14px_28px_rgba(26,28,26,0.14)] border border-[#dfddda] p-8">
-              {submitted ? (
-                <div className="py-10 text-center">
-                  <div className="w-12 h-12 mx-auto rounded-full bg-[#FCE3E7] text-[#BA0013] flex items-center justify-center mb-5">
-                    <Check size={22} />
-                  </div>
-                  <h3 className="font-bold text-lg text-[#1A1C1A] mb-2">Enquiry sent</h3>
-                  <p className="text-[#5D3F3C] text-sm">
-                    Thanks, {fullName.split(" ")[0] || "there"}. Our team will get back to you within 24 hours.
-                  </p>
+                <div className="font-bold text-sm text-[#1A1C1A] leading-snug">
+                  {links ? (
+                    links.map((link, index) => (
+                      <span key={link.href}>
+                        <a href={link.href} className="hover:underline focus-visible:underline active:underline">
+                          {link.text}
+                        </a>
+                        {index < links.length - 1 ? " / " : ""}
+                      </span>
+                    ))
+                  ) : href ? (
+                    <a
+                      href={href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className="hover:underline focus-visible:underline active:underline"
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    value
+                  )}
                 </div>
-              ) : (
-                <>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                    <div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ============ FORM ============ */}
+        <section className="bg-[#f1f0ee] pb-16 pt-16 md:pb-24 md:pt-20">
+          <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-start px-8 md:px-0">
+            <Reveal>
+              <span className="block text-[16px] font-bold tracking-widest uppercase text-[#BA0013] mb-6">
+                Get in Touch
+              </span>
+              <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] mb-6">
+                Tell Us About Your Energy Needs
+              </h2>
+              <p className="text-[16px] leading-[1.45] text-[#5D3F3C] max-w-md mb-10">
+                Every building is unique. Share a few details about your property, and our technical
+                specialists will prepare a customized feasibility report and solar proposal for you
+                within 24 hours of the survey.
+              </p>
+
+              <div className="space-y-5">
+                {promises.map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="w-8 h-8 shrink-0 rounded-full bg-[#FCE3E7] text-[#BA0013] flex items-center justify-center">
+                      <Check size={16} />
+                    </div>
+                    <span className="font-semibold text-sm text-[#1A1C1A]">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={150}>
+              <div className="bg-white rounded-[8px] shadow-[0_14px_28px_rgba(26,28,26,0.14)] border border-[#dfddda] p-8">
+                {submitted ? (
+                  <div className="py-10 text-center">
+                    <div className="w-12 h-12 mx-auto rounded-full bg-[#FCE3E7] text-[#BA0013] flex items-center justify-center mb-5">
+                      <Check size={22} />
+                    </div>
+                    <h3 className="font-bold text-lg text-[#1A1C1A] mb-2">Enquiry sent</h3>
+                    <p className="text-[#5D3F3C] text-sm">
+                      Thanks, {fullName.split(" ")[0] || "there"}. Our team will get back to you within 24 hours.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                      <div>
+                        <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          placeholder="John Doe"
+                          className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/20 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="john@example.com"
+                          className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/20 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                      <div>
+                        <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          placeholder="+91 00000 00000"
+                          className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/20 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
+                          Property Type
+                        </label>
+                        <div className="relative">
+                          <select
+                            value={propertyType}
+                            onChange={(e) => setPropertyType(e.target.value as "Residential" | "Commercial")}
+                            className="w-full appearance-none bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                          >
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                          </select>
+                          <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5D3F3C] pointer-events-none" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mb-5">
                       <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                        Full Name
+                        City
                       </label>
                       <input
                         type="text"
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
-                        placeholder="John Doe"
-                        className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                        placeholder="Pune"
+                        className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/20 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
                       />
                     </div>
-                    <div>
+
+                    <div className="mb-8">
                       <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                        Email Address
+                        Your Message
                       </label>
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="john@example.com"
-                        className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder="How can we help you?"
+                        rows={4}
+                        className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/20 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013] resize-none"
                       />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                    <div>
-                      <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+91 00000 00000"
-                        className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                        Property Type
-                      </label>
-                      <div className="relative">
-                        <select
-                          value={propertyType}
-                          onChange={(e) => setPropertyType(e.target.value as "Residential" | "Commercial")}
-                          className="w-full appearance-none bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
-                        >
-                          <option value="Residential">Residential</option>
-                          <option value="Commercial">Commercial</option>
-                        </select>
-                        <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5D3F3C] pointer-events-none" />
-                      </div>
-                    </div>
-                  </div>
+                    <button
+                      type="button"
+                      onClick={handleSubmit}
+                      className="w-full flex items-center justify-center gap-2 bg-[#BA0013] hover:bg-[#9f0010] transition-colors text-white font-semibold py-4 rounded-[8px]"
+                    >
+                      Send Enquiry <ArrowRight size={18} />
+                    </button>
+                  </>
+                )}
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-                  <div className="mb-5">
-                    <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
-                      placeholder="Pune"
-                      className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
-                    />
-                  </div>
+        {/* ============ MAP ============ */}
+        <section className="bg-[#faf9f7] py-16">
+          <div className="mx-auto max-w-7xl px-8 md:px-0">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=C-512%2C%20Industrial%20Estate%2C%20Gokul%20Road%2C%207th%20Cross%2C%20Hubballi%20-%20580032"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Shashwatt Energy address in Google Maps"
+              className="relative block h-90 w-full overflow-hidden rounded-xl border border-[#dfddda] shadow-[0_14px_28px_rgba(26,28,26,0.12)] md:h-110"
+            >
+              <iframe
+                title="Shashwatt Energy location map"
+                src="https://www.google.com/maps?q=C-512%2C%20Industrial%20Estate%2C%20Gokul%20Road%2C%207th%20Cross%2C%20Hubballi%20-%20580032&output=embed"
+                className="h-full w-full border-0 pointer-events-none"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </a>
+          </div>
+        </section>
 
-                  <div className="mb-8">
-                    <label className="block text-xs font-bold tracking-widest uppercase text-[#5D3F3C] mb-2">
-                      Your Message
-                    </label>
-                    <textarea
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="How can we help you?"
-                      rows={4}
-                      className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013] resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={handleSubmit}
-                    className="w-full flex items-center justify-center gap-2 bg-[#BA0013] hover:bg-[#9f0010] transition-colors text-white font-semibold py-4 rounded-[8px]"
-                  >
-                    Send Enquiry <ArrowRight size={18} />
-                  </button>
-                </>
-              )}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Footer */}
+        {/* Footer */}
         <footer className="bg-[#341010] text-white">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+          <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
             <div>
               <Link to="/" className="inline-flex items-center">
                 <img
                   src="/logo.png"
                   alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-6"
+                  className="h-20 w-auto -ml-3 md:-ml-3"
                 />
-                <span className="flex flex-col leading-none">
-                  <img
-                    src="/logo-text.png"
-                    alt="Shashwatt Energy"
-                    className="h-14 w-auto md:-ml-4 md:mt-2"
-                  />
-                </span>
               </Link>
 
               <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -418,7 +458,6 @@ export default function ContactUs() {
                   <br />
                   Yojana
                 </Link>
-                <Link to="/calculator">Calculator</Link>
               </div>
             </div>
 
@@ -430,7 +469,7 @@ export default function ContactUs() {
                 <Link to="/about">About Us</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/blog">Blogs</Link>
-                <Link to="/faq">FAQ</Link>
+                <Link to="/faq">FAQs</Link>
               </div>
             </div>
 
@@ -442,14 +481,14 @@ export default function ContactUs() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                      +917619575683
+                    </a>{" "}
+                    /{" "}
+                    <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                      9972975683
+                    </a>
+                  </p>
                 </div>
                 <div className="flex gap-4">
                   <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -460,9 +499,9 @@ export default function ContactUs() {
                 <div className="flex gap-4">
                   <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    C-512, Industrial Estate, Gokul
+                    C-512, 7th cross, Industrial Estate, Gokul
                     <br />
-                    Road, Hubballi - 580030
+                    Road, Hubballi - 580032
                   </p>
                 </div>
               </div>
@@ -473,7 +512,7 @@ export default function ContactUs() {
             All rights reserved. Designed by Spitel @2026
           </div>
         </footer>
-    </div>
+      </div>
     </main>
   );
 }

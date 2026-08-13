@@ -17,9 +17,10 @@ import FAQ from "./pages/FAQ";
 import Calculator from "./pages/Calcalutor";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/Blogdetails";
 
 const queryClient = new QueryClient();
-const whatsappNumber = "917829575683";
+const whatsappNumber = "917619575683";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -47,8 +48,10 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/blog-details" element={<BlogDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

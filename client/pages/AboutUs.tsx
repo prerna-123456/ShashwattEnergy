@@ -141,13 +141,13 @@ export default function AboutUs() {
     {
       icon: Sun,
       title: "Outstanding Efficiency",
-      desc: "Our modules ensure reliable power generation, performing efficiently even on cloudy days and in low-light conditions.",
+      desc: "Our modules deliver reliable power generation and consistent performance across varying weather and light conditions.",
       bg: "bg-[#f1f0ee]",
     },
     {
       icon: CloudRain,
       title: "Excellent Low Light Performance",
-      desc: "Our modules deliver reliable power, performing efficiently even in low-light or cloudy conditions.",
+      desc: "Our modules are designed to deliver reliable power generation across varying weather and light conditions.",
       bg: "bg-white",
     },
     {
@@ -183,12 +183,12 @@ export default function AboutUs() {
   ];
 
   const projects: ProjectItem[] = [
-    { img: project1, title: "Residential Rooftop", subtitle: "5kW Solar Installation", location: "Hubballi, Karnataka" },
-    { img: project2, title: "Residential Rooftop", subtitle: "3kW Solar Installation", location: "Hubballi, Karnataka" },
-    { img: project3, title: "Residential Rooftop", subtitle: "6kW Solar Installation", location: "Hubballi, Karnataka" },
-    { img: project4, title: "Industrial Complex", subtitle: "100kW Solar Farm", location: "Hubballi, Karnataka" },
-    { img: project5, title: "Commercial Building", subtitle: "25kW Rooftop System", location: "Hubballi, Karnataka" },
-    { img: project6, title: "Commercial Building", subtitle: "50kW Solar Array", location: "Hubballi, Karnataka" },
+    { img: project1, title: "Residential Rooftop", subtitle: "Residential Rooftop – 5 kW Solar Installation", location: "Hubballi, Karnataka" },
+    { img: project2, title: "Residential Rooftop", subtitle: "Residential Rooftop – 3 kW Solar Installation", location: "Hubballi, Karnataka" },
+    { img: project3, title: "Residential Rooftop", subtitle: "Residential Rooftop – 6 kW Solar Installation", location: "Hubballi, Karnataka" },
+    { img: project4, title: "Industrial Complex", subtitle: "Industrial Complex – 100 kW Solar Farm", location: "Hubballi, Karnataka" },
+    { img: project5, title: "Commercial Building", subtitle: "Commercial Building – 25 kW Rooftop System", location: "Hubballi, Karnataka" },
+    { img: project6, title: "Commercial Building", subtitle: "Commercial Building – 50 kW Solar Array", location: "Hubballi, Karnataka" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -198,21 +198,13 @@ export default function AboutUs() {
       <div className="bg-[#faf9f7] text-[#1A1C1A] antialiased">
 
         <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-          <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
+          <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/logo.png"
                 alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-4"
+                className="h-22 w-auto -ml-2 md:-ml-3"
               />
-
-              <div className="flex flex-col leading-none">
-                <img
-                  src="/logo-text.png"
-                  alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-4 md:mt-2"
-                />
-              </div>
             </Link>
 
             <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
@@ -260,7 +252,7 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
-          <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
+          <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
             <div className="max-w-185">
               <span
                 className={`inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium uppercase leading-none tracking-normal text-[#341010] transition-all duration-700 ease-out ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -288,8 +280,8 @@ export default function AboutUs() {
         </section>
 
         {/* ============ OUR LEGACY ============ */}
-        <section className="bg-[#faf9f7] py-14 md:py-20">
-          <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14 md:px-0">
+        <section className="bg-[#faf9f7] py-16 md:py-20">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 md:grid-cols-2 md:gap-14 md:px-0">
             <Reveal>
               <span className="block text-[14px] font-bold uppercase tracking-widest text-[#BA0013] mb-3">
                 Our Legacy
@@ -298,7 +290,7 @@ export default function AboutUs() {
                 Building a Greener Tomorrow, One Roof at a Time.
               </h2>
               <p className="mb-4 max-w-lg text-[18px] leading-[1.45] text-[#5D3F3C]">
-                At Shashwatt Energy, we are dedicated to harnessing the infinite power of the sun to create
+                At ShashWatt Energy, we are dedicated to harnessing the infinite power of the sun to create
                 sustainable, affordable, and innovative solar energy solutions. As a trusted partner in clean
                 energy, we aim to revolutionize the way communities and businesses access renewable power,
                 fostering a greener planet for future generations.
@@ -319,7 +311,7 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div>
-                  <div className="mb-1 text-[18px] font-bold text-[#1A1C1A]">98%</div>
+                  <div className="mb-1 text-[18px] font-bold text-[#1A1C1A]">100%</div>
                   <div className="text-[16px] uppercase tracking-wider text-[#5D3F3C]">
                     Customer Satisfaction
                   </div>
@@ -344,11 +336,11 @@ export default function AboutUs() {
         </section>
 
         {/* ============ ADVANTAGE ============ */}
-        <section className="bg-[#faf9f7] pb-16 pt-2 md:pb-24 md:pt-20">
-          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.85fr_1.15fr] md:px-0">
+        <section className="bg-[#faf9f7] pb-16 pt-16 md:pb-24 md:pt-20">
+          <div className="mx-auto grid max-w-7xl gap-16 px-8 lg:grid-cols-[0.85fr_1.15fr] md:px-0">
             <Reveal>
               <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-                The <span className="text-[#BA0013]">Shashwatt Energy</span> Advantage
+                The <span className="text-[#BA0013]">ShashWatt Energy</span> Advantage
               </h2>
               <p className="mb-8 max-w-112.5 text-[18px] leading-[1.45] text-[#5D3F3CCC]">
                 Discover what sets ShashWatt Energy apart through high-performance technology, dependable
@@ -397,7 +389,7 @@ export default function AboutUs() {
           }
         }
       `}</style>
-          <div className="mx-auto max-w-8xl overflow-hidden px-6 lg:px-0">
+          <div className="mx-auto max-w-8xl overflow-hidden px-8 lg:px-0">
             <h2 className="mb-20 text-center text-[40px] font-bold leading-tight text-[#1A1C1A]">
               Our Partners
             </h2>
@@ -425,8 +417,8 @@ export default function AboutUs() {
         </section>
 
         {/* ============ PROJECTS ============ */}
-        <section className="bg-[#faf9f7] pb-16 md:pb-24 md:pt-16">
-          <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <section className="bg-[#faf9f7] pb-16 md:pb-24 pt-16 md:pt-16">
+          <div className="mx-auto max-w-7xl px-8 md:px-0">
             <Reveal className="mb-11 flex flex-wrap items-end justify-between gap-6">
               <div>
                 <span className="mb-3 block text-[14px] font-bold uppercase tracking-widest text-[#BA0013]">
@@ -481,14 +473,14 @@ export default function AboutUs() {
         </section>
 
         {/* ============ LEADERSHIP ============ */}
-        <section className="bg-[#f1f0ee] py-14 text-center md:py-20">
-          <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <section className="bg-[#f1f0ee] py-16 text-center md:py-20">
+          <div className="mx-auto max-w-7xl px-8 md:px-0">
             <Reveal>
               <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
                 Our <span className="text-[#BA0013]">Leadership Team</span>
               </h2>
               <p className="mx-auto mb-14 max-w-5xl text-[20px] leading-[1.45] text-[#5D3F3C]">
-                Meet the passionate professionals driving Shashwatt&apos;s vision for a cleaner, more sustainable
+                Meet the passionate professionals driving ShashWatt&apos;s vision for a cleaner, more sustainable
                 future. Together, we combine expertise, innovation, and dedication to deliver exceptional solar
                 solutions.
               </p>
@@ -515,21 +507,14 @@ export default function AboutUs() {
 
         {/* Footer */}
         <footer className="bg-[#341010] text-white">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+          <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
             <div>
               <Link to="/" className="inline-flex items-center">
                 <img
                   src="/logo.png"
                   alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-6"
+                  className="h-20 w-auto -ml-3 md:-ml-3"
                 />
-                <span className="flex flex-col leading-none">
-                  <img
-                    src="/logo-text.png"
-                    alt="Shashwatt Energy"
-                    className="h-14 w-auto md:-ml-4 md:mt-2"
-                  />
-                </span>
               </Link>
 
               <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -565,7 +550,6 @@ export default function AboutUs() {
                   <br />
                   Yojana
                 </Link>
-                <Link to="/calculator">Calculator</Link>
               </div>
             </div>
 
@@ -577,7 +561,7 @@ export default function AboutUs() {
                 <Link to="/about">About Us</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/blog">Blogs</Link>
-                <Link to="/faq">FAQ</Link>
+                <Link to="/faq">FAQs</Link>
               </div>
             </div>
 
@@ -589,14 +573,14 @@ export default function AboutUs() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                      +917619575683
+                    </a>{" "}
+                    /{" "}
+                    <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                      9972975683
+                    </a>
+                  </p>
                 </div>
                 <div className="flex gap-4">
                   <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -607,9 +591,9 @@ export default function AboutUs() {
                 <div className="flex gap-4">
                   <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    C-512, Industrial Estate, Gokul
+                    C-512, 7th cross, Industrial Estate, Gokul
                     <br />
-                    Road, Hubballi - 580030
+                    Road, Hubballi - 580032
                   </p>
                 </div>
               </div>

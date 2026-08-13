@@ -31,21 +31,13 @@ export default function Commercial() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
+        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="Shashwatt Energy"
-              className="h-14 w-auto md:-ml-4"
+              className="h-22 w-auto -ml-2 md:-ml-3"
             />
-
-            <div className="flex flex-col leading-none">
-              <img
-                src="/logo-text.png"
-                alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-4 md:mt-2"
-              />
-            </div>
           </Link>
 
           <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
@@ -90,7 +82,7 @@ export default function Commercial() {
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
+        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
           <div className="max-w-185">
             <span className="inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium uppercase leading-none tracking-normal text-[#341010]">
               Raising Homes
@@ -108,8 +100,8 @@ export default function Commercial() {
       </section>
 
       {/* Solar */}
-      <section className="bg-[#faf9f7] py-14 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 text-center md:px-0">
+      <section className="bg-[#faf9f7] py-14 md:py-28 pt-16 lg:pt-28">
+        <div className="mx-auto max-w-7xl px-8 text-center md:px-0">
           <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Type of <span className="text-[#BA0013]">Roofs/Installation</span>
           </h2>
@@ -160,8 +152,8 @@ export default function Commercial() {
       </section>
 
       {/* Premium Solar Energy Solutions */}
-      <section className="bg-[#faf9f7] pb-16 pt-2 md:pb-24 md:pt-20">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+      <section className="bg-[#faf9f7] pb-16 pt-16 md:pb-24 md:pt-20">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <div className="text-center">
             <h2 className="text-[28px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               Premium Solar Energy Solutions
@@ -172,7 +164,7 @@ export default function Commercial() {
           </div>
 
           <div className="mt-16 grid items-center gap-10 md:grid-cols-2 md:gap-14">
-            <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-102">
+            <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-82">
               <h3 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
                 Solar on Sheet
               </h3>
@@ -185,11 +177,11 @@ export default function Commercial() {
                   },
                   {
                     icon: BadgeCheck,
-                    text: "Complete installation without drilling any holes, prevents water leakage.",
+                    text: "Complete installation without drilling any holes, preventing water leakage",
                   },
                   {
                     icon: Wrench,
-                    text: "Easy maintenance with integrated plumbing system",
+                    text: "Easy maintenance with an integrated plumbing system",
                   },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex gap-4">
@@ -215,22 +207,22 @@ export default function Commercial() {
             <img
               src="/energy.jpg"
               alt="Solar panels installed on a commercial metal sheet roof"
-              className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-102"
+              className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-86"
             />
           </div>
         </div>
       </section>
 
       {/* Solar on Structure */}
-      <section className="bg-[#faf9f7] pb-16 md:pb-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14 md:px-0">
+      <section className="bg-[#faf9f7] pb-16 md:pb-24 pt-16 lg:pt-0">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 md:grid-cols-2 md:gap-14 md:px-0">
           <img
             src="/Structure.jpg"
             alt="Solar panels installed on a custom commercial structure"
-            className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-102"
+            className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-82"
           />
 
-          <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-102">
+          <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-82">
             <h3 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               Solar on Structure
             </h3>
@@ -247,7 +239,7 @@ export default function Commercial() {
                 },
                 {
                   icon: TrendingUp,
-                  text: "Produce up to 15% more energy by virtue of bifaciality",
+                  text: "Produce up to 15% more energy through bifacial technology",
                 },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex gap-4">
@@ -262,20 +254,20 @@ export default function Commercial() {
               ))}
             </div>
 
-            <Link
+            {/* <Link
               to="#"
               className="mt-8 inline-flex rounded-[6px] bg-[#BA0013] px-7 py-3 text-[16px] text-white transition hover:bg-[#9f0010]"
             >
               Know More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
 
       {/* Solar Roof */}
-      <section className="bg-[#faf9f7] pb-16 md:pb-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14 md:px-0">
-          <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-102">
+      <section className="bg-[#faf9f7] pb-16 md:pb-24 pt-16 lg:pt-0">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 md:grid-cols-2 md:gap-14 md:px-0">
+          <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-82">
             <h3 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               Solar On Roof
             </h3>
@@ -307,25 +299,25 @@ export default function Commercial() {
               ))}
             </div>
 
-            <Link
+            {/* <Link
               to="#"
               className="mt-8 inline-flex rounded-[6px] bg-[#BA0013] px-7 py-3 text-[16px] text-white transition hover:bg-[#9f0010]"
             >
               Know More
-            </Link>
+            </Link> */}
           </div>
 
           <img
             src="/roof.jpg"
             alt="Commercial building with integrated solar roof"
-            className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-102"
+            className="h-70 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)] md:h-82"
           />
         </div>
       </section>
 
       {/* Portfolio */}
-      <section className="bg-[#faf9f7] pb-16 md:pb-24 md:pt-16">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+      <section className="bg-[#faf9f7] pb-16 md:pb-24 pt-16 md:pt-10">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
@@ -392,8 +384,8 @@ export default function Commercial() {
       </section>
 
       {/* Solar Options Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20 md:pt-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 md:pt-16">
+        <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <h2 className="mb-16 text-center text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Explore Your Solar Options
           </h2>
@@ -417,7 +409,7 @@ export default function Commercial() {
                 </span>
               </span>
             </Link>
- 
+
             <Link
               to="/pm-surya-ghar"
               className="flex min-h-34 items-center gap-9 rounded-lg border border-[#D9D5D0] bg-white px-11 py-8 transition hover:border-[#BA0013]/40"
@@ -431,8 +423,7 @@ export default function Commercial() {
                   PM Surya Ghar
                 </span>
                 <span className="mt-3 block max-w-73 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                  Add subsidy for PM Surya Ghar: 
-                    1kW - 30,000, 2kW - 60,000, 3kW - 78,000,
+                  1 kW – ₹30,000, 2 kW – ₹60,000, 3 kW – ₹78,000
                 </span>
               </span>
             </Link>
@@ -442,7 +433,7 @@ export default function Commercial() {
 
       {/* Solar Switch CTA */}
       <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
-        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-6 lg:px-0">
+        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
               Ready to Make the
@@ -476,21 +467,14 @@ export default function Commercial() {
 
       {/* Footer */}
       <footer className="bg-[#341010] text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+        <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
           <div>
             <Link to="/" className="inline-flex items-center">
               <img
                 src="/logo.png"
                 alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-6"
+                className="h-20 w-auto -ml-3 md:-ml-3"
               />
-              <span className="flex flex-col leading-none">
-                <img
-                  src="/logo-text.png"
-                  alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-4 md:mt-2"
-                />
-              </span>
             </Link>
 
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -526,7 +510,6 @@ export default function Commercial() {
                 <br />
                 Yojana
               </Link>
-              <Link to="/calculator">Calculator</Link>
             </div>
           </div>
 
@@ -538,7 +521,7 @@ export default function Commercial() {
               <Link to="/about">About Us</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/blog">Blogs</Link>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/faq">FAQs</Link>
             </div>
           </div>
 
@@ -550,14 +533,14 @@ export default function Commercial() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                    +917619575683
+                  </a>{" "}
+                  /{" "}
+                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                    9972975683
+                  </a>
+                </p>
               </div>
               <div className="flex gap-4">
                 <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -568,9 +551,9 @@ export default function Commercial() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, Industrial Estate, Gokul
+                  C-512, 7th cross, Industrial Estate, Gokul
                   <br />
-                  Road, Hubballi - 580030
+                  Road, Hubballi - 580032
                 </p>
               </div>
             </div>

@@ -25,21 +25,13 @@ export default function PMSuryaGharYojana() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
+        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="Shashwatt Energy"
-              className="h-14 w-auto md:-ml-4"
+              className="h-22 w-auto -ml-2 md:-ml-3"
             />
-
-            <div className="flex flex-col leading-none">
-              <img
-                src="/logo-text.png"
-                alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-4 md:mt-2"
-              />
-            </div>
           </Link>
 
           <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
@@ -84,7 +76,7 @@ export default function PMSuryaGharYojana() {
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
+        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-24 md:min-h-140 md:px-0 lg:min-h-138.5">
           <div className="max-w-165">
             <span className="inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] font-medium leading-none tracking-normal text-[#341010]">
               Subsidy
@@ -103,11 +95,11 @@ export default function PMSuryaGharYojana() {
 
       {/* PM Surya Ghar Intro */}
       <section className="bg-[#faf9f7] py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-[1.05fr_1fr] md:gap-20 md:px-0">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-8 md:grid-cols-[1.05fr_1fr] md:gap-20 md:px-0">
           <div>
             <div className="mt-10 overflow-hidden"> {/* border-b-2 border-r-2 border-[#00000040] */}
               <img
-                src="/surya.png" 
+                src="/surya.png"
                 alt="PM Surya Ghar Muft Bijli Yojana rooftop solar"
                 className="h-72 w-full object-cover object-center md:h-135.25"
               />
@@ -126,14 +118,16 @@ export default function PMSuryaGharYojana() {
             </h3>
 
             <p className="mt-7 max-w-135 text-[18px] leading-[1.55] text-[#5D3F3C]">
-              PM Surya Ghar: Muft Bijli Yojana is a government scheme that aims to
-              provide free electricity to households in India. The scheme was
-              launched by Prime Minister Narendra Modi on February 15, 2024.
-              Under the scheme, households will be provided with a subsidy to
-              install solar panels on their roofs. The subsidy will cover up to 40%
-              of the cost of the solar panels. The scheme is expected to benefit 1
-              crore households across India. It is estimated that the scheme will
-              save the government Rs. 75,000 crore per year in electricity costs.
+              PM Surya Ghar: Muft Bijli Yojana is a Government of India initiative
+              launched on 13 February 2024 to promote rooftop solar adoption among
+              residential households. With a total outlay of ₹75,021 crore, the
+              scheme aims to support rooftop solar installations for 1 crore
+              households by FY 2026–27. Eligible households can receive Central
+              Financial Assistance of up to ₹78,000 for rooftop solar systems
+              of 3 kW or higher, subject to scheme guidelines. The initiative
+              aims to help households reduce electricity bills and access up
+              to 300 units of free electricity per month through solar power,
+              while contributing to India's clean-energy transition.
             </p>
           </div>
         </div>
@@ -141,7 +135,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Scheme Helps */}
       <section className="bg-[#faf9f7] py-16 md:py-16">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <div className="mx-auto max-w-178 text-center">
             <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               What This Scheme Helps You Do
@@ -198,7 +192,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Suitable Rooftop Solar Plant Capacity */}
       <section className="bg-[#faf9f7] py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Suitable Rooftop Solar Plant Capacity
           </h2>
@@ -233,7 +227,7 @@ export default function PMSuryaGharYojana() {
               {
                 consumption: "> 300",
                 capacity: "Above 3 kW",
-                subsidy: "₹78,000 (Flat)",
+                subsidy: "Up to ₹78,000 (maximum subsidy)",
               },
             ].map(({ consumption, capacity, subsidy }) => (
               <div
@@ -257,7 +251,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Benefits */}
       <section className="bg-[#faf9f7] py-16 md:py-16">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <h2 className="text-center text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Benefits
           </h2>
@@ -268,13 +262,13 @@ export default function PMSuryaGharYojana() {
                 icon: Warehouse,
                 title: "Subsidy for Residential Households",
                 description:
-                  "The scheme offers a significant financial cushion by providing up to 40% subsidy for the installation of rooftop solar systems, making solar energy accessible and affordable for families across India.",
+                  "The scheme offers a significant financial cushion by providing subsidies of up to ₹78,000 for the installation of eligible rooftop solar systems, making solar energy more accessible and affordable for families across India.",
               },
               {
                 icon: Factory,
                 title: "Subsidy for GHS/RWA",
                 description:
-                  "Group Housing Societies and Resident Welfare Associations can benefit from Rs. 18,000 per kW for common facilities including EV Charging infrastructure up to 500 kW capacity (@ 3 kW per house).",
+                  "Group Housing Societies and Resident Welfare Associations can benefit from ₹18,000 per kW for common facilities including EV Charging infrastructure up to 500 kW capacity (@ 3 kW per house).",
               },
             ].map(({ icon: Icon, title, description }) => (
               <article
@@ -301,7 +295,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Eligibility Criteria */}
       <section className="bg-[#e9e7e4] py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-[1.05fr_0.95fr] md:gap-24 md:px-0">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-8 md:grid-cols-[1.05fr_0.95fr] md:gap-24 md:px-0">
           <div>
             <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
               Eligibility Criteria
@@ -342,10 +336,10 @@ export default function PMSuryaGharYojana() {
 
       {/* Solar Smarter Planning */}
       <section className="bg-[#faf9f7] py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
+        <div className="mx-auto max-w-7xl px-8 md:px-0">
           <div className="text-center">
             <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-              How Shashwatt Helps You Plan Solar Smarter
+              How ShashWatt Helps You Plan Solar Smarter
             </h2>
             <p className="mt-5 text-[16px] leading-relaxed text-[#5D3F3C]">
               We bridge the gap between policy and practical implementation.
@@ -396,7 +390,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Solar Switch CTA */}
       <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
-        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-6 lg:px-0">
+        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
               Ready to Make the
@@ -430,21 +424,14 @@ export default function PMSuryaGharYojana() {
 
       {/* Footer */}
       <footer className="bg-[#341010] text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+        <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
           <div>
             <Link to="/" className="inline-flex items-center">
               <img
                 src="/logo.png"
                 alt="Shashwatt Energy"
-                className="h-14 w-auto md:-ml-6"
+                className="h-20 w-auto -ml-3 md:-ml-3"
               />
-              <span className="flex flex-col leading-none">
-                <img
-                  src="/logo-text.png"
-                  alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-4 md:mt-2"
-                />
-              </span>
             </Link>
 
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -480,7 +467,6 @@ export default function PMSuryaGharYojana() {
                 <br />
                 Yojana
               </Link>
-              <Link to="/calculator">Calculator</Link>
             </div>
           </div>
 
@@ -492,7 +478,7 @@ export default function PMSuryaGharYojana() {
               <Link to="/about">About Us</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/blog">Blogs</Link>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/faq">FAQs</Link>
             </div>
           </div>
 
@@ -504,14 +490,14 @@ export default function PMSuryaGharYojana() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                    +917619575683
+                  </a>{" "}
+                  /{" "}
+                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                    9972975683
+                  </a>
+                </p>
               </div>
               <div className="flex gap-4">
                 <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -522,9 +508,9 @@ export default function PMSuryaGharYojana() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, Industrial Estate, Gokul
+                  C-512, 7th cross, Industrial Estate, Gokul
                   <br />
-                  Road, Hubballi - 580030
+                  Road, Hubballi - 580032
                 </p>
               </div>
             </div>

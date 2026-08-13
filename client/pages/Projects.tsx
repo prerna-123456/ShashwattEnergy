@@ -77,9 +77,8 @@ function Reveal({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      } ${className}`}
+      className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        } ${className}`}
       style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
     >
       {children}
@@ -116,11 +115,10 @@ function FilterDropdown({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className={`inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-full border transition-colors duration-200 ${
-          isActive
-            ? "bg-[#BA0013] border-[#BA0013] text-white"
-            : "bg-white border-[#dfddda] text-[#1A1C1A] hover:border-[#5D3F3C]/40"
-        }`}
+        className={`inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-full border transition-colors duration-200 ${isActive
+          ? "bg-[#BA0013] border-[#BA0013] text-white"
+          : "bg-white border-[#dfddda] text-[#1A1C1A] hover:border-[#5D3F3C]/40"
+          }`}
       >
         {isActive ? value : label}
         <ChevronDown
@@ -140,11 +138,10 @@ function FilterDropdown({
                 onChange(opt);
                 setOpen(false);
               }}
-              className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150 ${
-                value === opt
-                  ? "text-[#BA0013] font-semibold bg-[#FCE3E7]"
-                  : "text-[#5D3F3C] hover:bg-[#f1f0ee]"
-              }`}
+              className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150 ${value === opt
+                ? "text-[#BA0013] font-semibold bg-[#FCE3E7]"
+                : "text-[#5D3F3C] hover:bg-[#f1f0ee]"
+                }`}
             >
               {opt}
             </button>
@@ -167,7 +164,7 @@ export default function Projects() {
     {
       img: work1,
       title: "Residential Rooftop",
-      subtitle: "5kW Solar Installation",
+      subtitle: "– 5 kW Solar Installation",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Structure",
       projectType: "Residential",
@@ -177,7 +174,7 @@ export default function Projects() {
     {
       img: work2,
       title: "Residential Rooftop",
-      subtitle: "4kW Solar Installation",
+      subtitle: "– 4 kW Solar Installation",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Sheet",
       projectType: "Residential",
@@ -187,7 +184,7 @@ export default function Projects() {
     {
       img: work3,
       title: "Commercial Building",
-      subtitle: "10kW Rooftop System",
+      subtitle: "– 10 kW Rooftop System",
       location: "Hubballi, Karnataka",
       roofType: "Solar Roof",
       projectType: "Commercial",
@@ -197,7 +194,7 @@ export default function Projects() {
     {
       img: work4,
       title: "Residential Rooftop",
-      subtitle: "6kW Solar Installation",
+      subtitle: "– 6 kW Solar Installation",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Structure",
       projectType: "Residential",
@@ -207,7 +204,7 @@ export default function Projects() {
     {
       img: work5,
       title: "Residential Rooftop",
-      subtitle: "5kW Solar Installation",
+      subtitle: "– 5 kW Solar Installation",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Sheet",
       projectType: "Residential",
@@ -217,7 +214,7 @@ export default function Projects() {
     {
       img: work6,
       title: "Industrial Complex",
-      subtitle: "80kW Solar Farm",
+      subtitle: "– 80 kW Solar Farm",
       location: "Hubballi, Karnataka",
       roofType: "Solar Roof",
       projectType: "Commercial",
@@ -227,7 +224,7 @@ export default function Projects() {
     {
       img: work7,
       title: "Commercial Building",
-      subtitle: "15kW Rooftop System",
+      subtitle: "– 15 kW Rooftop System",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Structure",
       projectType: "Commercial",
@@ -237,7 +234,7 @@ export default function Projects() {
     {
       img: work8,
       title: "Residential Rooftop",
-      subtitle: "3kW Carport System",
+      subtitle: "– 3 kW Carport System",
       location: "Hubballi, Karnataka",
       roofType: "Solar on Structure",
       projectType: "Residential",
@@ -247,7 +244,7 @@ export default function Projects() {
     {
       img: work9,
       title: "Residential Rooftop",
-      subtitle: "7kW Solar Installation",
+      subtitle: "– 7 kW Solar Installation",
       location: "Hubballi, Karnataka",
       roofType: "Solar Roof",
       projectType: "Residential",
@@ -283,269 +280,251 @@ export default function Projects() {
 
   return (
     <main>
-    <div className="bg-[#faf9f7] text-[#1A1C1A] antialiased">
+      <div className="bg-[#faf9f7] text-[#1A1C1A] antialiased">
 
         <nav className="absolute left-0 right-0 top-0 z-20 text-white">
-                  <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-6 md:px-0">
-                    <Link to="/" className="flex items-center">
-                      <img
-                        src="/logo.png"
-                        alt="Shashwatt Energy"
-                        className="h-14 w-auto md:-ml-4"
-                      />
-        
-                      <div className="flex flex-col leading-none">
-                        <img
-                          src="/logo-text.png"
-                          alt="Shashwatt Energy"
-                          className="h-14 w-auto md:-ml-4 md:mt-2"
-                        />
-                      </div>
-                    </Link>
-        
-                    <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
-                      <Link to="/" className="hover:text-white/80">Home</Link>
-                      <Link to="/residential" className="hover:text-white/80">Residential</Link>
-                      <Link to="/commercial" className="hover:text-white/80 ">Commercial</Link>
-                      <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
-                      <Link to="/about" className="hover:text-white/80">About Us</Link>
-                      <Link to="/projects" className="border-b-2 border-[#BA0013] text-[#BA0013]">Projects</Link>
-                      <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-                      <Link to="/blog" className="hover:text-white/80">Blog</Link>
-                      <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
-                    </div>
-        
-                    <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
-                      Contact Us
-                    </Link>
-        
-                    <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
-                  </div>
-                  {menuOpen &&
-                    <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden">
-                      <div className="flex flex-col gap-4 text-sm">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                        <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
-                        <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
-                        <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
-                        <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-                        <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                        <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                        <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-                        <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
-                        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
-                      </div>
-                    </div>
-                  }
-                </nav>
-
-      {/* ============ HERO ============ */}
-      <section className="relative min-h-138.5 overflow-hidden bg-white bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5">
-        <img
-          src={heroImg}
-          alt="Aerial view of homes with solar panel roofs"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
-
-        <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-6 pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
-          <div className="max-w-185">
-            <span
-              className={`inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] uppercase leading-none tracking-normal text-[#341010] transition-all duration-700 ease-out ${
-                heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-            >
-              Projects
-            </span>
-            <h1
-              style={{ transitionDelay: heroIn ? "120ms" : "0ms" }}
-              className={`mt-8 text-[42px] font-bold leading-[1.05] tracking-normal text-white transition-all duration-700 ease-out sm:text-[56px] lg:text-[56px] ${
-                heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-            >
-              Solar in Action
-            </h1>
-            <p
-              style={{ transitionDelay: heroIn ? "240ms" : "0ms" }}
-              className={`mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white transition-all duration-700 ease-out md:text-[18px] ${
-                heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-            >
-              From homes and villas to apartments, housing societies, and commercial spaces, explore the
-              solar installations helping people and businesses move towards a cleaner energy future.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ OUR PROJECTS ============ */}
-      <section className="bg-[#faf9f7] pb-16 pt-2 md:pb-24 md:pt-20">
-        <div className="mx-auto max-w-7xl px-6 md:px-0">
-          <Reveal className="max-w-6xl mb-10">
-            <span className="block text-[14px] font-bold tracking-widest uppercase text-[#BA0013] mb-3">
-              OUR work
-            </span>
-            <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] mb-4">
-              Built to Make an Impact
-            </h2>
-            <p className="text-[18px] leading-[1.45] text-[#5D3F3C]">
-              Every Shashwatt project is a reflection of our commitment to quality, precision, and sustainable energy. From residential rooftops to large-scale commercial installations, we create solar solutions that are designed around the unique needs of every space.
-            </p>
-          </Reveal>
-
-          {/* Filter bar */}
-          <Reveal delay={80} className="relative z-30 mb-10">
-            <div className="flex flex-wrap items-center gap-3 pb-6 border-b border-[#dfddda]">
-              <FilterDropdown
-                label="Roof Type"
-                value={roofFilter}
-                options={ROOF_OPTIONS}
-                onChange={setRoofFilter}
+          <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Shashwatt Energy"
+                className="h-22 w-auto -ml-2 md:-ml-3"
               />
-              <FilterDropdown
-                label="Project Type"
-                value={projectFilter}
-                options={PROJECT_OPTIONS}
-                onChange={setProjectFilter}
-              />
-              <FilterDropdown
-                label="System Type"
-                value={systemFilter}
-                options={SYSTEM_OPTIONS}
-                onChange={setSystemFilter}
-              />
-              <FilterDropdown
-                label="Quality"
-                value={qualityFilter}
-                options={QUALITY_OPTIONS}
-                onChange={setQualityFilter}
-              />
+            </Link>
 
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={resetFilters}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2.5 rounded-full text-[#5D3F3C] hover:text-[#BA0013] transition-colors duration-200"
-                >
-                  <RotateCcw size={14} strokeWidth={2.5} />
-                  Reset Filters
-                </button>
-              )}
-
-              <span className="ml-auto text-sm font-medium text-[#5D3F3C]">
-                {filteredWork.length} {filteredWork.length === 1 ? "project" : "projects"}
-              </span>
+            <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
+              <Link to="/" className="hover:text-white/80">Home</Link>
+              <Link to="/residential" className="hover:text-white/80">Residential</Link>
+              <Link to="/commercial" className="hover:text-white/80 ">Commercial</Link>
+              <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
+              <Link to="/about" className="hover:text-white/80">About Us</Link>
+              <Link to="/projects" className="border-b-2 border-[#BA0013] text-[#BA0013]">Projects</Link>
+              <Link to="/faq" className="hover:text-white/80">FAQ</Link>
+              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
             </div>
-          </Reveal>
 
-          {filteredWork.length === 0 ? (
-            <Reveal>
-              <div className="text-center py-20 rounded-[8px] ring-1 ring-[#dfddda]">
-                <p className="text-lg font-semibold text-[#1A1C1A] mb-2">
-                  No projects match these filters
-                </p>
-                <p className="text-[#5D3F3C] mb-6">Try adjusting or resetting your filters.</p>
-                <button
-                  type="button"
-                  onClick={resetFilters}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-full bg-[#BA0013] text-white hover:bg-[#9f0010] transition"
-                >
-                  <RotateCcw size={14} strokeWidth={2.5} />
-                  Reset Filters
-                </button>
+            <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+              Contact Us
+            </Link>
+
+            <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
+          </div>
+          {menuOpen &&
+            <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden">
+              <div className="flex flex-col gap-4 text-sm">
+                <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+                <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
+                <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
+                <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
+                <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+                <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+              </div>
+            </div>
+          }
+        </nav>
+
+        {/* ============ HERO ============ */}
+        <section className="relative min-h-138.5 overflow-hidden bg-white bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5">
+          <img
+            src={heroImg}
+            alt="Aerial view of homes with solar panel roofs"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
+
+          <div className="relative z-10 mx-auto flex min-h-115 max-w-7xl items-center px-8 pt-36 lg:pt-30 md:min-h-140 md:px-0 md:pt-32 lg:min-h-138.5">
+            <div className="max-w-185">
+              <span
+                className={`inline-flex rounded-full bg-[#FFDAD8] px-5 py-2 text-[16px] uppercase leading-none tracking-normal text-[#341010] transition-all duration-700 ease-out ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
+              >
+                Projects
+              </span>
+              <h1
+                style={{ transitionDelay: heroIn ? "120ms" : "0ms" }}
+                className={`mt-8 text-[42px] font-bold leading-[1.05] tracking-normal text-white transition-all duration-700 ease-out sm:text-[56px] lg:text-[56px] ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
+              >
+                Solar in Action
+              </h1>
+              <p
+                style={{ transitionDelay: heroIn ? "240ms" : "0ms" }}
+                className={`mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white transition-all duration-700 ease-out md:text-[18px] ${heroIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
+              >
+                From homes and villas to apartments, housing societies, and commercial spaces, explore the
+                solar installations helping people and businesses move towards a cleaner energy future.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ OUR PROJECTS ============ */}
+        <section className="bg-[#faf9f7] pb-16 pt-16 md:pb-24 md:pt-20">
+          <div className="mx-auto max-w-7xl px-8 md:px-0">
+            <Reveal className="max-w-6xl mb-10">
+              <span className="block text-[14px] font-bold tracking-widest uppercase text-[#BA0013] mb-3">
+                OUR work
+              </span>
+              <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] mb-4">
+                Built to Make an Impact
+              </h2>
+              <p className="text-[18px] leading-[1.45] text-[#5D3F3C]">
+                Every ShashWatt project is a reflection of our commitment to quality, precision, and sustainable energy. From residential rooftops to large-scale commercial installations, we create solar solutions that are designed around the unique needs of every space.
+              </p>
+            </Reveal>
+
+            {/* Filter bar */}
+            <Reveal delay={80} className="relative z-30 mb-10">
+              <div className="flex flex-wrap items-center gap-3 pb-6 border-b border-[#dfddda]">
+                <FilterDropdown
+                  label="Roof Type"
+                  value={roofFilter}
+                  options={ROOF_OPTIONS}
+                  onChange={setRoofFilter}
+                />
+                <FilterDropdown
+                  label="Project Type"
+                  value={projectFilter}
+                  options={PROJECT_OPTIONS}
+                  onChange={setProjectFilter}
+                />
+                <FilterDropdown
+                  label="System Type"
+                  value={systemFilter}
+                  options={SYSTEM_OPTIONS}
+                  onChange={setSystemFilter}
+                />
+                <FilterDropdown
+                  label="Quality"
+                  value={qualityFilter}
+                  options={QUALITY_OPTIONS}
+                  onChange={setQualityFilter}
+                />
+
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={resetFilters}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2.5 rounded-full text-[#5D3F3C] hover:text-[#BA0013] transition-colors duration-200"
+                  >
+                    <RotateCcw size={14} strokeWidth={2.5} />
+                    Reset Filters
+                  </button>
+                )}
+
+                <span className="ml-auto text-sm font-medium text-[#5D3F3C]">
+                  {filteredWork.length} {filteredWork.length === 1 ? "project" : "projects"}
+                </span>
               </div>
             </Reveal>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredWork.map((p, i) => (
-                <Reveal key={`${p.img}-${p.title}-${p.subtitle}`} delay={(i % 3) * 100}>
-                  <div className="group rounded-[8px] overflow-hidden border border-[#dfddda] bg-white h-full flex flex-col shadow-[0_14px_28px_rgba(26,28,26,0.14)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_34px_rgba(26,28,26,0.18)]">
-                    <div className="relative aspect-[4/3.3] overflow-hidden">
-                      <img
-                        src={p.img}
-                        alt={`${p.title} - ${p.subtitle}`}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="p-5 flex-1 flex flex-col">
-                      <h3 className="font-semibold text-[16px] text-[#1A1C1A] mb-1">
-                        {p.title} {p.subtitle}
-                      </h3>
-                      <div className="flex items-center gap-1.5 text-[#5D3F3C] text-sm mb-3">
-                        <MapPin size={14} strokeWidth={2.5} className="shrink-0" />
-                        {p.location}
+
+            {filteredWork.length === 0 ? (
+              <Reveal>
+                <div className="text-center py-20 rounded-[8px] ring-1 ring-[#dfddda]">
+                  <p className="text-lg font-semibold text-[#1A1C1A] mb-2">
+                    No projects match these filters
+                  </p>
+                  <p className="text-[#5D3F3C] mb-6">Try adjusting or resetting your filters.</p>
+                  <button
+                    type="button"
+                    onClick={resetFilters}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-full bg-[#BA0013] text-white hover:bg-[#9f0010] transition"
+                  >
+                    <RotateCcw size={14} strokeWidth={2.5} />
+                    Reset Filters
+                  </button>
+                </div>
+              </Reveal>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredWork.map((p, i) => (
+                  <Reveal key={`${p.img}-${p.title}-${p.subtitle}`} delay={(i % 3) * 100}>
+                    <div className="group rounded-[8px] overflow-hidden border border-[#dfddda] bg-white h-full flex flex-col shadow-[0_14px_28px_rgba(26,28,26,0.14)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_34px_rgba(26,28,26,0.18)]">
+                      <div className="relative aspect-[4/3.3] overflow-hidden">
+                        <img
+                          src={p.img}
+                          alt={`${p.title} - ${p.subtitle}`}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
                       </div>
-                      <div className="mt-auto flex flex-wrap gap-1.5">
-                        {[p.roofType, p.projectType, p.systemType, p.quality].map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#f1f0ee] text-[#5D3F3C]"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      <div className="p-5 flex-1 flex flex-col">
+                        <h3 className="font-semibold text-[16px] text-[#1A1C1A] mb-1">
+                          {p.title} {p.subtitle}
+                        </h3>
+                        <div className="flex items-center gap-1.5 text-[#5D3F3C] text-sm mb-3">
+                          <MapPin size={14} strokeWidth={2.5} className="shrink-0" />
+                          {p.location}
+                        </div>
+                        <div className="mt-auto flex flex-wrap gap-1.5">
+                          {[p.roofType, p.projectType, p.systemType, p.quality].map((tag) => (
+                            <span
+                              key={tag}
+                              className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#f1f0ee] text-[#5D3F3C]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+                  </Reveal>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
 
-      {/* Solar Switch CTA */}
-      <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
-        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-6 lg:px-0">
-          <div className="w-full max-w-113.75 text-center md:ml-12">
-            <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
-              Ready to Make the
-              <br />
-              Switch to Solar?
-            </h2>
+        {/* Solar Switch CTA */}
+        <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+          <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
+            <div className="w-full max-w-113.75 text-center md:ml-12">
+              <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
+                Ready to Make the
+                <br />
+                Switch to Solar?
+              </h2>
 
-            <p className="mx-auto mt-6 text-[18px] leading-normal text-[#1A1C1A] md:text-[18px]">
-              Start your journey towards energy independence today
-              with India's most trusted solar engineering team.
-            </p>
+              <p className="mx-auto mt-6 text-[18px] leading-normal text-[#1A1C1A] md:text-[18px]">
+                Start your journey towards energy independence today
+                with India's most trusted solar engineering team.
+              </p>
 
-            <div className="mt-9 flex flex-wrap justify-center gap-5">
-              <Link
-                to="/contact"
-                className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
-              >
-                Contact Us
-              </Link>
+              <div className="mt-9 flex flex-wrap justify-center gap-5">
+                <Link
+                  to="/contact"
+                  className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
+                >
+                  Contact Us
+                </Link>
 
-              <Link
-                to="/calculator"
-                className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
-              >
-                Calculate Savings
-              </Link>
+                <Link
+                  to="/calculator"
+                  className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
+                >
+                  Calculate Savings
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
+        {/* Footer */}
         <footer className="bg-[#341010] text-white">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
+          <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
             <div>
               <Link to="/" className="inline-flex items-center">
                 <img
                   src="/logo.png"
                   alt="Shashwatt Energy"
-                  className="h-14 w-auto md:-ml-6"
+                  className="h-20 w-auto -ml-3 md:-ml-3"
                 />
-                <span className="flex flex-col leading-none">
-                  <img
-                    src="/logo-text.png"
-                    alt="Shashwatt Energy"
-                    className="h-14 w-auto md:-ml-4 md:mt-2"
-                  />
-                </span>
               </Link>
 
               <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
@@ -581,7 +560,6 @@ export default function Projects() {
                   <br />
                   Yojana
                 </Link>
-                <Link to="/calculator">Calculator</Link>
               </div>
             </div>
 
@@ -593,7 +571,7 @@ export default function Projects() {
                 <Link to="/about">About Us</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/blog">Blogs</Link>
-                <Link to="/faq">FAQ</Link>
+                <Link to="/faq">FAQs</Link>
               </div>
             </div>
 
@@ -605,14 +583,14 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                  +917619575683
-                </a>{" "}
-                /{" "}
-                <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                  9972975683
-                </a>
-              </p>
+                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
+                      +917619575683
+                    </a>{" "}
+                    /{" "}
+                    <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
+                      9972975683
+                    </a>
+                  </p>
                 </div>
                 <div className="flex gap-4">
                   <Mail className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
@@ -623,9 +601,9 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    C-512, Industrial Estate, Gokul
+                    C-512, 7th cross, Industrial Estate, Gokul
                     <br />
-                    Road, Hubballi - 580030
+                    Road, Hubballi - 580032
                   </p>
                 </div>
               </div>
@@ -636,7 +614,7 @@ export default function Projects() {
             All rights reserved. Designed by Spitel @2026
           </div>
         </footer>
-    </div>
+      </div>
     </main>
   );
 }
