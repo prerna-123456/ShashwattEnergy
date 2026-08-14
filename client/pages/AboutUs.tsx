@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { SolarSolutionsMobileLinks, SolarSolutionsNav } from "../components/SolarSolutionsNav";
 import {
   Sun,
   CloudRain,
@@ -209,8 +210,8 @@ export default function AboutUs() {
 
             <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
               <Link to="/" className="hover:text-white/80">Home</Link>
-              <Link to="/residential" className="hover:text-white/80">Residential</Link>
-              <Link to="/commercial" className="hover:text-white/80 ">Commercial</Link>
+              <SolarSolutionsNav />
+              <Link to="/ev-charging" className="hover:text-white/80">EV Charging</Link>
               <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
               <Link to="/about" className="border-b-2 border-[#BA0013] text-[#BA0013]">About Us</Link>
               <Link to="/projects" className="hover:text-white/80">Projects</Link>
@@ -229,8 +230,8 @@ export default function AboutUs() {
             <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden">
               <div className="flex flex-col gap-4 text-sm">
                 <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
-                <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
+                <SolarSolutionsNav />
+                <Link to="/ev-charging" className="hover:text-white/80">EV Charging</Link>
                 <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>

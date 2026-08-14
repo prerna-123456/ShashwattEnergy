@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LayoutGroup, motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { SolarSolutionsMobileLinks, SolarSolutionsNav } from "../components/SolarSolutionsNav";
 import {
   ArrowRight,
   Check,
@@ -411,12 +412,10 @@ export default function Index() {
                 Home
               </Link>
 
-              <Link to="/residential" className="hover:text-white/80">
-                Residential
-              </Link>
+              <SolarSolutionsNav/>
 
-              <Link to="/commercial" className="hover:text-white/80">
-                Commercial
+              <Link to="/ev-charging" className="hover:text-white/80">
+                EV Charging
               </Link>
 
               <Link
@@ -479,19 +478,11 @@ export default function Index() {
                   Home
                 </Link>
 
-                <Link
-                  to="/residential"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Residential
-                </Link>
+                <SolarSolutionsNav/>
 
-                <Link
-                  to="/commercial"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Commercial
-                </Link>
+              <Link to="/ev-charging" className="hover:text-white/80">
+                EV Charging
+              </Link>
 
                 <Link
                   to="/pm-surya-ghar"

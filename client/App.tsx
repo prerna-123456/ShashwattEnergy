@@ -18,6 +18,7 @@ import Calculator from "./pages/Calcalutor";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/Blogdetails";
+import EVCharging from "./pages/EVCharging";
 
 const queryClient = new QueryClient();
 const whatsappNumber = "917619575683";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/residential" element={<Residential />} />
           <Route path="/commercial" element={<Commercial />} />
+          <Route path="/ev-charging" element={<EVCharging />} />
           <Route path="/pm-surya-ghar" element={<PMSuryaGharYojana />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/projects" element={<Projects />} />

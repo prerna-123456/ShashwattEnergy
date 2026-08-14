@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from 
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Search } from "lucide-react";
 import { blogArticles, getArticleBySlug, getRelatedArticles } from "../data/Blogarticles"
+import { SolarSolutionsMobileLinks, SolarSolutionsNav } from "../components/SolarSolutionsNav";
 import {
   Phone,
   Mail,
@@ -154,51 +155,51 @@ export default function BlogDetail() {
 
   return (
     <div style={body} className="bg-[#faf9f7] text-[#1A1C1A] antialiased">
-        <nav className="absolute left-0 right-0 top-0 z-20 text-[#1A1C1A]">
-          <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
-            <Link to="/" className="flex items-center">
-              <img
-                src="/logo.png"
-                alt="Shashwatt Energy"
-                className="h-22 w-auto -ml-2 md:-ml-3"
-              />
-            </Link>
+      <nav className="absolute left-0 right-0 top-0 z-20 text-[#1A1C1A]">
+        <div className="mx-auto flex h-29.5 max-w-7xl items-center justify-between px-8 md:px-0">
+          <Link to="/" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Shashwatt Energy"
+              className="h-22 w-auto -ml-2 md:-ml-3"
+            />
+          </Link>
 
-            <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
-              <Link to="/" className="hover:text-black/80">Home</Link>
-              <Link to="/residential" className="hover:text-black/80">Residential</Link>
-              <Link to="/commercial" className="hover:text-black/80 ">Commercial</Link>
-              <Link to="/pm-surya-ghar" className="hover:text-black/80">PM Surya Ghar Yojana</Link>
-              <Link to="/about" className="hover:text-black/80">About Us</Link>
-              <Link to="/projects" className="hover:text-black/80">Projects</Link>
-              <Link to="/faq" className="hover:text-black/80">FAQs</Link>
-              <Link to="/blog" className="border-b-2 border-[#BA0013] text-[#BA0013]">Blogs</Link>
-              <Link to="/calculator" className="hover:text-black/80">Calculator</Link>
-            </div>
-
-            <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
-              Contact Us
-            </Link>
-
-            <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
+          <div className="hidden items-center gap-8 text-[14px] font-semibold md:flex">
+            <Link to="/" className="hover:text-black/80">Home</Link>
+            <SolarSolutionsNav />
+            <Link to="/ev-charging" className="hover:text-white/80">EV Charging</Link>
+            <Link to="/pm-surya-ghar" className="hover:text-black/80">PM Surya Ghar Yojana</Link>
+            <Link to="/about" className="hover:text-black/80">About Us</Link>
+            <Link to="/projects" className="hover:text-black/80">Projects</Link>
+            <Link to="/faq" className="hover:text-black/80">FAQs</Link>
+            <Link to="/blog" className="border-b-2 border-[#BA0013] text-[#BA0013]">Blogs</Link>
+            <Link to="/calculator" className="hover:text-black/80">Calculator</Link>
           </div>
-          {menuOpen &&
-            <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden text-white">
-              <div className="flex flex-col gap-4 text-sm">
-                <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                <Link to="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
-                <Link to="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
-                <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
-                <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-                <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
-                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
-                <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
-                <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
-              </div>
+
+          <Link to="/contact" className="hidden rounded-[8px] bg-[#BA0013] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#BA0013] md:block">
+            Contact Us
+          </Link>
+
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
+        </div>
+        {menuOpen &&
+          <div className="mx-6 rounded-lg bg-black/55 px-6 py-5 backdrop-blur-md md:hidden text-white">
+            <div className="flex flex-col gap-4 text-sm">
+              <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+              <SolarSolutionsNav />
+              <Link to="/ev-charging" className="hover:text-white/80">EV Charging</Link>
+              <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+              <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
+              <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </div>
-          }
-        </nav>
+          </div>
+        }
+      </nav>
       <div className="mx-auto max-w-7xl px-6 pt-30 pb-16 md:px-0 md:pt-32 md:pb-24">
         <div className="grid lg:grid-cols-[1fr_320px] gap-12 items-start">
           {/* ============ MAIN COLUMN ============ */}
@@ -302,72 +303,72 @@ export default function BlogDetail() {
 
           {/* ============ SIDEBAR ============ */}
           <div ref={sidebarWrapRef} className="relative lg:h-full">
-          <aside
-            ref={sidebarRef}
-            style={sidebarStyle}
-            className="flex flex-col gap-8 pb-4 lg:w-80"
-          >
-            {/* Search */}
-            <form onSubmit={handleSidebarSearch} className="relative">
-              <Search
-                size={16}
-                strokeWidth={2.5}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5D3F3C]"
-              />
-              <input
-                type="text"
-                value={sidebarSearch}
-                onChange={(e) => setSidebarSearch(e.target.value)}
-                placeholder="Search Blogs"
-                style={body}
-                className="w-full pl-10 pr-4 py-3 text-[16px] rounded-full border border-[#dfddda] bg-white text-[#1A1C1A] focus:outline-none focus:border-[#BA0013]/40"
-              />
-            </form>
+            <aside
+              ref={sidebarRef}
+              style={sidebarStyle}
+              className="flex flex-col gap-8 pb-4 lg:w-80"
+            >
+              {/* Search */}
+              <form onSubmit={handleSidebarSearch} className="relative">
+                <Search
+                  size={16}
+                  strokeWidth={2.5}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5D3F3C]"
+                />
+                <input
+                  type="text"
+                  value={sidebarSearch}
+                  onChange={(e) => setSidebarSearch(e.target.value)}
+                  placeholder="Search Blogs"
+                  style={body}
+                  className="w-full pl-10 pr-4 py-3 text-[16px] rounded-full border border-[#dfddda] bg-white text-[#1A1C1A] focus:outline-none focus:border-[#BA0013]/40"
+                />
+              </form>
 
-            {/* Recent Posts */}
-            <div>
-              <h3
-                style={heading}
-                className="text-[16px] font-bold uppercase tracking-widest text-[#5D3F3C] mb-4"
-              >
-                Recent Posts
-              </h3>
-              <div className="flex flex-col gap-3">
-                {recentPosts.map((p) => (
-                  <Link
-                    key={p.slug}
-                    to={`/blog/${p.slug}`}
-                    style={heading}
-                    className="block rounded-[8px] border border-[#dfddda] bg-white p-4 text-[16px] font-medium text-[#1A1C1A] leading-snug shadow-[0_14px_28px_rgba(26,28,26,0.08)] hover:text-[#BA0013] hover:border-[#BA0013]/40 transition-colors duration-200"
-                  >
-                    {p.title}
-                  </Link>
-                ))}
+              {/* Recent Posts */}
+              <div>
+                <h3
+                  style={heading}
+                  className="text-[16px] font-bold uppercase tracking-widest text-[#5D3F3C] mb-4"
+                >
+                  Recent Posts
+                </h3>
+                <div className="flex flex-col gap-3">
+                  {recentPosts.map((p) => (
+                    <Link
+                      key={p.slug}
+                      to={`/blog/${p.slug}`}
+                      style={heading}
+                      className="block rounded-[8px] border border-[#dfddda] bg-white p-4 text-[16px] font-medium text-[#1A1C1A] leading-snug shadow-[0_14px_28px_rgba(26,28,26,0.08)] hover:text-[#BA0013] hover:border-[#BA0013]/40 transition-colors duration-200"
+                    >
+                      {p.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Categories */}
-            <div>
-              <h3
-                style={heading}
-                className="text-[16px] font-bold uppercase tracking-widest text-[#5D3F3C] mb-4"
-              >
-                Categories
-              </h3>
-              <div className="flex flex-col gap-3">
-                {ALL_CATEGORIES.map((cat) => (
-                  <Link
-                    key={cat}
-                    to={`/blog?category=${encodeURIComponent(cat)}`}
-                    style={heading}
-                    className="block rounded-[8px] border border-[#dfddda] bg-white px-4 py-3 text-[16px] font-medium text-[#1A1C1A] shadow-[0_14px_28px_rgba(26,28,26,0.08)] hover:text-[#BA0013] hover:border-[#BA0013]/40 transition-colors duration-200"
-                  >
-                    {cat}
-                  </Link>
-                ))}
+              {/* Categories */}
+              <div>
+                <h3
+                  style={heading}
+                  className="text-[16px] font-bold uppercase tracking-widest text-[#5D3F3C] mb-4"
+                >
+                  Categories
+                </h3>
+                <div className="flex flex-col gap-3">
+                  {ALL_CATEGORIES.map((cat) => (
+                    <Link
+                      key={cat}
+                      to={`/blog?category=${encodeURIComponent(cat)}`}
+                      style={heading}
+                      className="block rounded-[8px] border border-[#dfddda] bg-white px-4 py-3 text-[16px] font-medium text-[#1A1C1A] shadow-[0_14px_28px_rgba(26,28,26,0.08)] hover:text-[#BA0013] hover:border-[#BA0013]/40 transition-colors duration-200"
+                    >
+                      {cat}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          </aside>
+            </aside>
           </div>
         </div>
       </div>
@@ -419,40 +420,40 @@ export default function BlogDetail() {
       )}
 
       {/* Solar Switch CTA */}
-        <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
-          <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
-            <div className="w-full max-w-113.75 text-center md:ml-12">
-              <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
-                Ready to Make the
-                <br />
-                Switch to Solar?
-              </h2>
+      <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
+        <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
+          <div className="w-full max-w-113.75 text-center md:ml-12">
+            <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
+              Ready to Make the
+              <br />
+              Switch to Solar?
+            </h2>
 
-              <p className="mx-auto mt-6 text-[18px] leading-normal text-[#1A1C1A] md:text-[18px]">
-                Start your journey towards energy independence today
-                with India's most trusted solar engineering team.
-              </p>
+            <p className="mx-auto mt-6 text-[18px] leading-normal text-[#1A1C1A] md:text-[18px]">
+              Start your journey towards energy independence today
+              with India's most trusted solar engineering team.
+            </p>
 
-              <div className="mt-9 flex flex-wrap justify-center gap-5">
-                <Link
-                  to="/contact"
-                  className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
-                >
-                  Contact Us
-                </Link>
+            <div className="mt-9 flex flex-wrap justify-center gap-5">
+              <Link
+                to="/contact"
+                className="inline-flex h-12.5 min-w-33.5 items-center justify-center rounded-xl bg-[#BA0013] px-7 text-[16px] text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] transition hover:bg-[#BA0013]"
+              >
+                Contact Us
+              </Link>
 
-                <Link
-                  to="/calculator"
-                  className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
-                >
-                  Calculate Savings
-                </Link>
-              </div>
+              <Link
+                to="/calculator"
+                className="inline-flex h-12.5 min-w-41 items-center justify-center rounded-xl bg-white px-7 text-[16px] text-[#1A1C1A] shadow-[0_16px_28px_rgba(39,31,25,0.12)] transition hover:text-[#BA0013]"
+              >
+                Calculate Savings
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Footer */}
+      {/* Footer */}
       <footer className="bg-[#341010] text-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-8 py-16 md:grid-cols-[1.25fr_1fr_1fr_1.35fr] lg:px-0">
           <div>
