@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 // Photo — served from the /public/faqimg folder
-const heroImg = "/faqimg/faq-hero.png";
+const heroImg = "/faqimg/faq-hero.webp";
 
 interface FaqItem {
   question: string;
@@ -188,8 +188,8 @@ export default function FAQ() {
               <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
               <Link to="/about" className="hover:text-white/80">About Us</Link>
               <Link to="/projects" className="hover:text-white/80">Projects</Link>
-              <Link to="/faq" className="border-b-2 border-[#BA0013] text-[#BA0013]">FAQ</Link>
-              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/faq" className="border-b-2 border-[#BA0013] text-[#BA0013]">FAQs</Link>
+              <Link to="/blog" className="hover:text-white/80">Blogs</Link>
               <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
             </div>
 
@@ -208,8 +208,8 @@ export default function FAQ() {
                 <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
                 <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
               </div>
@@ -293,7 +293,7 @@ export default function FAQ() {
         </section>
 
         {/* Solar Switch CTA */}
-        <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+        <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
           <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
             <div className="w-full max-w-113.75 text-center md:ml-12">
               <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

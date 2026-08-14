@@ -41,8 +41,8 @@ export default function PMSuryaGharYojana() {
             <Link to="/pm-surya-ghar" className="border-b-2 border-[#BA0013] text-[#BA0013]">PM Surya Ghar Yojana</Link>
             <Link to="/about" className="hover:text-white/80">About Us</Link>
             <Link to="/projects" className="hover:text-white/80">Projects</Link>
-            <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-            <Link to="/blog" className="hover:text-white/80">Blog</Link>
+            <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+            <Link to="/blog" className="hover:text-white/80">Blogs</Link>
             <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
           </div>
 
@@ -61,8 +61,8 @@ export default function PMSuryaGharYojana() {
               <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
               <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
               <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
               <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </div>
@@ -72,7 +72,7 @@ export default function PMSuryaGharYojana() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('/surya-bg.png')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
+        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('/surya-bg.webp')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
@@ -99,7 +99,7 @@ export default function PMSuryaGharYojana() {
           <div>
             <div className="mt-10 overflow-hidden"> {/* border-b-2 border-r-2 border-[#00000040] */}
               <img
-                src="/surya.png"
+                src="/surya.webp"
                 alt="PM Surya Ghar Muft Bijli Yojana rooftop solar"
                 className="h-72 w-full object-cover object-center md:h-135.25"
               />
@@ -326,7 +326,7 @@ export default function PMSuryaGharYojana() {
 
           <div className="rounded-xl bg-white p-7 shadow-[0_18px_28px_rgba(26,28,26,0.12)] md:mt-24">
             <img
-              src="/criteria.png"
+              src="/criteria.webp"
               alt="PM Surya Ghar solar eligibility illustration"
               className="h-60 w-full rounded-[6px] object-cover object-center md:h-60"
             />
@@ -389,7 +389,7 @@ export default function PMSuryaGharYojana() {
       </section>
 
       {/* Solar Switch CTA */}
-      <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+      <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
         <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

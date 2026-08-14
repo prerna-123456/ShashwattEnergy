@@ -45,7 +45,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Solar Technology",
     date: "Jan 14, 2025",
     readTime: "6 min read",
-    image: "/blogsimg/microinverter-vs-string-inverter.png",
+    image: "/blogsimg/microinverter-vs-string-inverter.webp",
     imageAlt: "Residential rooftop solar panels with microinverter system",
     excerpt:
       "Compare microinverters and traditional string inverters across performance, shading impact, monitoring and future expansion.",
@@ -131,7 +131,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Cost & Savings",
     date: "Feb 11, 2025",
     readTime: "6 min read",
-    image: "/blogsimg/solar-roi-payback.png",
+    image: "/blogsimg/solar-roi-payback.webp",
     imageAlt: "Modern Indian home with rooftop solar panels in warm sunlight",
     excerpt:
       "Understand how solar ROI and payback period are calculated, and what determines how quickly a rooftop solar system pays for itself.",
@@ -210,7 +210,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Cost & Savings",
     date: "Mar 18, 2025",
     readTime: "6 min read",
-    image: "/blogsimg/rooftop-solar-cost-india.png",
+    image: "/blogsimg/rooftop-solar-cost-india.webp",
     imageAlt: "Realistic Indian residential rooftop with solar panel installation",
     excerpt:
       "A practical look at what influences rooftop solar pricing in India, from system size to inverter type, to help you budget realistically.",
@@ -294,7 +294,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Villas & Homes",
     date: "Dec 16, 2025",
     readTime: "6 min read",
-    image: "/blogsimg/solar-for-villas.png",
+    image: "/blogsimg/solar-for-villas.webp",
     imageAlt: "Modern villa with a large rooftop solar installation and landscaped garden",
     excerpt:
       "Villas often have ideal rooftop space for solar. Here's what villa owners should know about installation, sizing and savings.",
@@ -371,7 +371,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Housing Societies",
     date: "Jan 20, 2026",
     readTime: "6 min read",
-    image: "/blogsimg/housing-societies-solar.png",
+    image: "/blogsimg/housing-societies-solar.webp",
     imageAlt: "Aerial view of a modern Indian housing society with rooftop solar panels",
     excerpt:
       "Rooftop solar can help housing societies cut common-area electricity costs. Here's how societies typically approach a solar decision.",
@@ -448,7 +448,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Housing Societies",
     date: "Feb 17, 2026",
     readTime: "5 min read",
-    image: "/blogsimg/solar-apartments.png",
+    image: "/blogsimg/solar-apartments.webp",
     imageAlt: "Modern apartment complex with rooftop solar panels and greenery",
     excerpt:
       "Apartments have different rooftop and ownership considerations than independent homes. Here's how solar can still work for them.",
@@ -525,7 +525,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Commercial Solar",
     date: "Mar 17, 2026",
     readTime: "7 min read",
-    image: "/blogsimg/commercial-rooftop-solar.png",
+    image: "/blogsimg/commercial-rooftop-solar.webp",
     imageAlt: "Large commercial warehouse rooftop covered with solar panels",
     excerpt:
       "How commercial rooftop solar differs from residential systems, and what business owners should consider before installing.",
@@ -611,7 +611,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Solar Education",
     date: "Jun 18, 2024",
     readTime: "5 min read",
-    image: "/blogsimg/solar-energy-explained.png",
+    image: "/blogsimg/solar-energy-explained.webp",
     imageAlt: "Sunlit residential solar panel installation on a clear day",
     excerpt:
       "New to solar? Learn how solar energy works, why Indian homeowners are switching, and what to know before going solar. A clear, jargon-free guide.",
@@ -687,7 +687,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Solar Education",
     date: "Jul 16, 2024",
     readTime: "5 min read",
-    image: "/blogsimg/how-solar-energy-works.png",
+    image: "/blogsimg/how-solar-energy-works.webp",
     imageAlt: "Close-up of solar panels on a rooftop under bright sunlight",
     excerpt:
       "Curious how sunlight becomes electricity? A simple, visual explanation of how solar panels and inverters generate power for your home.",
@@ -756,7 +756,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Residential Solar",
     date: "Aug 20, 2024",
     readTime: "7 min read",
-    image: "/blogsimg/rooftop-solar-for-homes.png",
+    image: "/blogsimg/rooftop-solar-for-homes.webp",
     imageAlt: "Premium modern Indian home with a substantial rooftop solar installation",
     excerpt:
       "Everything Indian homeowners need to know about rooftop solar — how it works, what it costs, and how to plan an installation for your home.",
@@ -841,7 +841,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Cost & Savings",
     date: "Sep 24, 2024",
     readTime: "6 min read",
-    image: "/blogsimg/reduce-electricity-bill-solar.png",
+    image: "/blogsimg/reduce-electricity-bill-solar.webp",
     imageAlt: "Residential home with solar panels in warm afternoon sunlight",
     excerpt:
       "See how rooftop solar lowers monthly electricity bills by offsetting grid consumption, and what factors affect your actual savings.",

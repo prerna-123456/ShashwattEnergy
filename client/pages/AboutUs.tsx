@@ -214,8 +214,8 @@ export default function AboutUs() {
               <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
               <Link to="/about" className="border-b-2 border-[#BA0013] text-[#BA0013]">About Us</Link>
               <Link to="/projects" className="hover:text-white/80">Projects</Link>
-              <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+              <Link to="/blog" className="hover:text-white/80">Blogs</Link>
               <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
             </div>
 
@@ -234,8 +234,8 @@ export default function AboutUs() {
                 <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
                 <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
               </div>

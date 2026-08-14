@@ -7,6 +7,9 @@ import {
   Landmark,
   ArrowRight,
   ContactRound,
+  Factory,
+  DraftingCompass,
+  Warehouse,
   Earth,
   Mail,
   Phone,
@@ -37,8 +40,8 @@ export default function Residential() {
             <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
             <Link to="/about" className="hover:text-white/80">About Us</Link>
             <Link to="/projects" className="hover:text-white/80">Projects</Link>
-            <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-            <Link to="/blog" className="hover:text-white/80">Blog</Link>
+            <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+            <Link to="/blog" className="hover:text-white/80">Blogs</Link>
             <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
           </div>
 
@@ -57,8 +60,8 @@ export default function Residential() {
               <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
               <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
               <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
               <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </div>
@@ -68,7 +71,7 @@ export default function Residential() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('/residential-bg.png')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
+        className="relative min-h-138.5 overflow-hidden bg-white bg-[linear-gradient(90deg,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0.47)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.1)_100%),url('/residential-bg.webp')] bg-cover bg-center text-white md:min-h-138.5 lg:min-h-138.5"
       >
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.06)_42%,rgba(0,0,0,0.32)_100%)]" />
 
@@ -89,6 +92,58 @@ export default function Residential() {
               with high-performance solar infrastructure.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Solar */}
+      <section className="bg-[#faf9f7] py-14 md:py-28 pt-16 lg:pt-28">
+        <div className="mx-auto max-w-7xl px-8 text-center md:px-0">
+          <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
+            Type of <span className="text-[#BA0013]">Roofs/Installation</span>
+          </h2>
+        </div>
+
+        <div className="mx-auto mt-12 grid max-w-7xl gap-6 px-6 md:grid-cols-3 md:px-0">
+          {[
+            {
+              icon: Factory,
+              title: "Solar-on-Sheet",
+              description:
+                "Easy to implement and quick installation method for existing infrastructure.",
+            },
+            {
+              icon: DraftingCompass,
+              title: "Solar-on-Structure",
+              description:
+                "Enhanced energy production with bifaciality and optimized structural tilt.",
+            },
+            {
+              icon: Warehouse,
+              title: "Solar Roof",
+              description:
+                "Integrated solar panels that serve as your building's actual roofing material.",
+            },
+          ].map(({ icon: Icon, title, description }) => (
+            <article
+              key={title}
+              className="min-h-51.25 rounded-[8px] border border-[#dfddda] bg-white px-7 py-8 shadow-[0_14px_28px_rgba(26,28,26,0.14)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_34px_rgba(26,28,26,0.18)]"
+            >
+              <Icon className="h-6 w-6 text-[#BA0013]" strokeWidth={2.2} />
+              <h2 className="mt-5 text-[24px] font-semibold leading-tight text-[#1A1C1A]">
+                {title}
+              </h2>
+              <p className="mt-4 max-w-62.5 text-[16px] leading-[1.45] text-[#5D3F3C]">
+                {description}
+              </p>
+              {/* <Link
+                to="#"
+                className="mt-5 inline-flex items-center gap-2 text-[16px] font-medium text-[#BA0013] transition hover:gap-3"
+              >
+                Know More
+                <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              </Link> */}
+            </article>
+          ))}
         </div>
       </section>
 
@@ -118,7 +173,7 @@ export default function Residential() {
 
           <div className="relative mx-auto w-full max-w-150 pt-10 md:pt-0">
             <img
-              src="/portfolio.png"
+              src="/portfolio.webp"
               alt="Residential solar installation project"
               className="h-72 w-full rounded-lg object-cover object-center shadow-[0_18px_35px_rgba(39,31,25,0.22)] md:h-87"
             />
@@ -168,7 +223,7 @@ export default function Residential() {
           <article className="grid overflow-hidden rounded-lg bg-white shadow-[0_16px_35px_rgba(39,31,25,0.12)] md:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-80 md:min-h-132">
               <img
-                src="/project1.png"
+                src="/project1.webp"
                 alt="The Emerald Heights Villa solar installation"
                 className="h-full w-full object-cover"
               />
@@ -231,7 +286,7 @@ export default function Residential() {
           <div className="grid gap-10 md:grid-cols-3">
             <article className="overflow-hidden rounded-lg bg-white shadow-[0_12px_24px_rgba(39,31,25,0.12)]">
               <img
-                src="/home1.png"
+                src="/home1.webp"
                 alt="Sunrise Residency solar installation"
                 className="h-58 w-full object-cover"
               />
@@ -261,7 +316,7 @@ export default function Residential() {
 
             <article className="overflow-hidden rounded-lg bg-white shadow-[0_12px_24px_rgba(39,31,25,0.12)]">
               <img
-                src="/home2.png"
+                src="/home2.webp"
                 alt="Maple Greens Apartments solar installation"
                 className="h-58 w-full object-cover"
               />
@@ -291,7 +346,7 @@ export default function Residential() {
 
             <article className="overflow-hidden rounded-lg bg-white shadow-[0_12px_24px_rgba(39,31,25,0.12)]">
               <img
-                src="/home3.png"
+                src="/home3.webp"
                 alt="The Horizon Villa solar installation"
                 className="h-58 w-full object-cover"
               />
@@ -339,7 +394,7 @@ export default function Residential() {
 
           <div className="mx-auto mt-18 grid max-w-325 overflow-hidden rounded-2xl bg-white shadow-[0_16px_40px_rgba(39,31,25,0.16)] md:grid-cols-[1fr_1.03fr]">
             <img
-              src="/solar.png"
+              src="/solar.webp"
               alt="Standard residential rooftop solar solution"
               className="h-80 w-full object-cover md:h-122"
             />
@@ -452,7 +507,7 @@ export default function Residential() {
             </div>
 
             <img
-              src="/premium.png"
+              src="/premium.webp"
               alt="Premium residential rooftop solar solution"
               className="h-80 w-full object-cover md:h-128"
             />
@@ -1071,7 +1126,7 @@ export default function Residential() {
           <div className="mt-16 grid w-full gap-14 md:grid-cols-2">
             <article className="overflow-hidden rounded-lg bg-white shadow-[0_10px_22px_rgba(39,31,25,0.12)]">
               <img
-                src="/application1.png"
+                src="/application1.webp"
                 alt="Rooftop solar installation"
                 className="h-64 w-full object-cover"
               />
@@ -1089,7 +1144,7 @@ export default function Residential() {
 
             <article className="overflow-hidden rounded-lg bg-white shadow-[0_10px_22px_rgba(39,31,25,0.12)]">
               <img
-                src="/application2.png"
+                src="/application2.webp"
                 alt="Solar carport installation"
                 className="h-64 w-full object-cover"
               />
@@ -1157,7 +1212,7 @@ export default function Residential() {
       </section>
 
       {/* Solar Switch CTA */}
-      <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+      <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
         <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

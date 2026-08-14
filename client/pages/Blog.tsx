@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 
 // Photos — served from the /public/blogsimg folder
-const heroImg = "/blogsimg/hero.png";
-const campusImg = "/blogsimg/campus.png";
+const heroImg = "/blogsimg/hero.webp";
+const campusImg = "/blogsimg/campus.webp";
 
 // Categories actually used across the current 11-article library. Keeping
 // this derived from the data (rather than a separate hardcoded list) means
@@ -164,8 +164,8 @@ export default function Blog() {
             <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
             <Link to="/about" className="hover:text-white/80">About Us</Link>
             <Link to="/projects" className="hover:text-white/80">Projects</Link>
-            <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-            <Link to="/blog" className="border-b-2 border-[#BA0013] text-[#BA0013]">Blog</Link>
+            <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+            <Link to="/blog" className="border-b-2 border-[#BA0013] text-[#BA0013]">Blogs</Link>
             <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
           </div>
 
@@ -184,8 +184,8 @@ export default function Blog() {
               <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
               <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+              <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
               <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
               <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </div>
@@ -414,7 +414,7 @@ export default function Blog() {
       </section>
 
       {/* Solar Switch CTA */}
-      <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+      <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
         <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 // Photos — served from the /public/projectsimg folder
-const heroImg = "/projectsimg/hero.png";
+const heroImg = "/projectsimg/hero.webp";
 const work1 = "/projectsimg/work-1.png";
 const work2 = "/projectsimg/work-2.png";
 const work3 = "/projectsimg/work-3.png";
@@ -299,8 +299,8 @@ export default function Projects() {
               <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
               <Link to="/about" className="hover:text-white/80">About Us</Link>
               <Link to="/projects" className="border-b-2 border-[#BA0013] text-[#BA0013]">Projects</Link>
-              <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+              <Link to="/blog" className="hover:text-white/80">Blogs</Link>
               <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
             </div>
 
@@ -319,8 +319,8 @@ export default function Projects() {
                 <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
                 <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
               </div>
@@ -482,7 +482,7 @@ export default function Projects() {
         </section>
 
         {/* Solar Switch CTA */}
-        <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+        <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
           <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
             <div className="w-full max-w-113.75 text-center md:ml-12">
               <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

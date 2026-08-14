@@ -45,18 +45,18 @@ const features = [
 ];
 
 const trustCarouselImages = [
-  "/trust.png",
-  "/trust2.jpg",
-  "/trust3.jpg",
-  "/trust4.jpg",
-  "/trust5.jpg",
+  "/trust.webp",
+  "/trust2.webp",
+  "/trust3.webp",
+  "/trust4.webp",
+  "/trust5.webp",
 ];
 
 const heroSlides = [
   {
     title: "Turn Sunlight Into\nLong-Term Savings",
     desc: "Empowering Indian homes and businesses with high-performance solar infrastructure. We deliver end-to-end engineering excellence for a sustainable future.",
-    image: "/hero-bg.png",
+    image: "/hero-bg.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
@@ -65,7 +65,7 @@ const heroSlides = [
   {
     title: "Generate clean energy and\nreduce your power bills",
     desc: "Harness the power of the sun to create a smarter, more sustainable, and cost-effective energy future.",
-    image: "/hero-bg2.png",
+    image: "/hero-bg2.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
@@ -74,7 +74,7 @@ const heroSlides = [
   {
     title: "Power Your World with\nClean Energy",
     desc: "Switch to solar and generate clean, renewable power that reduces your dependence on conventional energy while building a more sustainable future.",
-    image: "/hero-bg3.png",
+    image: "/hero-bg3.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
@@ -83,7 +83,7 @@ const heroSlides = [
   {
     title: "Reliable Solar Backup,\nWhenever You Need It",
     desc: "Stay powered through outages with dependable solar backup solutions designed to keep your home or business running without interruption.",
-    image: "/hero-bg4.png",
+    image: "/hero-bg4.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
@@ -92,7 +92,7 @@ const heroSlides = [
   {
     title: "Step Into a Smarter\nEnergy Future",
     desc: "Take control of the way you power your home or business with clean solar energy.Reduce your dependence on the grid, lower your electricity bills, and enjoy energy designed around your needs.",
-    image: "/hero-bg5.png",
+    image: "/hero-bg5.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
@@ -159,7 +159,7 @@ const partnerLogos = [
     alt: "Partner logo 4",
   },
   {
-    src: "/logo1.png",
+    src: "/logo1.webp",
     alt: "Partner logo 5",
   },
 ];
@@ -168,25 +168,25 @@ const livingSpaces = [
   {
     title: "Independent Homes",
     desc: "Maximum autonomy with custom rooftop designs tailored for family needs.",
-    image: "/home1.png",
+    image: "/home1.webp",
     Icon: House,
   },
   {
     title: "Malls",
     desc: "Powering malls with efficient solar energy and long-term savings.",
-    image: "/mall.png",
+    image: "/mall.webp",
     Icon: Building,
   },
   {
     title: "Warehouse",
     desc: "Reliable solar power for efficient and sustainable warehouse operations.",
-    image: "/warehouse.png",
+    image: "/warehouse.webp",
     Icon: Building2,
   },
   {
     title: "Commercials",
     desc: "Smart solar solutions for energy-efficient commercial spaces.",
-    image: "/commercials.png",
+    image: "/commercials.webp",
     Icon: Building2,
   },
   {
@@ -237,19 +237,19 @@ const blogPosts = [
 const customerStories = [
   {
     name: "Commercial Customer",
-    system: "25KW On-Grid System",
+    system: "25kW On-Grid System",
     quote:
       "The ShashWatt Energy team made our solar installation simple and seamless. The system is performing efficiently, helping us significantly reduce our monthly electricity costs.",
   },
   {
     name: "Rural Property Owner",
-    system: "10KW Off-Grid System",
+    system: "10kW Off-Grid System",
     quote:
       "We now have reliable power even in areas with limited grid connectivity. The team provided excellent guidance and installed the system professionally.",
   },
   {
     name: "Residential Customer",
-    system: "8KW Hybrid System",
+    system: "8kW Hybrid System",
     quote:
       "Our hybrid solar system gives us reliable backup along with significant energy savings. The entire installation process was smooth, professional, and hassle-free.",
   },
@@ -435,11 +435,11 @@ export default function Index() {
               </Link>
 
               <Link to="/faq" className="hover:text-white/80">
-                FAQ
+                FAQs
               </Link>
 
               <Link to="/blog" className="hover:text-white/80">
-                Blog
+                Blogs
               </Link>
 
               <Link to="/calculator" className="hover:text-white/80">
@@ -788,7 +788,7 @@ export default function Index() {
                 125,000+
               </h3>
               <p className="text-[16px] font-semibold uppercase tracking-[2px] text-[#5D3F3C]">
-                Tress Planted
+                Trees Planted
               </p>
             </div>
           </div>
@@ -1133,7 +1133,7 @@ export default function Index() {
 
           <div className="relative pb-10 pr-0 md:pr-18">
             <img
-              src="/yojana.png"
+              src="/yojana.webp"
               alt="Rooftop solar installation under PM Surya Ghar scheme"
               className="h-94 w-full rounded-xl object-cover shadow-[0_24px_50px_rgba(39,31,25,0.22)] -mt-28 lg:mt-0"
             />
@@ -1180,13 +1180,13 @@ export default function Index() {
               transition={{ duration: 1.05, ease: "easeOut" }}
             >
               ShashWatt has achieved <span className="font-bold text-[#007100]">3,000+ kW </span> of solar installations, generating an estimated
-              <span className="font-bold text-[#007100]">4.2 million+ kWh</span> of clean energy annually and avoiding approximately 
+              <span className="font-bold text-[#007100]"> 4.2 million+ kWh</span> of clean energy annually and avoiding approximately 
               <span className="font-bold text-[#007100]"> 3,000+</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around 
-              <span className="font-bold text-[#007100]">50,000+</span> trees.
+              <span className="font-bold text-[#007100]"> 50,000+</span> trees.
             </motion.p>
 
             <img
-              src="/impact.png"
+              src="/impact.webp"
               alt="Solar panels with wind turbines and greenery"
               className="relative z-0 block h-full w-full object-fill md:h-full md:-mt-60"
             />
@@ -1570,7 +1570,7 @@ export default function Index() {
       </section>
 
       {/* Solar Switch CTA */}
-      <section className="min-h-105 bg-[url('/cta-bg.png')] bg-cover bg-center">
+      <section className="min-h-105 bg-[url('/cta-bg.webp')] bg-cover bg-center">
         <div className="mx-auto flex min-h-105 max-w-7xl items-center px-8 lg:px-0">
           <div className="w-full max-w-113.75 text-center md:ml-12">
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">

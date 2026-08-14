@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 // Photos — served from the /public/calculatorimg folder
-const heroImg = "/contactusimg/contact-hero.png";
+const heroImg = "/contactusimg/contact-hero.webp";
 
 // Fades + slides content up into view the first time it enters the viewport.
 function Reveal({
@@ -148,8 +148,8 @@ export default function ContactUs() {
               <Link to="/pm-surya-ghar" className="hover:text-white/80">PM Surya Ghar Yojana</Link>
               <Link to="/about" className="hover:text-white/80">About Us</Link>
               <Link to="/projects" className="hover:text-white/80">Projects</Link>
-              <Link to="/faq" className="hover:text-white/80">FAQ</Link>
-              <Link to="/blog" className="hover:text-white/80">Blog</Link>
+              <Link to="/faq" className="hover:text-white/80">FAQs</Link>
+              <Link to="/blog" className="hover:text-white/80">Blogs</Link>
               <Link to="/calculator" className="hover:text-white/80">Calculator</Link>
             </div>
 
@@ -168,8 +168,8 @@ export default function ContactUs() {
                 <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
                 <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
                 <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+                <Link to="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
+                <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
                 <Link to="/calculator" onClick={() => setMenuOpen(false)}>Calculator</Link>
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
               </div>
