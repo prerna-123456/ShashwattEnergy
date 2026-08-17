@@ -56,7 +56,7 @@ const trustCarouselImages = [
 const heroSlides = [
   {
     title: "Turn Sunlight Into\nLong-Term Savings",
-    desc: "Empowering Indian homes and businesses with high-performance solar infrastructure. We deliver end-to-end engineering excellence for a sustainable future.",
+    desc: "Empowering Indian homes and businesses with high- performance solar infrastructure. We deliver end-to-end  engineering excellence for a sustainable future.",
     image: "/hero-bg.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
@@ -92,7 +92,7 @@ const heroSlides = [
   },
   {
     title: "Step Into a Smarter\nEnergy Future",
-    desc: "Take control of the way you power your home or business with clean solar energy.Reduce your dependence on the grid, lower your electricity bills, and enjoy energy designed around your needs.",
+    desc: "Take control of the way you power your home or business with clean solar energy. Reduce your dependence on the grid, lower your electricity bills, and enjoy energy designed around your needs.",
     image: "/hero-bg5.webp",
     primaryLabel: "Consult our Expertise",
     primaryLink: "/contact",
@@ -1662,12 +1662,12 @@ export default function Index() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                    +917619575683
+                  <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 76195 75683
                   </a>{" "}
                   /{" "}
-                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                    9972975683
+                  <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 95916 75683
                   </a>
                 </p>
               </div>

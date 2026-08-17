@@ -395,12 +395,12 @@ export default function FAQ() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                      +917619575683
+                    <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                      +91 76195 75683
                     </a>{" "}
                     /{" "}
-                    <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                      9972975683
+                    <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                      +91 95916 75683
                     </a>
                   </p>
                 </div>

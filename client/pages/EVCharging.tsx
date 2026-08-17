@@ -88,7 +88,7 @@ export default function EVCharging() {
             <div className="flex flex-col gap-4 text-sm">
               <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
               <SolarSolutionsMobileLinks onNavigate={() => setMenuOpen(false)} />
-                <Link to="/ev-charging" className="border-b-2 border-[#BA0013] text-[#BA0013]">EV Charging</Link>
+              <Link to="/ev-charging" className="border-b-2 border-[#BA0013] text-[#BA0013]">EV Charging</Link>
               <Link to="/pm-surya-ghar" onClick={() => setMenuOpen(false)}>PM Surya Ghar Yojana</Link>
               <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
               <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
@@ -318,12 +318,12 @@ export default function EVCharging() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                    +917619575683
+                  <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 76195 75683
                   </a>{" "}
                   /{" "}
-                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                    9972975683
+                  <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 95916 75683
                   </a>
                 </p>
               </div>

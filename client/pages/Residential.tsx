@@ -192,7 +192,7 @@ export default function Residential() {
       </section>
 
       {/* Featured Project Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+      {/* <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
         <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="mb-12 flex flex-wrap items-center gap-4">
             <button
@@ -265,20 +265,13 @@ export default function Residential() {
               <p className="mt-11 max-w-94 text-[16px] leading-[1.55] text-[#5D3F3C]">
                 A grid-connected solar PV system for a luxury villa, using TOPCon half-cut modules for high efficiency and reliable performance in varying light conditions.
               </p>
-
-              {/* <Link
-                to="/projects"
-                className="mt-11 inline-flex h-12 w-39 items-center justify-center rounded-[8px] border-2 border-[#BA0013] text-[14px] font-semibold text-[#BA0013]"
-              >
-                View Project
-              </Link> */}
             </div>
           </article>
         </div>
-      </section>
+      </section> */}
 
       {/* Completed Home Projects Section */}
-      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-0">
+      <section className="bg-[#FAF9F6] pb-16 md:pb-20 pt-16 lg:pt-16">
         <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <h2 className="mb-12 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
             Completed Home Projects
@@ -388,8 +381,7 @@ export default function Residential() {
 
             <p className="mx-auto mt-5 max-w-165 text-[18px] leading-[1.45] text-[#5D3F3C]">
               Explore cutting-edge solar products designed to transform your energy
-              <br className="hidden md:block" />
-              usage and bring sustainable living to your home.
+              <br className="hidden md:block" /> usage and bring sustainable living to your home.
             </p>
           </div>
 
@@ -607,11 +599,11 @@ export default function Residential() {
                 </div>
 
                 <div className="px-20 py-6">
-                  <span className="font-bold">Feston / Deye</span> (String Inverter)
+                  <span className="font-bold">String Inverter</span>
                 </div>
 
                 <div className="px-44 py-6">
-                  <span className="font-bold italic">Enphase</span> (Microinverter)
+                  <span className="font-bold">Microinverter</span>
                 </div>
               </div>
 
@@ -868,7 +860,7 @@ export default function Residential() {
                   </p>
 
                   <p className="text-[14px] text-[#5D3F3C]">
-                    <span className="font-bold">Feston / Deye</span> (String Inverter)
+                    <span className="font-bold">String Inverter</span>
                   </p>
                 </div>
 
@@ -878,7 +870,7 @@ export default function Residential() {
                   </p>
 
                   <p className="text-[14px] text-[#5D3F3C]">
-                    <span className="font-bold italic">Enphase</span> (Microinverter)
+                    <span className="font-bold">Microinverter</span>
                   </p>
                 </div>
               </div>
@@ -1119,7 +1111,7 @@ export default function Residential() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-135 text-[18px] leading-[1.55] text-[#5D3F3C]">
-              Solar panels with the latest technology combined with micro inverters for
+              Solar panels with the latest technology combined with microinverters for
               higher generation and long lasting systems
             </p>
           </div>
@@ -1314,12 +1306,12 @@ export default function Residential() {
               <div className="flex gap-4">
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                    +917619575683
+                  <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 76195 75683
                   </a>{" "}
                   /{" "}
-                  <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                    9972975683
+                  <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                    +91 95916 75683
                   </a>
                 </p>
               </div>

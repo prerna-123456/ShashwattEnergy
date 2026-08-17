@@ -77,14 +77,13 @@ const contactDetails: ContactDetail[] = [
     value: "+91 78295 75683 / +91 99729 75683",
     links: [
       { text: "+91 78295 75683", href: "tel:+917829575683" },
-      { text: "+91 99729 75683", href: "tel:+919972975683" },
     ],
   },
   {
     icon: Mail,
     label: "Email Us",
-    value: "contact@shashwatt.com",
-    href: "mailto:contact@shashwatt.com",
+    value: "connect@shashwatt.com",
+    href: "mailto:connect@shashwatt.com",
   },
   {
     icon: MapPin,
@@ -482,12 +481,12 @@ export default function ContactUs() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
-                      +917619575683
+                    <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                      +91 76195 75683
                     </a>{" "}
                     /{" "}
-                    <a href="tel:+919972975683" className="hover:underline focus-visible:underline active:underline">
-                      9972975683
+                    <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                      +91 95916 75683
                     </a>
                   </p>
                 </div>
