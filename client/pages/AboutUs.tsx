@@ -474,7 +474,7 @@ export default function AboutUs() {
         </section>
 
         {/* ============ LEADERSHIP ============ */}
-        <section className="bg-[#f1f0ee] py-16 text-center md:py-20">
+        {/* <section className="bg-[#f1f0ee] py-16 text-center md:py-20">
           <div className="mx-auto max-w-7xl px-8 md:px-0">
             <Reveal>
               <h2 className="mb-4 text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
@@ -504,7 +504,7 @@ export default function AboutUs() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="bg-[#341010] text-white">

@@ -257,28 +257,34 @@ export default function Calculator() {
                   <div className="text-[14px] font-bold tracking-widest uppercase text-[#5D3F3C] mb-3">
                     1. Property Type
                   </div>
+
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       type="button"
                       onClick={() => setPropertyType("Residential")}
                       className={`flex flex-col items-center justify-center gap-2 rounded-[8px] border py-6 transition-colors ${propertyType === "Residential"
-                        ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
-                        : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
+                          ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
+                          : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
                         }`}
                     >
                       <HomeIcon size={22} />
-                      <span className="font-medium text-[24px]">Residential</span>
+                      <span className="font-medium text-[16px] sm:text-[24px]">
+                        Residential
+                      </span>
                     </button>
+
                     <button
                       type="button"
                       onClick={() => setPropertyType("Commercial")}
                       className={`flex flex-col items-center justify-center gap-2 rounded-[8px] border py-6 transition-colors ${propertyType === "Commercial"
-                        ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
-                        : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
+                          ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
+                          : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
                         }`}
                     >
                       <Building2 size={22} />
-                      <span className="font-medium text-[24px]">Commercial</span>
+                      <span className="font-medium text-[16px] sm:text-[24px]">
+                        Commercial
+                      </span>
                     </button>
                   </div>
                 </div>

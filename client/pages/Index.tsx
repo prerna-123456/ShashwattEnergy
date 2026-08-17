@@ -767,16 +767,16 @@ export default function Index() {
 
             <div className="md:border-r md:border-[#ead5cf]">
               <h3 className="mb-5 font-serif text-[40px] leading-none text-[#1A1C1A] md:text-[56px]">
-                175,000+
+                4.2M+ kWh
               </h3>
               <p className="text-[16px] font-semibold uppercase tracking-[2px] text-[#5D3F3C]">
-                kWh Clean Energy Generated
+                Clean Energy Generated
               </p>
             </div>
 
             <div>
               <h3 className="mb-5 font-serif text-[40px] leading-none text-[#BA0013] md:text-[56px]">
-                125,000+
+                50,000+
               </h3>
               <p className="text-[16px] font-semibold uppercase tracking-[2px] text-[#5D3F3C]">
                 Trees Planted
