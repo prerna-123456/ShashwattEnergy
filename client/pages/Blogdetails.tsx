@@ -200,7 +200,7 @@ export default function BlogDetail() {
           </div>
         }
       </nav>
-      <div className="mx-auto max-w-7xl px-6 pt-30 pb-16 md:px-0 md:pt-32 md:pb-24">
+      <div className="mx-auto max-w-7xl px-8 pt-30 pb-16 md:px-0 md:pt-32 md:pb-24">
         <div className="grid lg:grid-cols-[1fr_320px] gap-12 items-start">
           {/* ============ MAIN COLUMN ============ */}
           <div>
@@ -375,7 +375,7 @@ export default function BlogDetail() {
 
       {/* ============ RELATED ARTICLES ============ */}
       {related.length > 0 && (
-        <section className="bg-[#faf9f7] px-6 md:px-0 pb-16 md:pb-24">
+        <section className="bg-[#faf9f7] px-8 md:px-0 pb-16 md:pb-24">
           <div className="max-w-7xl mx-auto">
             <h2 style={heading} className="text-[28px] md:text-[32px] font-bold mb-10 text-[#1A1C1A]">
               You May Also Like
