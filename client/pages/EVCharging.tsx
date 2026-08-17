@@ -125,7 +125,7 @@ export default function EVCharging() {
       </section>
 
       {/* EV Charging Solutions */}
-      <section className="bg-[#FAF9F6] py-0 md:py-20">
+      <section className="bg-[#FAF9F6] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center justify-center gap-4 text-[14px] font-bold uppercase tracking-normal text-[#BA0013]">
@@ -182,7 +182,7 @@ export default function EVCharging() {
       </section>
 
       {/* Enphase Installer Badge */}
-      <section className="bg-[#FAF9F6] pt-16 md:pt-0 pb-16 md:pb-20">
+      <section className="bg-[#FAF9F6] pt-0 md:pt-0 pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl px-8 lg:px-0">
           <div className="relative overflow-hidden rounded-[18px] bg-[#F7F9F4] px-8 py-7 shadow-[0_18px_45px_rgba(24,38,26,0.06)] ring-1 ring-black/5 md:px-14">
             <div className="absolute right-0 top-0 hidden h-full w-60 opacity-60 md:block">
