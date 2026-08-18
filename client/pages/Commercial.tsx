@@ -236,7 +236,7 @@ export default function Commercial() {
                 },
                 {
                   icon: Shield,
-                  text: "Rust free - Galvanized Iron pipes used for structure",
+                  text: "Rust-free – Galvanized Iron pipes are used for the structure.",
                 },
                 {
                   icon: TrendingUp,

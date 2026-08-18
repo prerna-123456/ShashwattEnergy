@@ -124,9 +124,9 @@ export default function PMSuryaGharYojana() {
               residential households. With a total outlay of ₹75,021 crore, the
               scheme aims to support rooftop solar installations for 1 crore
               households by FY 2026–27. Eligible households can receive Central
-              Financial Assistance of up to ₹78,000 for rooftop solar systems
-              of 3 kW or higher, subject to scheme guidelines. The initiative
-              aims to help households reduce electricity bills and access up
+              Financial Assistance of up to ₹78,000 for eligible rooftop solar systems, 
+              subject to applicable scheme guidelines and subsidy limits.
+              The initiative aims to help households reduce electricity bills and access up
               to 300 units of free electricity per month through solar power,
               while contributing to India's clean-energy transition.
             </p>
@@ -218,12 +218,12 @@ export default function PMSuryaGharYojana() {
               {
                 consumption: "0 - 150",
                 capacity: "1 - 2 kW",
-                subsidy: "₹30,000 - 60,000",
+                subsidy: "₹30,000 – ₹60,000",
               },
               {
                 consumption: "150 - 300",
                 capacity: "2 - 3 kW",
-                subsidy: "₹60,000 - 78,000",
+                subsidy: "₹60,000 - ₹78,000",
               },
               {
                 consumption: "> 300",

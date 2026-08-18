@@ -23,7 +23,7 @@ export default function EVCharging() {
     {
       title: "Home EV Chargers",
       description:
-        "Compact 3.3 kW to 7.2 kW AC wallbox chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
+        "Compact 3.3 – 7.2 kW AC wall-box chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
       image: "/ev1.webp",
       icon: Home,
       features: "Safe  •  Smart  •  Convenient",
@@ -31,7 +31,7 @@ export default function EVCharging() {
     {
       title: "Commercial & Fleet Charging",
       description:
-        "Dual-port 11 kW / 22 kW AC chargers designed for corporate offices, hotels, hospitals and residential society parking areas.",
+        "Dual-port 11 kW and 22 kW AC chargers designed for corporate offices, hotels, hospitals, and residential society parking areas.",
       image: "/ev2.webp",
       icon: Building2,
       features: "Efficient  •  Scalable  •  Reliable",
@@ -39,7 +39,7 @@ export default function EVCharging() {
     {
       title: "Fast DC Charging Hubs",
       description:
-        "30 kW to 60 kW high-speed DC fast chargers for highway hubs, public charging corridors and commercial fleet operations.",
+        "High-speed 30–60 kW DC fast chargers for highway hubs, public charging corridors, and commercial fleet operations.",
       image: "/ev3.webp",
       icon: Gauge,
       features: "High Speed  •  Powerful  •  Future-Ready",

@@ -154,7 +154,7 @@ export default function AboutUs() {
     {
       icon: ClipboardList,
       title: "Easy Purchase",
-      desc: "Enjoy a hassle-free solar panel purchase with easy steps, transparent pricing, and expert support.",
+      desc: "Enjoy a hassle-free solar purchasing experience with simple steps, transparent pricing, and expert support.",
       bg: "bg-white",
       borderTop: true,
     },

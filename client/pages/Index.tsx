@@ -118,12 +118,12 @@ const solutions = [
     image: "/solution2.jpg",
   },
   {
-    title: "Housing Society",
+    title: "Housing Societies",
     desc: "Transform your housing society with solar power for cost savings and a greener community.",
     image: null,
   },
   {
-    title: "Commercial Complex",
+    title: "Commercial Complexes",
     desc: "Make your commercial space energy-efficient with cost-saving solar solutions.",
     image: "/solution3.jpg",
   },
@@ -238,19 +238,19 @@ const blogPosts = [
 const customerStories = [
   {
     name: "Commercial Customer",
-    system: "25kW On-Grid System",
+    system: "25 kW On-Grid System",
     quote:
       "The ShashWatt Energy team made our solar installation simple and seamless. The system is performing efficiently, helping us significantly reduce our monthly electricity costs.",
   },
   {
     name: "Rural Property Owner",
-    system: "10kW Off-Grid System",
+    system: "10 kW Off-Grid System",
     quote:
       "We now have reliable power even in areas with limited grid connectivity. The team provided excellent guidance and installed the system professionally.",
   },
   {
     name: "Residential Customer",
-    system: "8kW Hybrid System",
+    system: "8 kW Hybrid System",
     quote:
       "Our hybrid solar system gives us reliable backup along with significant energy savings. The entire installation process was smooth, professional, and hassle-free.",
   },
@@ -924,7 +924,7 @@ export default function Index() {
                       className="text-[16px] leading-[1.55] text-[#5D3F3C] sm:text-[15px] md:text-[16px]"
                     >
                       We partner with industry leaders like Adani,
-                      RenewSys, Emphase and Panasonic for maximum
+                      RenewSys, Enphase and Panasonic for maximum
                       efficiency.
                     </p>
                   </div>
@@ -1073,7 +1073,7 @@ export default function Index() {
               </h2>
 
               <p className="mb-8 max-w-180 text-[16px] lg:text-[18px] leading-[1.45] text-[#1A1C1A]">
-                We handle paperwork, liaisoning, commissioning, subsidy applications, and loan applications.
+                We handle paperwork, liaising, commissioning, subsidy applications, and loan applications.
               </p>
             </motion.div>
 
@@ -1170,7 +1170,7 @@ export default function Index() {
               }
               transition={{ duration: 1.05, ease: "easeOut" }}
             >
-              ShashWatt has achieved <span className="font-bold text-[#007100]">3,000+ kW </span> of solar installations, generating an estimated
+              ShashWatt has installed <span className="font-bold text-[#007100]">3,000+ kW </span> of solar capacity, generating an estimated
               <span className="font-bold text-[#007100]"> 4.2 million+ kWh</span> of clean energy annually and avoiding approximately
               <span className="font-bold text-[#007100]"> 3,000+</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around
               <span className="font-bold text-[#007100]"> 50,000+</span> trees.
@@ -1224,7 +1224,7 @@ export default function Index() {
                   10+
                 </p>
                 <p className="text-[20px] lg:text-[16px] leading-tight text-[#5D3F3C]">
-                  Checkpoints
+                  Quality Checkpoints
                 </p>
               </div>
             </div>
