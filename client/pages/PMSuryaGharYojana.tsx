@@ -88,7 +88,7 @@ export default function PMSuryaGharYojana() {
             </h1>
 
             <p className="mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white md:text-[18px]">
-              Discover how government-backed solar subsidy support can help households reduce installation costs and move toward cleaner, more independent energy use.
+              Discover how government-backed solar subsidy support can help households reduce installation costs and move towards cleaner, more independent energy use.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function PMSuryaGharYojana() {
         <div className="mx-auto max-w-7xl px-8 md:px-0">
           <div className="mx-auto max-w-178 text-center">
             <h2 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-              What This Scheme Helps You Do
+              What This Scheme Helps You Do?
             </h2>
             <p className="mx-auto mt-4 max-w-150 text-[16px] leading-[1.45] text-[#5D3F3C]">
               Modernizing your energy consumption while significantly reducing
@@ -151,7 +151,7 @@ export default function PMSuryaGharYojana() {
             {[
               {
                 icon: Grid2X2,
-                title: "Loans at lower rate of interest",
+                title: "Loans at a lower rate of interest",
                 description:
                   "Affordable solar financing with lower interest rates and flexible repayment options.",
               },
@@ -159,7 +159,7 @@ export default function PMSuryaGharYojana() {
                 icon: Landmark,
                 title: "Get Subsidy Support",
                 description:
-                  "Direct financial assistance covering significant percentages of installation costs.",
+                  "Direct financial assistance covering a significant percentage of installation costs.",
               },
               {
                 icon: TrendingUp,
@@ -269,7 +269,7 @@ export default function PMSuryaGharYojana() {
                 icon: Factory,
                 title: "Subsidy for GHS/RWA",
                 description:
-                  "Group Housing Societies and Resident Welfare Associations can benefit from ₹18,000 per kW for common facilities including EV Charging infrastructure up to 500 kW capacity (@ 3 kW per house).",
+                  "Group Housing Societies and Resident Welfare Associations can benefit from ₹18,000 per kW for common facilities, including EV Charging infrastructure up to 500 kW capacity (@ 3 kW per house).",
               },
             ].map(({ icon: Icon, title, description }) => (
               <article
@@ -352,25 +352,25 @@ export default function PMSuryaGharYojana() {
               {
                 step: "01",
                 title: "Understand Requirement",
-                description: "Analyzing your peak loads and monthly unit consumption.",
+                description: "We analyze your peak loads and monthly unit consumption.",
               },
               {
                 step: "02",
                 title: "Check Suitability",
                 description:
-                  "Satellite-based assessment of your rooftop space and shadow profile.",
+                  "We conduct a satellite-based assessment of your rooftop space and shadow profile.",
               },
               {
                 step: "03",
                 title: "Estimate Capacity",
                 description:
-                  "Calculating the exact kW needed for maximum ROI and subsidy.",
+                  "We calculate the exact kW needed for maximum ROI and subsidy.",
               },
               {
                 step: "04",
                 title: "Plan Installation",
                 description:
-                  "Full execution from vendor selection to commissioning.",
+                  "We handle the full execution from vendor selection to commissioning.",
               },
             ].map(({ step, title, description }) => (
               <article key={step} className="text-center">
@@ -438,8 +438,8 @@ export default function PMSuryaGharYojana() {
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
               Empowering a sustainable future by <br />
               delivering innovative solar energy <br />
-              systems. Based in Hubballi, serving <br />
-              the nation.
+              systems. We are based in Hubballi <br />
+              and serve the nation.
             </p>
 
             <div className="mt-8 flex items-center gap-8">
@@ -457,12 +457,12 @@ export default function PMSuryaGharYojana() {
 
           <div>
             <h3 className="mb-8 text-[24px] font-semibold text-[#BA0013]">
-              Service
+              Services
             </h3>
             <div className="flex flex-col gap-5 text-[16px] leading-tight text-[#FAF9F6]">
               <Link to="/residential">Residential Solar</Link>
               <Link to="/commercial">Commercial Solar</Link>
-              <Link to="/industrial">Industrial Solutions</Link>
+              <Link to="/ev-charging">EV Charging</Link>
               <Link to="/pm-surya-ghar">
                 PM Surya Ghar
                 <br />
@@ -492,11 +492,11 @@ export default function PMSuryaGharYojana() {
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
                   <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 76195 75683
+                    +91 7619575683
                   </a>{" "}
                   /{" "}
                   <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 95916 75683
+                    +91 9591675683
                   </a>
                 </p>
               </div>
@@ -509,8 +509,7 @@ export default function PMSuryaGharYojana() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, 7th cross, Industrial Estate, Gokul
-                  <br />
+                  C-512, 7th Cross, Industrial Estate, Gokul
                   Road, Hubballi - 580032
                 </p>
               </div>
@@ -519,7 +518,16 @@ export default function PMSuryaGharYojana() {
         </div>
 
         <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-          All rights reserved. Designed by Spitel @2026
+          ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+          <a
+            href="https://spitel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Spitel
+          </a>{" "}
+          Pvt Ltd
         </div>
       </footer>
     </main>

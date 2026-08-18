@@ -8,19 +8,12 @@ import {
   Building2,
   Gauge,
   Zap,
-  Landmark,
   ContactRound,
   Earth,
   Mail,
   Phone,
   MapPin,
   Share2,
-  Factory,
-  Warehouse,
-  CircleCheck,
-  TrendingUp,
-  Grid2X2,
-  Leaf,
 } from "lucide-react";
 
 export default function EVCharging() {
@@ -30,7 +23,7 @@ export default function EVCharging() {
     {
       title: "Home EV Chargers",
       description:
-        "Compact 3.3 kW to 7.2 kW AC wall-box chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
+        "Compact 3.3 kW to 7.2 kW AC wallbox chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
       image: "/ev1.webp",
       icon: Home,
       features: "Safe  •  Smart  •  Convenient",
@@ -46,10 +39,10 @@ export default function EVCharging() {
     {
       title: "Fast DC Charging Hubs",
       description:
-        "High-speed 30 kW to 60 kW DC fast chargers for highway hubs, public charging corridors and commercial fleet operations.",
+        "30 kW to 60 kW high-speed DC fast chargers for highway hubs, public charging corridors and commercial fleet operations.",
       image: "/ev3.webp",
       icon: Gauge,
-      features: "High Speed  •  Powerful  •  Future Ready",
+      features: "High Speed  •  Powerful  •  Future-Ready",
     },
   ];
 
@@ -207,7 +200,7 @@ export default function EVCharging() {
 
                 <p className="mt-5 max-w-145 text-[16px] font-medium leading-[1.55] text-[#5D3F3C]">
                   As an Enphase Gold Installer, we bring certified expertise,
-                  highest quality standards and reliable service for all your
+                  the highest quality standards and reliable service for all your
                   energy needs.
                 </p>
               </div>
@@ -223,7 +216,7 @@ export default function EVCharging() {
             <h2 className="mx-auto text-[30px] font-bold leading-[1.16] text-[#1A1C1A] md:text-[40px]">
               Ready to Make the
               <br />
-              Switch to Solar?
+              Switch to EV Charging?
             </h2>
 
             <p className="mx-auto mt-6 text-[18px] leading-normal text-[#1A1C1A] md:text-[18px]">
@@ -265,8 +258,8 @@ export default function EVCharging() {
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
               Empowering a sustainable future by <br />
               delivering innovative solar energy <br />
-              systems. Based in Hubballi, serving <br />
-              the nation.
+              systems. We are based in Hubballi <br />
+              and serve the nation.
             </p>
 
             <div className="mt-8 flex items-center gap-8">
@@ -284,12 +277,12 @@ export default function EVCharging() {
 
           <div>
             <h3 className="mb-8 text-[24px] font-semibold text-[#BA0013]">
-              Service
+              Services
             </h3>
             <div className="flex flex-col gap-5 text-[16px] leading-tight text-[#FAF9F6]">
               <Link to="/residential">Residential Solar</Link>
               <Link to="/commercial">Commercial Solar</Link>
-              <Link to="/industrial">Industrial Solutions</Link>
+              <Link to="/ev-charging">EV Charging</Link>
               <Link to="/pm-surya-ghar">
                 PM Surya Ghar
                 <br />
@@ -319,11 +312,11 @@ export default function EVCharging() {
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
                   <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 76195 75683
+                    +91 7619575683
                   </a>{" "}
                   /{" "}
                   <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 95916 75683
+                    +91 9591675683
                   </a>
                 </p>
               </div>
@@ -336,8 +329,7 @@ export default function EVCharging() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, 7th cross, Industrial Estate, Gokul
-                  <br />
+                  C-512, 7th Cross, Industrial Estate, Gokul
                   Road, Hubballi - 580032
                 </p>
               </div>
@@ -346,7 +338,16 @@ export default function EVCharging() {
         </div>
 
         <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-          All rights reserved. Designed by Spitel @2026
+          ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+          <a
+            href="https://spitel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Spitel
+          </a>{" "}
+          Pvt Ltd
         </div>
       </footer>
     </main>

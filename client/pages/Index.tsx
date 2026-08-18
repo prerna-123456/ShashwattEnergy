@@ -412,7 +412,7 @@ export default function Index() {
                 Home
               </Link>
 
-              <SolarSolutionsNav/>
+              <SolarSolutionsNav />
 
               <Link to="/ev-charging" className="hover:text-white/80">
                 EV Charging
@@ -478,11 +478,11 @@ export default function Index() {
                   Home
                 </Link>
 
-                <SolarSolutionsNav/>
+                <SolarSolutionsNav />
 
-              <Link to="/ev-charging" className="hover:text-white/80">
-                EV Charging
-              </Link>
+                <Link to="/ev-charging" className="hover:text-white/80">
+                  EV Charging
+                </Link>
 
                 <Link
                   to="/pm-surya-ghar"
@@ -1171,8 +1171,8 @@ export default function Index() {
               transition={{ duration: 1.05, ease: "easeOut" }}
             >
               ShashWatt has achieved <span className="font-bold text-[#007100]">3,000+ kW </span> of solar installations, generating an estimated
-              <span className="font-bold text-[#007100]"> 4.2 million+ kWh</span> of clean energy annually and avoiding approximately 
-              <span className="font-bold text-[#007100]"> 3,000+</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around 
+              <span className="font-bold text-[#007100]"> 4.2 million+ kWh</span> of clean energy annually and avoiding approximately
+              <span className="font-bold text-[#007100]"> 3,000+</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around
               <span className="font-bold text-[#007100]"> 50,000+</span> trees.
             </motion.p>
 
@@ -1609,8 +1609,8 @@ export default function Index() {
             <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
               Empowering a sustainable future by <br />
               delivering innovative solar energy <br />
-              systems. Based in Hubballi, serving <br />
-              the nation.
+              systems. We are based in Hubballi <br />
+              and serve the nation.
             </p>
 
             <div className="mt-8 flex items-center gap-8">
@@ -1628,12 +1628,12 @@ export default function Index() {
 
           <div>
             <h3 className="mb-8 text-[24px] font-semibold text-[#BA0013]">
-              Service
+              Services
             </h3>
             <div className="flex flex-col gap-5 text-[16px] leading-tight text-[#FAF9F6]">
               <Link to="/residential">Residential Solar</Link>
               <Link to="/commercial">Commercial Solar</Link>
-              <Link to="/industrial">Industrial Solutions</Link>
+              <Link to="/ev-charging">EV Charging</Link>
               <Link to="/pm-surya-ghar">
                 PM Surya Ghar
                 <br />
@@ -1663,11 +1663,11 @@ export default function Index() {
                 <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
                   <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 76195 75683
+                    +91 7619575683
                   </a>{" "}
                   /{" "}
                   <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
-                    +91 95916 75683
+                    +91 9591675683
                   </a>
                 </p>
               </div>
@@ -1680,8 +1680,7 @@ export default function Index() {
               <div className="flex gap-4">
                 <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                 <p>
-                  C-512, 7th cross, Industrial Estate, Gokul
-                  <br />
+                  C-512, 7th Cross, Industrial Estate, Gokul
                   Road, Hubballi - 580032
                 </p>
               </div>
@@ -1690,7 +1689,16 @@ export default function Index() {
         </div>
 
         <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-          All rights reserved. Designed by Spitel @2026
+          ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+          <a
+            href="https://spitel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Spitel
+          </a>{" "}
+          Pvt Ltd
         </div>
       </footer>
     </main>

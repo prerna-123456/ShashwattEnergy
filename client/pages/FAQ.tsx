@@ -126,7 +126,7 @@ export default function FAQ() {
     {
       question: "Should I choose a regular inverter or a microinverter for my solar system?",
       answer:
-        "Both are useful options, but microinverters can offer better flexibility and performance in certain situations. They are particularly beneficial for homes with trees or areas that cause shading. Since each panel operates independently, shading on one panel has less impact on the performance of the others.",
+        "Both are useful options, but microinverters can offer greater flexibility and better performance in certain situations. They are particularly beneficial for homes with trees or other areas that cause shading. Since each panel operates independently, shading on one panel has less impact on the performance of the other panels.",
     },
     {
       question: "How can solar and battery storage help reduce rising electricity costs?",
@@ -141,7 +141,7 @@ export default function FAQ() {
     {
       question: "Can I turn my unused land or space into an EV charging hub?",
       answer:
-        "Absolutely! You can transform unused space into a smart EV charging hub and create a future-ready business opportunity. With ShashWatt Energy EV Chargers, you can provide convenient charging while supporting the transition toward clean mobility. Power your land. Power your future. Choose Shashwatt Energy.",
+        "Absolutely! You can transform unused space into a smart EV charging hub and create a future-ready business opportunity. With ShashWatt Energy EV Chargers, you can provide convenient charging while supporting the transition toward clean mobility. Power your land. Power your future. Choose ShashWatt Energy.",
     },
     {
       question: "Can ShashWatt Energy's solar solutions increase the value of my home?",
@@ -161,7 +161,7 @@ export default function FAQ() {
     {
       question: "Will solar panels work during cloudy or rainy weather?",
       answer:
-        "Yes. Solar panels can continue generating electricity during cloudy weather because daylight is still available, although their output may be lower than on a sunny day. Rain can also help wash away dust and dirt from the panels. This monsoon, switch to solar with Shashwatt Energy and power your home smarter.",
+        "Yes. Solar panels can continue generating electricity during cloudy weather because daylight is still available, although their output may be lower than on a sunny day. Rain can also help wash away dust and dirt from the panels. This monsoon, switch to solar with ShashWatt Energy and power your home smarter.",
     },
   ];
 
@@ -248,8 +248,7 @@ export default function FAQ() {
                   }`}
               >
                 From choosing the right solar system to understanding installation, savings, subsidies,
-                and maintenance, find simple answers to everything you need to know before making the
-                switch to solar energy.
+                and maintenance, find simple answers to everything you need to know before switching to solar energy.
               </p>
             </div>
           </div>
@@ -267,7 +266,7 @@ export default function FAQ() {
                     Need to Know
                   </span>
                   <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] max-w-xl">
-                    Curious About <br />Solar?
+                    What you need to know?
                   </h2>
                 </div>
                 <p className="text-[16px] font-medium leading-[1.45] text-[#5D3F3C] max-w-xl md:text-right">
@@ -342,8 +341,8 @@ export default function FAQ() {
               <p className="mt-8 max-w-72 text-[16px] leading-[1.55] text-white/90">
                 Empowering a sustainable future by <br />
                 delivering innovative solar energy <br />
-                systems. Based in Hubballi, serving <br />
-                the nation.
+                systems. We are based in Hubballi <br />
+                and serve the nation.
               </p>
 
               <div className="mt-8 flex items-center gap-8">
@@ -361,12 +360,12 @@ export default function FAQ() {
 
             <div>
               <h3 className="mb-8 text-[24px] font-semibold text-[#BA0013]">
-                Service
+                Services
               </h3>
               <div className="flex flex-col gap-5 text-[16px] leading-tight text-[#FAF9F6]">
                 <Link to="/residential">Residential Solar</Link>
                 <Link to="/commercial">Commercial Solar</Link>
-                <Link to="/industrial">Industrial Solutions</Link>
+                <Link to="/ev-charging">EV Charging</Link>
                 <Link to="/pm-surya-ghar">
                   PM Surya Ghar
                   <br />
@@ -396,11 +395,11 @@ export default function FAQ() {
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
                     <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
-                      +91 76195 75683
+                      +91 7619575683
                     </a>{" "}
                     /{" "}
                     <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
-                      +91 95916 75683
+                      +91 9591675683
                     </a>
                   </p>
                 </div>
@@ -413,8 +412,7 @@ export default function FAQ() {
                 <div className="flex gap-4">
                   <MapPin className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    C-512, 7th cross, Industrial Estate, Gokul
-                    <br />
+                    C-512, 7th Cross, Industrial Estate, Gokul
                     Road, Hubballi - 580032
                   </p>
                 </div>
@@ -423,7 +421,16 @@ export default function FAQ() {
           </div>
 
           <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-            All rights reserved. Designed by Spitel @2026
+            ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+            <a
+              href="https://spitel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Spitel
+            </a>{" "}
+            Pvt Ltd
           </div>
         </footer>
       </div>
