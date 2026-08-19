@@ -22,6 +22,62 @@ export default function Residential() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    );
+  }
+
+  function FacebookIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    );
+  }
+
+  function WhatsAppIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.887.525 3.65 1.436 5.152L2 22l4.973-1.404A9.945 9.945 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.169-1.141l-.299-.177-3.106.878.847-3.09-.194-.313A8.16 8.16 0 0 1 3.8 12c0-4.52 3.68-8.2 8.201-8.2 4.52 0 8.199 3.68 8.199 8.2 0 4.52-3.679 8.2-8.199 8.2z" />
+      </svg>
+    );
+  }
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
@@ -100,7 +156,7 @@ export default function Residential() {
       <section className="bg-[#faf9f7] py-14 md:py-28 pt-16 lg:pt-28">
         <div className="mx-auto max-w-7xl px-8 text-center md:px-0">
           <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-            Type of <span className="text-[#BA0013]">Roofs/Installation</span>
+            Type of <span className="text-[#BA0013]">Roofs/Installations</span>
           </h2>
         </div>
 
@@ -110,7 +166,7 @@ export default function Residential() {
               icon: Factory,
               title: "Solar-on-Sheet",
               description:
-                "Easy to implement and quick installation method for existing infrastructure.",
+                "An easy-to-implement and quick installation method for existing infrastructure.",
             },
             {
               icon: DraftingCompass,
@@ -164,10 +220,10 @@ export default function Residential() {
             </h2>
 
             <p className="mt-7 max-w-2xl text-[18px] leading-[1.55] text-[#5D3F3C]">
-              Every rooftop is a unique engineering challenge. From the orientation
-              of the sun to the architectural integrity of the structure, we
-              customize each system to maximize yield without compromising your
-              home's aesthetic value. We deliver end-to-end engineering excellence
+              Every rooftop is a unique engineering challenge. From the orientation of 
+              the roof relative to the sun to the architectural integrity of the 
+              structure, we customize each system to maximize yield without compromising 
+              your home's aesthetic value. We deliver end-to-end engineering excellence
               for a sustainable future.
             </p>
           </div>
@@ -406,15 +462,14 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    String inverter based solar system with TOPCon Half cut
-                    panels with efficiency up to 21%
+                    String-inverter-based solar system with TOPCon half-cut panels with efficiency up to 21%
                   </p>
                 </div>
 
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    GI based structure and standard fire resistant wiring
+                    GI-based structure and standard fire-resistant wiring
                   </p>
                 </div>
 
@@ -446,17 +501,16 @@ export default function Residential() {
                 Premium
               </h3>
 
-              <p className="mt-5 max-w-125 text-[18px] leading-[1.55] text-[#5D3F3C]">
-                Solar panels with latest technology combined with micro
-                inverters for higher generation and long lasting systems
+              <p className="mt-5 max-w-135 text-[18px] leading-[1.55] text-[#5D3F3C]">
+                Solar panels with the latest technology combined with microinverters 
+                for higher generation and long-lasting systems.
               </p>
 
               <div className="mt-9 space-y-6">
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Microinverters based solar system with TOPCon N-Type panels
-                    with efficiency up to 24%
+                    Microinverter-based solar system with TOPCon N-type panels with efficiency up to 24%
                   </p>
                 </div>
 
@@ -470,8 +524,7 @@ export default function Residential() {
                 <div className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#BA0013]" />
                   <p className="max-w-125 text-[16px] leading-[1.45] text-[#1A1C1A]">
-                    Long life - 30 years warranty on panels and 25 years warranty on
-                    Micro inverters
+                    Long life – 30-year warranty on panels and 25-year warranty on microinverters
                   </p>
                 </div>
 
@@ -502,7 +555,7 @@ export default function Residential() {
             <img
               src="/premium.webp"
               alt="Premium residential rooftop solar solution"
-              className="h-80 w-full object-cover md:h-128"
+              className="h-80 w-full object-cover md:h-150"
             />
           </div>
         </div>
@@ -579,15 +632,15 @@ export default function Residential() {
                 </div>
 
                 <div className="px-20 py-6">
-                  Performance warranty - <span className="font-bold">30 Years</span>
+                  Performance Warranty – <span className="font-bold">30 Years</span>
                   <br />
-                  Product warranty - 12 years
+                  Product Warranty – 12 years
                 </div>
 
                 <div className="px-44 py-6">
-                  Performance warranty - <span className="font-bold">30 Years</span>
+                  Performance Warranty - <span className="font-bold">30 Years</span>
                   <br />
-                  Product warranty - 12 years
+                  Product Warranty - 12 years
                 </div>
               </div>
 
@@ -643,7 +696,7 @@ export default function Residential() {
               <div className="grid grid-cols-[0.62fr_0.95fr_1.5fr] border-b border-black/10 text-[14px] text-[#1A1C1A]">
 
                 <div className="px-20 py-6 font-semibold">
-                  Average generation per kW
+                  Average monthly generation per kW
                 </div>
 
                 <div className="px-20 py-6">
@@ -679,7 +732,7 @@ export default function Residential() {
                 </div>
 
                 <div className="px-20 py-6">
-                  If one panel fails, generation stops completely
+                  If one panel fails, the system's generation may be reduced
                 </div>
 
                 <div className="px-44 py-6">
@@ -825,9 +878,9 @@ export default function Residential() {
                   </p>
 
                   <p className="text-[14px] leading-normal text-[#5D3F3C]">
-                    Performance warranty - <span className="font-bold">30 Years</span>
+                    Performance Warranty - <span className="font-bold">30 Years</span>
                     <br />
-                    Product warranty - 12 years
+                    Product Warranty - 12 years
                   </p>
                 </div>
 
@@ -837,9 +890,9 @@ export default function Residential() {
                   </p>
 
                   <p className="text-[14px] leading-normal text-[#5D3F3C]">
-                    Performance warranty - <span className="font-bold">30 Years</span>
+                    Performance Warranty - <span className="font-bold">30 Years</span>
                     <br />
-                    Product warranty - 12 years
+                    Product Warranty - 12 years
                   </p>
                 </div>
               </div>
@@ -937,7 +990,7 @@ export default function Residential() {
             <div className="mb-4 rounded-lg bg-white p-5 shadow-[0_10px_25px_rgba(39,31,25,0.08)]">
 
               <h3 className="mb-4 text-[16px] font-bold text-[#1A1C1A]">
-                Average generation per kW
+                Average monthly generation per kW
               </h3>
 
               <div className="grid grid-cols-2 gap-4">
@@ -1011,7 +1064,7 @@ export default function Residential() {
                   </p>
 
                   <p className="text-[14px] leading-normal text-[#5D3F3C]">
-                    If one panel fails, generation stops completely
+                    If one panel fails, the system's generation may be reduced
                   </p>
                 </div>
 
@@ -1129,8 +1182,7 @@ export default function Residential() {
                   Rooftop Installation
                 </h3>
                 <p className="mt-3 max-w-105 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                  Installed on the roof of your apartment / common areas such as
-                  club house etc. for maximum yield.
+                  Installed on the roof of your apartment or common areas such as the clubhouse for maximum yield.
                 </p>
               </div>
             </article>
@@ -1258,15 +1310,33 @@ export default function Residential() {
             </p>
 
             <div className="mt-8 flex items-center gap-8">
-              <Link to="#" aria-label="Website" className="text-white">
-                <Earth size={20} />
-              </Link>
-              <Link to="#" aria-label="Share" className="text-white">
-                <Share2 size={20} />
-              </Link>
-              <Link to="#" aria-label="Profile" className="text-white">
-                <ContactRound size={20} />
-              </Link>
+              <a
+                href="https://www.instagram.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-white hover:text-white/80"
+              >
+                <InstagramIcon size={28} />
+              </a>
+              <a
+                href="https://www.facebook.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-white hover:text-white/80"
+              >
+                <FacebookIcon size={28} />
+              </a>
+              <a
+                href="https://wa.me/917619575683"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-white hover:text-white/80"
+              >
+                <WhatsAppIcon size={28} />
+              </a>
             </div>
           </div>
 

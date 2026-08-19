@@ -29,6 +29,62 @@ export default function Commercial() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    );
+  }
+
+  function FacebookIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    );
+  }
+
+  function WhatsAppIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.887.525 3.65 1.436 5.152L2 22l4.973-1.404A9.945 9.945 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.169-1.141l-.299-.177-3.106.878.847-3.09-.194-.313A8.16 8.16 0 0 1 3.8 12c0-4.52 3.68-8.2 8.201-8.2 4.52 0 8.199 3.68 8.199 8.2 0 4.52-3.679 8.2-8.199 8.2z" />
+      </svg>
+    );
+  }
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f7] text-[#1A1C1A]">
       <nav className="absolute left-0 right-0 top-0 z-20 text-white">
@@ -90,11 +146,11 @@ export default function Commercial() {
             </span>
 
             <h1 className="mt-8 text-[42px] font-bold leading-[1.05] tracking-normal text-white sm:text-[56px] lg:text-[56px]">
-              Invest in Solar for your commercial establishment
+              Invest in Solar for Your Commercial Establishment
             </h1>
 
-            <p className="mt-7 max-w-140 text-[18px] font-medium leading-[1.55] text-white md:text-[18px]">
-              Explore innovative solar solutions for your business and start saving on electricity from Day 1 with our professional industrial grade installations.
+            <p className="mt-7 max-w-145 text-[18px] font-medium leading-[1.55] text-white md:text-[18px]">
+              Explore innovative solar solutions for your business and start saving on electricity from Day 1 with our professional industrial-grade installations.
             </p>
           </div>
         </div>
@@ -104,7 +160,7 @@ export default function Commercial() {
       <section className="bg-[#faf9f7] py-14 md:py-28 pt-16 lg:pt-28">
         <div className="mx-auto max-w-7xl px-8 text-center md:px-0">
           <h2 className="text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-            Type of <span className="text-[#BA0013]">Roofs/Installation</span>
+            Type of <span className="text-[#BA0013]">Roofs/Installations</span>
           </h2>
         </div>
 
@@ -114,7 +170,7 @@ export default function Commercial() {
               icon: Factory,
               title: "Solar-on-Sheet",
               description:
-                "Easy to implement and quick installation method for existing infrastructure.",
+                "An easy-to-implement and quick installation method for existing infrastructure.",
             },
             {
               icon: DraftingCompass,
@@ -236,7 +292,7 @@ export default function Commercial() {
                 },
                 {
                   icon: Shield,
-                  text: "Rust-free – Galvanized Iron pipes are used for the structure.",
+                  text: "Rust-free – galvanized iron pipes are used for the structure",
                 },
                 {
                   icon: TrendingUp,
@@ -270,7 +326,7 @@ export default function Commercial() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 md:grid-cols-2 md:gap-14 md:px-0">
           <div className="rounded-[8px] bg-[#f1f0ee] px-9 py-10 md:min-h-82">
             <h3 className="text-[30px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
-              Solar On Roof
+              Solar on Roof
             </h3>
 
             <div className="mt-7 space-y-6">
@@ -285,7 +341,7 @@ export default function Commercial() {
                 },
                 {
                   icon: Wrench,
-                  text: "Ideal for new construction / under construction properties",
+                  text: "Ideal for new construction/under-construction properties",
                 },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex gap-4">
@@ -423,8 +479,8 @@ export default function Commercial() {
                 <span className="block text-[24px] font-semibold leading-tight text-[#1A1C1A]">
                   PM Surya Ghar
                 </span>
-                <span className="mt-3 block max-w-73 text-[16px] leading-[1.45] text-[#5D3F3C]">
-                  1 kW – ₹30,000, 2 kW – ₹60,000, 3 kW – ₹78,000
+                <span className="mt-3 block max-w-70 text-[16px] leading-[1.45] text-[#5D3F3C]">
+                  1 kW – ₹30,000; 2 kW – ₹60,000; <br />3 kW – ₹78,000
                 </span>
               </span>
             </Link>
@@ -486,15 +542,33 @@ export default function Commercial() {
             </p>
 
             <div className="mt-8 flex items-center gap-8">
-              <Link to="#" aria-label="Website" className="text-white">
-                <Earth size={20} />
-              </Link>
-              <Link to="#" aria-label="Share" className="text-white">
-                <Share2 size={20} />
-              </Link>
-              <Link to="#" aria-label="Profile" className="text-white">
-                <ContactRound size={20} />
-              </Link>
+              <a
+                href="https://www.instagram.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-white hover:text-white/80"
+              >
+                <InstagramIcon size={28} />
+              </a>
+              <a
+                href="https://www.facebook.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-white hover:text-white/80"
+              >
+                <FacebookIcon size={28} />
+              </a>
+              <a
+                href="https://wa.me/917619575683"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-white hover:text-white/80"
+              >
+                <WhatsAppIcon size={28} />
+              </a>
             </div>
           </div>
 

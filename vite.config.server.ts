@@ -21,6 +21,7 @@ export default defineConfig({
         "url",
         "http",
         "https",
+        "tls",
         "os",
         "crypto",
         "stream",

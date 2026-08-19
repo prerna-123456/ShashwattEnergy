@@ -12,13 +12,69 @@ import {
   Phone,
   Mail,
   MapPin,
-  Share2,
   Menu,
   X,
-  ContactRound,
-  Earth,
   type LucideIcon,
 } from "lucide-react";
+
+// lucide-react no longer ships branded/logo icons (Facebook, Instagram,
+// WhatsApp) — they were removed over trademark concerns. These are small
+// inline SVGs matching the size/stroke of the rest of the icon set.
+function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.887.525 3.65 1.436 5.152L2 22l4.973-1.404A9.945 9.945 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.169-1.141l-.299-.177-3.106.878.847-3.09-.194-.313A8.16 8.16 0 0 1 3.8 12c0-4.52 3.68-8.2 8.201-8.2 4.52 0 8.199 3.68 8.199 8.2 0 4.52-3.679 8.2-8.199 8.2z" />
+    </svg>
+  );
+}
 
 // Photos — served from the /public/calculatorimg folder
 const heroImg = "/calculatorimg/hero.webp";
@@ -109,6 +165,11 @@ function Reveal({
   );
 }
 
+interface CalculatorErrors {
+  state?: string;
+  bill?: string;
+}
+
 export default function Calculator() {
   // Triggers the hero text entrance animation once on mount.
   const [heroIn, setHeroIn] = useState(false);
@@ -140,13 +201,53 @@ export default function Calculator() {
   const [state, setState] = useState("");
   const [bill, setBill] = useState("");
   const [result, setResult] = useState<{ sizeKw: number; monthlySavings: number } | null>(null);
+  const [errors, setErrors] = useState<CalculatorErrors>({});
+
+  // TC_183: switching property type should give the user a fresh form —
+  // no stale state/bill/result/errors carried over.
+  const handlePropertyTypeChange = (type: "Residential" | "Commercial") => {
+    setPropertyType(type);
+    setState("");
+    setBill("");
+    setResult(null);
+    setErrors({});
+  };
+
+  // TC_184: changing (or clearing) the state selection invalidates any
+  // previous result — it must be recalculated, not silently kept.
+  const handleStateChange = (value: string) => {
+    setState(value);
+    setResult(null);
+    setErrors((prev) => ({ ...prev, state: undefined }));
+  };
+
+  const handleBillChange = (value: string) => {
+    setBill(value);
+    setResult(null);
+    setErrors((prev) => ({ ...prev, bill: undefined }));
+  };
 
   const handleCalculate = () => {
+    const newErrors: CalculatorErrors = {};
+
+    if (!state) {
+      newErrors.state = "Please select your state.";
+    }
+
     const billValue = parseFloat(bill);
-    if (!billValue || billValue <= 0) {
+    if (bill.trim() === "" || Number.isNaN(billValue)) {
+      newErrors.bill = "Please enter your average monthly electricity bill.";
+    } else if (billValue <= 0) {
+      newErrors.bill = "Please enter a valid amount greater than 0.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
       setResult(null);
       return;
     }
+
     // Rough estimate: ~1kW offsets about ₹1000 of monthly bill for residential,
     // commercial tariffs are a bit higher so it takes slightly less capacity.
     const perKwOffset = propertyType === "Residential" ? 1000 : 1300;
@@ -261,7 +362,8 @@ export default function Calculator() {
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       type="button"
-                      onClick={() => setPropertyType("Residential")}
+                      aria-pressed={propertyType === "Residential"}
+                      onClick={() => handlePropertyTypeChange("Residential")}
                       className={`flex flex-col items-center justify-center gap-2 rounded-[8px] border py-6 transition-colors ${propertyType === "Residential"
                         ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
                         : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
@@ -275,7 +377,8 @@ export default function Calculator() {
 
                     <button
                       type="button"
-                      onClick={() => setPropertyType("Commercial")}
+                      aria-pressed={propertyType === "Commercial"}
+                      onClick={() => handlePropertyTypeChange("Commercial")}
                       className={`flex flex-col items-center justify-center gap-2 rounded-[8px] border py-6 transition-colors ${propertyType === "Commercial"
                         ? "border-[#BA0013] bg-[#FCE3E7] text-[#BA0013]"
                         : "border-[#dfddda] bg-[#faf9f7] text-[#5D3F3C] hover:border-[#5D3F3C]/40"
@@ -291,14 +394,17 @@ export default function Calculator() {
 
                 {/* State */}
                 <div className="mb-7">
-                  <div className="text-[14px] font-bold tracking-widest uppercase text-[#5D3F3C] mb-3">
+                  <label htmlFor="calc-state" className="block text-[14px] font-bold tracking-widest uppercase text-[#5D3F3C] mb-3">
                     2. Select State
-                  </div>
+                  </label>
                   <div className="relative">
                     <select
+                      id="calc-state"
                       value={state}
-                      onChange={(e) => setState(e.target.value)}
-                      className="w-full appearance-none bg-[#faf9f7] text-[16px] border border-[#dfddda] rounded-[8px] px-4 py-3.5 text-[#1A1C1A] focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                      onChange={(e) => handleStateChange(e.target.value)}
+                      aria-invalid={!!errors.state}
+                      className={`w-full appearance-none bg-[#faf9f7] text-[16px] border rounded-[8px] px-4 py-3.5 text-[#1A1C1A] focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 ${errors.state ? "border-red-500" : "border-[#dfddda] focus:border-[#BA0013]"
+                        }`}
                     >
                       <option value="">Choose your state</option>
                       {indianStates.map((s) => (
@@ -307,24 +413,33 @@ export default function Calculator() {
                     </select>
                     <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5D3F3C] pointer-events-none" />
                   </div>
+                  {errors.state && (
+                    <p className="mt-2 text-sm text-red-600">{errors.state}</p>
+                  )}
                 </div>
 
                 {/* Bill */}
                 <div className="mb-8">
-                  <div className="text-[14px] font-bold tracking-widest uppercase text-[#5D3F3C] mb-3">
+                  <label htmlFor="calc-bill" className="block text-[14px] font-bold tracking-widest uppercase text-[#5D3F3C] mb-3">
                     3. Average Monthly Electricity Bill
-                  </div>
+                  </label>
                   <div className="relative">
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5D3F3C]">₹</span>
                     <input
+                      id="calc-bill"
                       type="number"
                       min={0}
                       value={bill}
-                      onChange={(e) => setBill(e.target.value)}
+                      onChange={(e) => handleBillChange(e.target.value)}
                       placeholder="Enter your average monthly electricity bill"
-                      className="w-full bg-[#faf9f7] border border-[#dfddda] rounded-[8px] pl-9 pr-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 focus:border-[#BA0013]"
+                      aria-invalid={!!errors.bill}
+                      className={`w-full bg-[#faf9f7] border rounded-[8px] pl-9 pr-4 py-3.5 text-[#1A1C1A] placeholder:text-[#5D3F3C]/60 focus:outline-none focus:ring-2 focus:ring-[#BA0013]/30 ${errors.bill ? "border-red-500" : "border-[#dfddda] focus:border-[#BA0013]"
+                        }`}
                     />
                   </div>
+                  {errors.bill && (
+                    <p className="mt-2 text-sm text-red-600">{errors.bill}</p>
+                  )}
                 </div>
 
                 <button
@@ -434,15 +549,33 @@ export default function Calculator() {
               </p>
 
               <div className="mt-8 flex items-center gap-8">
-                <Link to="#" aria-label="Website" className="text-white">
-                  <Earth size={20} />
-                </Link>
-                <Link to="#" aria-label="Share" className="text-white">
-                  <Share2 size={20} />
-                </Link>
-                <Link to="#" aria-label="Profile" className="text-white">
-                  <ContactRound size={20} />
-                </Link>
+                <a
+                  href="https://www.instagram.com/shashwattenergy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-white hover:text-white/80"
+                >
+                  <InstagramIcon size={28} />
+                </a>
+                <a
+                  href="https://www.facebook.com/shashwattenergy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="text-white hover:text-white/80"
+                >
+                  <FacebookIcon size={28} />
+                </a>
+                <a
+                  href="https://wa.me/917619575683"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="text-white hover:text-white/80"
+                >
+                  <WhatsAppIcon size={28} />
+                </a>
               </div>
             </div>
 
@@ -482,11 +615,11 @@ export default function Calculator() {
                 <div className="flex gap-4">
                   <Phone className="mt-0.5 shrink-0 text-[#BA0013]" size={18} />
                   <p>
-                    <a href="tel:+9176195 75683" className="hover:underline focus-visible:underline active:underline">
+                    <a href="tel:+917619575683" className="hover:underline focus-visible:underline active:underline">
                       +91 7619575683
                     </a>{" "}
                     /{" "}
-                    <a href="tel:+9195916 75683" className="hover:underline focus-visible:underline active:underline">
+                    <a href="tel:+919591675683" className="hover:underline focus-visible:underline active:underline">
                       +91 9591675683
                     </a>
                   </p>

@@ -56,18 +56,18 @@ const trustCarouselImages = [
 const heroSlides = [
   {
     title: "Turn Sunlight Into\nLong-Term Savings",
-    desc: "Empowering Indian homes and businesses with high- performance solar infrastructure. We deliver end-to-end  engineering excellence for a sustainable future.",
+    desc: "Empowering Indian homes and businesses with high-performance solar infrastructure. We deliver end-to-end  engineering excellence for a sustainable future.",
     image: "/hero-bg.webp",
-    primaryLabel: "Consult our Expertise",
+    primaryLabel: "Consult Our Experts",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
     secondaryLink: "/about",
   },
   {
-    title: "Generate clean energy and\nreduce your power bills",
+    title: "Generate Clean Energy and\nReduce Your Power Bills",
     desc: "Harness the power of the sun to create a smarter, more sustainable, and cost-effective energy future.",
     image: "/hero-bg2.webp",
-    primaryLabel: "Consult our Expertise",
+    primaryLabel: "Consult Our Experts",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
     secondaryLink: "/about",
@@ -76,7 +76,7 @@ const heroSlides = [
     title: "Power Your World with\nClean Energy",
     desc: "Switch to solar and generate clean, renewable power that reduces your dependence on conventional energy while building a more sustainable future.",
     image: "/hero-bg3.webp",
-    primaryLabel: "Consult our Expertise",
+    primaryLabel: "Consult Our Experts",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
     secondaryLink: "/about",
@@ -85,16 +85,16 @@ const heroSlides = [
     title: "Reliable Solar Backup,\nWhenever You Need It",
     desc: "Stay powered through outages with dependable solar backup solutions designed to keep your home or business running without interruption.",
     image: "/hero-bg4.webp",
-    primaryLabel: "Consult our Expertise",
+    primaryLabel: "Consult Our Experts",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
     secondaryLink: "/about",
   },
   {
     title: "Step Into a Smarter\nEnergy Future",
-    desc: "Take control of the way you power your home or business with clean solar energy. Reduce your dependence on the grid, lower your electricity bills, and enjoy energy designed around your needs.",
+    desc: "Take control of the way you power your home or business with clean solar energy. Reduce your dependence on the grid, lower your electricity bills, and enjoy an energy solution designed around your needs.",
     image: "/hero-bg5.webp",
-    primaryLabel: "Consult our Expertise",
+    primaryLabel: "Consult Our Experts",
     primaryLink: "/contact",
     secondaryLabel: "About Us",
     secondaryLink: "/about",
@@ -104,7 +104,7 @@ const heroSlides = [
 const solutions = [
   {
     title: "Home",
-    desc: "Power your home sustainably with solar energy and gain long-term savings on electricity costs",
+    desc: "Power your home sustainably with solar energy and gain long-term savings on electricity costs.",
     image: "/solution1.jpg",
   },
   {
@@ -168,7 +168,7 @@ const partnerLogos = [
 const livingSpaces = [
   {
     title: "Independent Homes",
-    desc: "Maximum autonomy with custom rooftop designs tailored for family needs.",
+    desc: "Maximum autonomy with custom rooftop designs tailored to family needs.",
     image: "/home1.webp",
     Icon: House,
   },
@@ -192,7 +192,7 @@ const livingSpaces = [
   },
   {
     title: "Housing Societies",
-    desc: "Community-scale power for common utility savings and green branding.",
+    desc: "Community-scale power for savings on common utility costs and green branding.",
     image: "/solution2.jpg",
     Icon: Hotel,
   },
@@ -207,31 +207,34 @@ const faqItems = [
   {
     question: "What is net metering and how does it benefit me?",
     answer:
-      "Net metering lets you send excess solar electricity back to the grid and receive credits on your bill, helping reduce your overall electricity cost.",
+      "Net metering lets you send excess solar electricity back to the grid and receive credits on your bill, helping reduce your overall electricity costs.",
   },
 ];
 
 const blogPosts = [
   {
-    category: "TECHNOLOGY",
-    title: "The Shift from Infrastructure to Intelligent Ecosystems",
-    desc: "Discover how AI-driven load balancing and V2G technology are transforming corporate fleets into revenue-generating assets.",
-    date: "July 06, 2026",
-    image: "/solar1.jpg",
+    category: "Commercial Solar",
+    title: "Complete Guide to Commercial  Rooftop Solar",
+    slug: "commercial-rooftop-solar-guide",
+    desc: "How commercial rooftop solar differs from residential systems and what business owners should consider before installing..",
+    date: "Mar 17, 2026",
+    image: "/blogsimg/commercial-rooftop-solar.webp",
   },
   {
-    category: "EFFICIENCY",
-    title: "Preparing for the Next Material Frontier: Solid-State Batteries",
-    desc: "How ShashWatt is bypassing AC/DC conversion losses with Direct-DC solar integration and Megawatt Charging Systems.",
-    date: "June 28, 2026",
-    image: "/solar2.jpg",
+    category: "Housing Societies",
+    title: "Solar Solutions for Apartments and Residential Communities",
+    slug: "solar-apartments-residential-communities",
+    desc: "Apartments have different rooftop and ownership considerations than independent homes. Here's how solar can still work for them.",
+    date: "Feb 17, 2026",
+    image: "/blogsimg/solar-apartments.webp",
   },
   {
-    category: "SUSTAINABILITY",
-    title: "The Sustainability Paradox: Second-Life Battery Programs",
-    desc: "Decoupling the battery's lifecycle from the vehicle's chassis to ensure lithium-ion assets provide value as stationary storage.",
-    date: "June 15, 2026",
-    image: "/solar3.jpg",
+    category: "Housing Societies",
+    title: "How Housing Societies Can Benefit from Rooftop Solar",
+    slug: "housing-societies-rooftop-solar",
+    desc: "Rooftop solar can help housing societies cut common-area electricity costs. Here's how societies typically approach a solar decision.",
+    date: "Jan 20, 2026",
+    image: "/blogsimg/housing-societies-solar.webp",
   },
 ];
 
@@ -252,7 +255,7 @@ const customerStories = [
     name: "Residential Customer",
     system: "8 kW Hybrid System",
     quote:
-      "Our hybrid solar system gives us reliable backup along with significant energy savings. The entire installation process was smooth, professional, and hassle-free.",
+      "Our hybrid solar system provides reliable backup along with significant energy savings. The entire installation process was smooth, professionally handled, and hassle-free.",
   },
 ];
 
@@ -366,6 +369,62 @@ export default function Index() {
 
     return () => observer.disconnect();
   }, []);
+
+  function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    );
+  }
+
+  function FacebookIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    );
+  }
+
+  function WhatsAppIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.887.525 3.65 1.436 5.152L2 22l4.973-1.404A9.945 9.945 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.169-1.141l-.299-.177-3.106.878.847-3.09-.194-.313A8.16 8.16 0 0 1 3.8 12c0-4.52 3.68-8.2 8.201-8.2 4.52 0 8.199 3.68 8.199 8.2 0 4.52-3.679 8.2-8.199 8.2z" />
+      </svg>
+    );
+  }
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f7f2] text-[#431013]">
@@ -899,7 +958,7 @@ export default function Index() {
                     <p
                       className="text-[16px] leading-[1.55] text-[#5D3F3C] sm:text-[15px] md:text-[16px]"
                     >
-                      Over 3,000+ kW installed across diverse terrains
+                      Over 3,000 kW installed across diverse terrains
                       and property types in India.
                     </p>
                   </div>
@@ -923,7 +982,7 @@ export default function Index() {
                     <p
                       className="text-[16px] leading-[1.55] text-[#5D3F3C] sm:text-[15px] md:text-[16px]"
                     >
-                      We partner with industry leaders like Adani,
+                      We partner with industry leaders such as Adani,
                       RenewSys, Enphase and Panasonic for maximum
                       efficiency.
                     </p>
@@ -1073,7 +1132,7 @@ export default function Index() {
               </h2>
 
               <p className="mb-8 max-w-180 text-[16px] lg:text-[18px] leading-[1.45] text-[#1A1C1A]">
-                We handle paperwork, liaising, commissioning, subsidy applications, and loan applications.
+                We handle paperwork, liaison, commissioning, subsidy applications, and loan applications.
               </p>
             </motion.div>
 
@@ -1171,15 +1230,15 @@ export default function Index() {
               transition={{ duration: 1.05, ease: "easeOut" }}
             >
               ShashWatt has installed <span className="font-bold text-[#007100]">3,000+ kW </span> of solar capacity, generating an estimated
-              <span className="font-bold text-[#007100]"> 4.2 million+ kWh</span> of clean energy annually and avoiding approximately
-              <span className="font-bold text-[#007100]"> 3,000+</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around
-              <span className="font-bold text-[#007100]"> 50,000+</span> trees.
+              <span className="font-bold text-[#007100]"> 4.2 million kWh</span> of clean energy annually and avoiding approximately
+              <span className="font-bold text-[#007100]"> 3,000</span> tonnes of CO₂ emissions each year — equivalent to the carbon sequestration of around
+              <span className="font-bold text-[#007100]"> 50,000</span> trees.
             </motion.p>
 
             <img
               src="/impact.webp"
               alt="Solar panels with wind turbines and greenery"
-              className="relative z-0 block h-full w-full object-fill md:h-full md:-mt-60"
+              className="relative z-0 block h-full w-full object-fill md:h-full md:-mt-40"
             />
           </div>
         </div>
@@ -1201,10 +1260,11 @@ export default function Index() {
               <h2 className="mb-6 text-[34px] font-bold leading-tight text-[#1A1C1A] md:text-[40px]">
                 Built with Precision
               </h2>
-              <p className="max-w-140 text-[16px] leading-[1.45] text-[#5D3F3C] md:text-[18px]">
-                Our engineering team focuses on the details that ensure 25+ years
-                of trouble-free performance. From rust-resistant mounting to UV-
-                protected cabling, every component is selected for the Indian
+              <p className="max-w-160 text-[16px] leading-[1.45] text-[#5D3F3C] md:text-[18px]">
+                Our engineering team focuses on the details that ensure 25+ years <br />
+                of trouble-free performance. From rust-resistant mounting to <br />
+                UV-protected cabling, every component is selected for <br />
+                the Indian
                 climate.
               </p>
             </div>
@@ -1316,7 +1376,7 @@ export default function Index() {
             </h2>
             <p className="mx-auto mt-4 max-w-150 text-[16px] lg:text-[18px] leading-[1.45] text-[#5D3F3C]">
               From individual bungalows to sprawling housing societies, we have the
-              expertise to power any home configuration.
+              expertise to provide solar solutions for any home configuration.
             </p>
           </div>
 
@@ -1466,7 +1526,7 @@ export default function Index() {
                     </p>
 
                     <Link
-                      to="/blog"
+                      to={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-2 text-[16px] text-[#BA0013] transition duration-700 group-hover:text-[#FF2D3F]"
                     >
                       Read Article
@@ -1614,15 +1674,33 @@ export default function Index() {
             </p>
 
             <div className="mt-8 flex items-center gap-8">
-              <Link to="#" aria-label="Website" className="text-white">
-                <Earth size={20} />
-              </Link>
-              <Link to="#" aria-label="Share" className="text-white">
-                <Share2 size={20} />
-              </Link>
-              <Link to="#" aria-label="Profile" className="text-white">
-                <ContactRound size={20} />
-              </Link>
+              <a
+                href="https://www.instagram.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-white hover:text-white/80"
+              >
+                <InstagramIcon size={28} />
+              </a>
+              <a
+                href="https://www.facebook.com/shashwattenergy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-white hover:text-white/80"
+              >
+                <FacebookIcon size={28} />
+              </a>
+              <a
+                href="https://wa.me/917619575683"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-white hover:text-white/80"
+              >
+                <WhatsAppIcon size={28} />
+              </a>
             </div>
           </div>
 
