@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { SolarSolutionsMobileLinks, SolarSolutionsNav } from "../components/SolarSolutionsNav";
+/* import { RiDoubleQuotesL } from "react-icons/ri"; */
+/* import { RiDoubleQuotesR } from "react-icons/ri"; */
 import {
   Sun,
   CloudRain,
@@ -194,6 +196,48 @@ export default function AboutUs() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function DoubleQuoteLeft({
+    size = 20,
+    className = "",
+  }: {
+    size?: number;
+    className?: string;
+  }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M10 11H6.5C6.5 8.8 7.7 7.3 10 6.5V4C5.7 4.6 3.5 7.4 3.5 12v7h6.5v-8zm10 0h-3.5c0-2.2 1.2-3.7 3.5-4.5V4c-4.3.6-6.5 3.4-6.5 8v7H20v-8z" />
+      </svg>
+    );
+  }
+
+  function DoubleQuoteRight({
+    size = 20,
+    className = "",
+  }: {
+    size?: number;
+    className?: string;
+  }) {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+      >
+        <path d="M14 13h3.5c0 2.2-1.2 3.7-3.5 4.5V20c4.3-.6 6.5-3.4 6.5-8V5H14v8zm-10 0h3.5c0 2.2-1.2 3.7-3.5 4.5V20c4.3-.6 6.5-3.4 6.5-8V5H4v8z" />
+      </svg>
+    );
+  }
+
   function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
     return (
       <svg
@@ -383,7 +427,11 @@ export default function AboutUs() {
                 className="h-142.75 w-full rounded-[8px] object-cover shadow-[0_16px_28px_rgba(26,28,26,0.18)]"
               />
               <div className="absolute -bottom-6 -right-4 w-56 rounded-[8px] bg-[#BA0013] p-6 text-white shadow-[0_16px_28px_rgba(186,0,19,0.22)] sm:-right-8">
-                <span className="mb-3 block text-2xl font-extrabold">"99"</span>
+                <span className="mb-3 flex items-center gap-1 text-2xl font-extrabold">
+                  <DoubleQuoteLeft size={20} className="mb-5" />
+                  99
+                  <DoubleQuoteRight size={20} className="mb-5" />
+                </span>
                 <p className="text-[24px] leading-snug">
                   Clean energy is an investment in tomorrow.
                 </p>
@@ -675,7 +723,7 @@ export default function AboutUs() {
           </div>
 
           <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-            ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+            © 2026 All Rights Reserved. ShashWatt Energy. Powered by{" "}
             <a
               href="https://spitel.com"
               target="_blank"

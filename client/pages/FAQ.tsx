@@ -126,7 +126,7 @@ export default function FAQ() {
     {
       question: "Should I choose a regular inverter or a microinverter for my solar system?",
       answer:
-        "Both are useful options, but microinverters can offer greater flexibility and better performance in certain situations. They are particularly beneficial for homes with trees or other areas that cause shading. Since each panel operates independently, shading on one panel has less impact on the performance of the other panels.",
+        "Both are useful options, but microinverters can offer greater flexibility and better performance in certain situations. They are particularly beneficial for homes with trees or other sources of shading. Since each panel operates independently, shading on one panel has less impact on the performance of the other panels.",
     },
     {
       question: "How can solar and battery storage help reduce rising electricity costs?",
@@ -319,10 +319,10 @@ export default function FAQ() {
                   <span
                     className="block text-[14px] font-bold tracking-widest uppercase text-[#BA0013] mb-3"
                   >
-                    Need to Know
+                    What you Need to Know
                   </span>
                   <h2 className="text-[30px] md:text-[40px] font-bold leading-tight text-[#1A1C1A] max-w-xl">
-                    What you need to know?
+                    Curious About Solar?
                   </h2>
                 </div>
                 <p className="text-[16px] font-medium leading-[1.45] text-[#5D3F3C] max-w-xl md:text-right">
@@ -495,7 +495,7 @@ export default function FAQ() {
           </div>
 
           <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-            ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+            © 2026 All Rights Reserved. ShashWatt Energy. Powered by{" "}
             <a
               href="https://spitel.com"
               target="_blank"

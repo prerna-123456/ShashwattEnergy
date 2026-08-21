@@ -170,6 +170,9 @@ interface CalculatorErrors {
   bill?: string;
 }
 
+const MIN_MONTHLY_BILL = 100;
+const MAX_MONTHLY_BILL = 1000000;
+
 export default function Calculator() {
   // Triggers the hero text entrance animation once on mount.
   const [heroIn, setHeroIn] = useState(false);
@@ -237,8 +240,8 @@ export default function Calculator() {
     const billValue = parseFloat(bill);
     if (bill.trim() === "" || Number.isNaN(billValue)) {
       newErrors.bill = "Please enter your average monthly electricity bill.";
-    } else if (billValue <= 0) {
-      newErrors.bill = "Please enter a valid amount greater than 0.";
+    } else if (billValue < MIN_MONTHLY_BILL || billValue > MAX_MONTHLY_BILL) {
+      newErrors.bill = `Please enter an amount between ₹${MIN_MONTHLY_BILL.toLocaleString("en-IN")} and ₹${MAX_MONTHLY_BILL.toLocaleString("en-IN")}.`;
     }
 
     setErrors(newErrors);
@@ -428,7 +431,8 @@ export default function Calculator() {
                     <input
                       id="calc-bill"
                       type="number"
-                      min={0}
+                      min={MIN_MONTHLY_BILL}
+                      max={MAX_MONTHLY_BILL}
                       value={bill}
                       onChange={(e) => handleBillChange(e.target.value)}
                       placeholder="Enter your average monthly electricity bill"
@@ -642,7 +646,7 @@ export default function Calculator() {
           </div>
 
           <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-            ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+            © 2026 All Rights Reserved. ShashWatt Energy. Powered by{" "}
             <a
               href="https://spitel.com"
               target="_blank"

@@ -592,7 +592,7 @@ export default function PMSuryaGharYojana() {
         </div>
 
         <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-          ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+          © 2026 All Rights Reserved. ShashWatt Energy. Powered by{" "}
           <a
             href="https://spitel.com"
             target="_blank"

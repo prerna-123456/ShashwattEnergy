@@ -82,7 +82,7 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "Shading and Layout Considerations",
           paragraphs: [
-            "Shading is one of the biggest practical differences between the two options. If your roof has partial shade at certain times of day, from a water tank, parapet wall, or a neighbouring structure, microinverters generally handle that better because each panel works on its own.",
+            "Shading is one of the biggest practical differences between the two options. If your roof has partial shade at certain times of day, caused by a water tank, parapet wall, or a neighbouring structure, microinverters generally handle that better because each panel works on its own.",
             "If your roof is fully open with no shading obstacles and a simple, uniform layout, a string inverter can perform very effectively and is often a more straightforward setup.",
           ],
         },
@@ -98,7 +98,7 @@ export const blogArticles: BlogArticle[] = [
           paragraphs: [
             "Adding panels later is generally simpler with microinverters, since each new panel comes with its own inverter and does not require re-balancing an existing string.",
             "For string inverters, expanding a system may require additional planning to ensure the new panels are compatible with the existing string configuration, and in some cases a second string or inverter may be needed.",
-            "On the maintenance side, a string inverter is a single component that is easy to access and, if ever needed, replace. Microinverters are mounted on the roof alongside each panel, which can mean more components overall, though each one manages a smaller share of the system.",
+            "On the maintenance side, a string inverter is a single, easily accessible component that can be quickly serviced or replaced if required. Microinverters are mounted on the roof alongside each panel, which can mean more components overall, though each one manages a smaller share of the system.",
           ],
         },
         {
@@ -641,7 +641,7 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "The Basic Building Blocks of a Home Solar System",
           paragraphs: [
-            "A typical rooftop solar system has a few core components: solar panels that capture sunlight, an inverter that converts the electricity into a form your home can use, mounting structure that secures the panels to your roof, and wiring that connects everything together.",
+            "A typical rooftop solar system has a few core components: solar panels that capture sunlight, an inverter that converts the electricity into a form your home can use, a mounting structure that secures the panels to your roof, and wiring that connects everything together.",
             "Depending on the type of system, there may also be a connection to the electricity grid, and in some cases, a battery for storing extra electricity.",
           ],
         },
@@ -656,7 +656,7 @@ export const blogArticles: BlogArticle[] = [
           heading: "What Affects How Well Solar Works for a Given Home",
           paragraphs: [
             "How much electricity a system generates depends on factors like the amount of usable roof space, the roof's orientation and tilt, any shading from trees or nearby buildings, and local sunlight conditions throughout the year.",
-            "Your household's own electricity usage pattern also matters, since solar tends to have the biggest impact on bills when a meaningful share of that usage happens during daylight hours.",
+            "Your household's own electricity usage pattern also matters, since solar tends to have the biggest impact on bills when a meaningful share of that electricity usage occurs during daylight hours.",
           ],
         },
         {
@@ -669,13 +669,13 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "Getting Started",
           paragraphs: [
-            "The most useful first step is understanding your own electricity consumption, typically visible on a few months of your electricity bills, since this becomes the basis for sizing any system recommendation.",
-            "From there, a site assessment of your roof, whether in person or through satellite/remote tools, helps determine what system size and layout would actually suit your home.",
+            "The most useful first step is understanding your own electricity consumption, typically visible on a few months of your electricity bills, since this becomes the basis for determining the appropriate system size.",
+            "From there, a site assessment of your roof, whether in person or through satellite or remote tools, helps determine what system size and layout would actually suit your home.",
           ],
         },
       ],
       conclusion:
-        "Solar energy, at its core, is a straightforward idea: capture sunlight and convert it into usable electricity for your home. The details that matter, like roof suitability, system sizing and your household's consumption pattern, are specific to your situation, which is why understanding your own electricity usage is a great place to start before exploring solar further.",
+        "Solar energy, at its core, is a straightforward idea: capture sunlight and convert its energy into usable electricity for your home. The details that matter, like roof suitability, system sizing and your household's consumption pattern, are specific to your situation, which is why understanding your own electricity usage is a great place to start before exploring solar further.",
     },
   },
 
@@ -690,7 +690,7 @@ export const blogArticles: BlogArticle[] = [
     image: "/blogsimg/how-solar-energy-works.webp",
     imageAlt: "Close-up of solar panels on a rooftop under bright sunlight",
     excerpt:
-      "Curious how sunlight becomes electricity? A simple, visual explanation of how solar panels and inverters generate power for your home.",
+      "Curious how sunlight becomes electricity? A simple, visual explanation of how solar panels generate electricity and inverters convert it into usable power for your home.",
     seo: {
       metaTitle: "How Solar Energy Works: From Sunlight to Electricity",
       metaDescription:
@@ -711,14 +711,14 @@ export const blogArticles: BlogArticle[] = [
           heading: "Step 1: Sunlight Hits the Solar Panel",
           paragraphs: [
             "Solar panels are made up of many individual solar cells, most commonly built from silicon, a material that reacts to sunlight in a useful way.",
-            "When sunlight strikes these cells, it causes electrons within the material to move, which is the starting point of electricity generation. This happens continuously throughout daylight hours, though the intensity varies with sunlight conditions.",
+            "When sunlight strikes these cells, it causes electrons within the material to move, which is the starting point of electricity generation. Electricity generation occurs when sufficient sunlight is available, with output varying depending on sunlight intensity and other system conditions.",
           ],
         },
         {
           heading: "Step 2: Solar Cells Generate Direct Current (DC) Electricity",
           paragraphs: [
             "The movement of electrons within the solar cells generates direct current, or DC, electricity. This is the raw electrical output of the solar panel itself.",
-            "DC electricity flows in one steady direction, which is different from the electricity used by most home appliances, setting up the need for the next step in the process.",
+            "DC electricity flows in one direction, while most household appliances use AC electricity supplied through the home's electrical system.",
           ],
         },
         {
@@ -732,7 +732,7 @@ export const blogArticles: BlogArticle[] = [
           heading: "Step 4: Electricity Powers Your Home",
           paragraphs: [
             "Once converted to AC, the electricity flows into your home's electrical system, powering lights, fans, appliances and devices just like grid electricity would.",
-            "If your system is connected to the grid, any electricity your panels generate but your home does not use at that moment can, depending on your connection type and local regulations, be sent back to the grid, often through a process called net metering.",
+            "If your system is connected to the grid, any electricity your panels generate but your home does not use at that moment can, depending on your connection type and local regulations, be sent back to the grid. Net metering is the mechanism used to measure and account for electricity exported to and imported from the grid.",
           ],
         },
         {
@@ -779,8 +779,8 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "The Core Components of a Home Solar System",
           paragraphs: [
-            "A residential solar system generally includes solar panels, an inverter, mounting structure, wiring, and depending on the setup, a connection to the grid or a battery for storage.",
-            "The panels capture sunlight and generate DC electricity, the inverter converts it to usable AC electricity, and the mounting structure and wiring hold everything together and connect it safely to your home's electrical system.",
+            "A residential solar system generally includes solar panels, an inverter, mounting structure, wiring, and, depending on the setup, a connection to the grid or a battery for storage.",
+            "The panels capture sunlight and generate DC electricity; the inverter converts it to usable AC electricity, and the mounting structure and wiring hold everything together and connect it safely to your home's electrical system.",
           ],
         },
         {
@@ -793,7 +793,7 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "Sizing the Right System",
           paragraphs: [
-            "System size is typically based on your household's electricity consumption, visible in a few months of past electricity bills, balanced against your available and structurally suitable roof space.",
+            "System size is typically based on your household's electricity consumption, as shown by several months of past electricity bills, balanced against your available and structurally suitable roof space.",
             "An undersized system limits potential savings, while an oversized system may not be fully utilised depending on your usage pattern and local grid regulations, so proper sizing is worth getting right from the start.",
           ],
         },
@@ -808,8 +808,8 @@ export const blogArticles: BlogArticle[] = [
           heading: "The Installation Process, Step by Step",
           paragraphs: [
             "The process typically starts with a site visit or remote assessment, followed by system design and a detailed proposal covering equipment, cost and expected generation.",
-            "Once approved, installation involves setting up the mounting structure, placing and wiring the panels, installing the inverter, and connecting everything to your home's electrical system.",
-            "Depending on your connection type and location, the final step often involves applying for net metering or the relevant grid connection approval through your local electricity board.",
+            "Once approved, installation involves setting up the mounting structure, installing and wiring the panels, installing the inverter, and connecting everything to your home's electrical system.",
+            "Depending on your connection type and location, the final step often involves applying for net metering or obtaining the relevant grid connection approval through your local electricity board.",
           ],
         },
         {
@@ -859,20 +859,20 @@ export const blogArticles: BlogArticle[] = [
     },
     content: {
       introduction:
-        "Reducing electricity bills is the reason most homeowners first look into rooftop solar. But it helps to understand exactly how that reduction happens, what factors influence how much you actually save, and what to realistically expect rather than relying on vague promises.",
+        "Reducing electricity bills is one of the main reasons homeowners look into rooftop solar. But it helps to understand exactly how that reduction happens, what factors influence how much you actually save, and what to realistically expect rather than relying on vague promises.",
       sections: [
         {
           heading: "The Basic Mechanism: Offsetting Grid Consumption",
           paragraphs: [
             "When your solar panels generate electricity, that electricity is used directly by your home, reducing the amount of power you need to draw from the grid at that moment.",
-            "Every unit of electricity your panels supply is essentially a unit you do not have to buy from your utility, which is the core mechanism behind the bill reduction.",
+            "Every unit of electricity your panels supply can reduce the amount of electricity you need to purchase from the grid, which is the core mechanism behind the bill reduction.",
           ],
         },
         {
           heading: "How Net Metering Fits In",
           paragraphs: [
             "In many locations, homes with grid-connected solar systems can use a mechanism called net metering, where excess electricity generated but not immediately used is sent back to the grid.",
-            "Depending on the specific net metering policy in your area, this exported electricity may be credited against your consumption, effectively letting your bill reflect your \"net\" usage rather than your total draw from the grid.",
+            "Depending on the specific net metering policy in your area, this exported electricity may be credited against your consumption, allowing your bill to reflect your net electricity usage after applicable credits.",
             "Net metering rules, credit structures and eligibility vary by state and electricity board, so it is worth confirming the current policy that applies to your specific location and connection type.",
           ],
         },
@@ -894,7 +894,7 @@ export const blogArticles: BlogArticle[] = [
         {
           heading: "Setting Realistic Expectations",
           paragraphs: [
-            "Solar typically reduces a significant portion of a household's electricity bill rather than eliminating it entirely, and the exact proportion depends on the factors above.",
+            "Solar can reduce a significant portion of a household's electricity bill rather than eliminating it entirely, and the exact proportion depends on the factors above.",
             "It is also worth remembering that solar panel output naturally varies by season and weather, so month-to-month savings will fluctuate even though the system is performing normally.",
           ],
         },
@@ -902,8 +902,8 @@ export const blogArticles: BlogArticle[] = [
           heading: "Frequently Asked Questions",
           paragraphs: [
             "Q: Will solar completely eliminate my electricity bill?\nA: In most home setups, solar offsets a portion of your consumption rather than eliminating the bill entirely, though the exact impact depends on system size, usage pattern and net metering arrangement.",
-            "Q: Do cloudy days mean no savings that day?\nA: Solar panels still generate electricity on cloudy days, though typically at a reduced level compared to clear, sunny conditions.",
-            "Q: How soon will I see a change in my bill after installation?\nA: Once your system is commissioned and, where applicable, connected through net metering, the impact typically shows up from your very next billing cycle onward.",
+            "Q: Do cloudy days mean I won't save money that day?\nA: Solar panels still generate electricity on cloudy days, though typically at a reduced level compared to clear, sunny conditions.",
+            "Q: How soon will I see a change in my bill after installation?\nA: Once your system is commissioned and, where applicable, connected through net metering, the impact will typically be reflected in your next billing cycle.",
           ],
         },
       ],

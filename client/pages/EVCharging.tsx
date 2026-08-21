@@ -23,7 +23,7 @@ export default function EVCharging() {
     {
       title: "Home EV Chargers",
       description:
-        "Compact 3.3 – 7.2 kW AC wall-box chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
+        "Compact 3.3 – 7.2 kW AC wallbox chargers designed for safe and convenient overnight home charging, with smart app monitoring and load protection.",
       image: "/ev1.webp",
       icon: Home,
       features: "Safe  •  Smart  •  Convenient",
@@ -39,7 +39,7 @@ export default function EVCharging() {
     {
       title: "Fast DC Charging Hubs",
       description:
-        "High-speed 30–60 kW DC fast chargers for highway hubs, public charging corridors, and commercial fleet operations.",
+        "30 kW to 60 kW High-Speed DC fast chargers for highway hubs, public charging corridors, and commercial fleet operations.",
       image: "/ev3.webp",
       icon: Gauge,
       features: "High Speed  •  Powerful  •  Future-Ready",
@@ -412,7 +412,7 @@ export default function EVCharging() {
         </div>
 
         <div className="border-t border-white/20 bg-[#341010] py-4 text-center text-[16px] text-[#FAF9F6]">
-          ©2026 All Rights Reserved. Shashwatt Energy. Powered By{" "}
+          © 2026 All Rights Reserved. ShashWatt Energy. Powered by{" "}
           <a
             href="https://spitel.com"
             target="_blank"
